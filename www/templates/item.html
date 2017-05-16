@@ -1,0 +1,30 @@
+<ion-view cache-view="false" view-title="Platinum Registration">
+    <ion-content>
+        <h4 class="title">{{name}}</h4>
+        <ul class="grid">
+            <li class="grid-item step {{step.status == 1 ? 'approved': (step.status == -1 ? 'denied': '')}}" ng-repeat="(key, step) in steps">
+            		<a ng-href="#/app/{{key}}/{{sid}}/{{name}}" href="#/app/{{key}}/{{sid}}/{{name}}">
+	                <h5>{{step.name}}</h5>
+	                <p ng-if="key == 'step1'">Uploaded: {{step.uploaded}}</p>
+	                <p ng-if="key == 'step2'">Require: 1 image</p>
+	                <p ng-if="key == 'step2'">Uploaded: {{step.uploaded}}</p>
+	                <p ng-if="key == 'step3'">Require: 8 images</p>
+	                <p ng-if="key == 'step3'">Uploaded: {{step.uploaded}}</p>
+	                <p ng-if="key == 'step3'">Approved: {{step.approved}}</p>
+	                <p ng-if="key == 'step4'">Require: 6 images</p>
+	                <p ng-if="key == 'step4'">Uploaded: {{step.uploaded}}</p>
+	                <p ng-if="key == 'step4'">Approved: {{step.approved}}</p>
+	                <p ng-if="key == 'step5'">Require: 6 images</p>
+	                <p ng-if="key == 'step5'">Uploaded: {{step.uploaded}}</p>
+	                <p ng-if="key == 'step5'">Approved: {{step.approved}}</p>
+	                <p ng-if="key == 'contact'">{{step.count}} messages</p>
+	                <p ng-if="key == 'contact'">Unread: {{step.unread}}</p>
+	                <p ng-if="key == 'comment'">{{step.count}} comments</p>
+	                <p ng-if="key == 'comment'">Unread: {{step.unread}}</p>
+	                <span ng-if="step.status == 1" class="icon ion-checkmark-round"></span>
+	                <span ng-if="step.status == -1 || step.status == 2" class="icon ion-android-checkbox-blank"></span>
+                </a>
+            </li>
+        </ul>
+    </ion-content>
+</ion-view>

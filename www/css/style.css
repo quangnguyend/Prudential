@@ -1,1 +1,323 @@
 /* Empty. Add your own CSS if you like */
+/* General */
+.alert {
+	padding: 20px;
+	text-align: center;
+}
+.img p {
+	text-align: center;
+	padding: 10px;
+}
+/* Popup */
+.popup-container .popup {
+	width: 350px;
+	padding: 15px 20px;
+}
+.popup-container .popup,
+.popup-container .popup button
+{
+	border-radius: 6px;
+}
+
+.popup .popup-head {
+	border-bottom: 1px solid #ccc;
+}
+.popup .popup-title {
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+
+.login {
+    background: transparent url("../img/splash.png");
+    background-size: cover;
+}
+
+.login form {
+    margin: auto;
+}
+
+.login form .logo {
+    text-align: center;
+}
+
+.login form .list {
+	max-width: 300px;
+	margin: auto;
+}
+
+.login .item {
+    background: transparent;
+    border: 0;
+}
+
+.login .item-input {
+    background-color: #36465d;
+    opacity: 0.8;
+    border: 0;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.login .error {
+    background-color: white;
+    opacity: 0.9;
+    border-radius: 5px;
+    color: red;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.login .submit {
+    padding: 0;
+}
+
+.login .item-input input,
+.login .item-input .input-label {
+    color: white;
+}
+
+.login .submit button {
+    background-color: #36465d;
+    opacity: 0.9;
+}
+
+.login .submit button.activated {
+    background-color: #56a1d5;
+}
+
+h4.title {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.grid .grid-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 15px;
+    position: relative;
+}
+.grid .grid-item a {
+    display: block;
+    padding: 15px;
+    position: relative;
+    text-decoration: none;
+}
+.grid .grid-item a:active {
+    background-color: #e5e5e5;
+}
+.grid .grid-item.registration {
+    border-top: 5px solid #56a1d5; !important;
+    padding: 0;
+}
+
+.grid .grid-item.step {
+	padding: 0;
+}
+
+.grid .registration.approved {
+    border-top: 5px solid #a5ca68;
+}
+.grid .registration.denied {
+    border-top: 5px solid #798392;
+}
+
+.grid .grid-item h4,
+.grid .grid-item h5{
+    color: #56a1d5;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.grid .grid-item p {
+    color: #666;
+    margin-bottom: 5px;
+    line-height: 15px;
+    font-size: 13px;
+}
+
+.grid .grid-item span.icon {
+    position: absolute;
+    color: #56a1d5;
+    right: 15px;
+    top: 15px;
+    font-size: 20px;
+}
+
+.grid .grid-item.approved h4,
+.grid .grid-item.approved h5,
+.grid .grid-item.approved span.icon {
+    color: #a5ca68;
+}
+.grid .grid-item.denied h4,
+.grid .grid-item.denied h5,
+.grid .grid-item.denied span.icon{
+    color: #798392;
+}
+
+.grid .grid-item.image {
+    text-align: center;
+}
+
+.grid .grid-item.image h5 {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.step2 {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+span.label {
+    color: black;
+}
+
+input[type=button] {
+    background-color: #019cde;
+    color: white;
+    border: 0;
+    border-size: border-box;
+    border-radius: 5px;
+    padding: 5px 20px;
+    margin-top: 10px;
+}
+
+.approval {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.step1 ul {
+	padding: 10px;
+}
+
+.step1 ul li {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 15px;
+    position: relative;
+    width: 260px;
+}
+
+.step1 ul li a.ion-close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.comment .grid .grid-item h5{
+	font-weight: bold;
+	margin-bottom: 0;
+}
+
+.contact .grid .grid-item h5.summary{
+	font-weight: bold;
+	margin-bottom: 0;
+}
+
+.comment li {
+	position: relative;
+}
+
+.comment li .delete {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 25px;
+}
+
+.comment-form {
+	border: 1px solid #ddd;
+	border-top: 5px solid #798392;
+	border-radius: 5px;
+	margin: 10px;
+	padding: 10px;
+}
+
+.comment-form textarea {
+	border: 1px solid #ddd;
+	border-radius: 5px;
+}
+
+.comment-form hr {
+	border-top: 1px solid #ddd;
+	border-bottom: 0;
+}
+
+ul.footer {
+	margin-top: 100px;
+	text-align: center;
+    background-color: #36465d;
+    opacity: 0.8;
+    border: 0;
+    border-radius: 5px;
+    padding: 10px 0;
+}
+
+ul.footer li {
+	display: inline;
+}
+
+ul.footer li span,
+ul.footer li a {
+	color: white;
+	text-decoration: none;
+	font-size: 18px;
+}
+
+.terms p,
+.terms h4,
+.policy p,
+.policy h4 {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+.app_or_web .popup {
+	max-width: 400px;
+}
+.app_or_web .popup-buttons {
+	display: none;
+}
+.app_or_web .popup-body {
+	text-align: center;
+	padding-top:0;
+}
+.app_or_web .popup-body ul li {
+	margin-bottom: 15px;
+	text-align: center;
+}
+.app_or_web .popup-body ul > li:last-child {
+	margin-bottom: 0;
+}
+
+.app_or_web ul li button {
+	background: #56a1d5;
+	border: 0;
+	border-radius: 5px;
+	color: white;
+	line-height: 19px;
+	padding: 10px;
+	width: 100%;
+}
+
+.app_or_web ul li button:active {
+	background-color: #e5e5e5;
+}
+.popup-container.agreement .popup-head {
+	padding-bottom: 30px;
+}
+.popup-container.agreement .popup-buttons {
+	width: 150px;
+	margin: 0 auto;
+}
+@media only screen and (min-width: 768px) {
+	.popup-container.agreement .popup {
+		width: 600px;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.popup-container.agreement .popup {
+		width: 80%;
+	}
+}

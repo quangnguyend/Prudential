@@ -1,0 +1,21 @@
+<ion-view cache-view="false" view-title="{{title}}">
+    <ion-content>
+        <h4 class="title">{{name}} / #2</h4>
+        <div class="step2">
+            <ul class="grid">
+                <li class="grid-item image {{status == 1 ? 'approved' : ''}}">
+                    <p class="img" ng-if="files.file_0.thumbnail.length == 0"><img class="thumbnail" src="img/no-image.gif" style="width: 240px;"/></p>
+                    <p class="img alert" ng-if="files.file_0.thumbnail.length > 0 && files.file_0.thumbnail.indexOf('http') == 0 && $root.loading.indexOf('step2_' + sid + '_file_0') != -1">This image is loading!</p>
+                    <p class="img alert" ng-if="files.file_0.thumbnail.length > 0 && files.file_0.thumbnail.indexOf('http') == 0 && $root.loading.indexOf('step2_' + sid + '_file_0') == -1">Missing image. Please try to synchronize your records</p>
+                    <p class="img" ng-if="files.file_0.thumbnail.length > 0 && files.file_0.thumbnail.indexOf('http') != 0"><img class="thumbnail" src="{{files.file_0.thumbnail + '?time=' + files.file_0.time}}" style="width: 240px;"/></p>
+                    <p ng-if="prev == 1 && status == 0">
+                        <input type="button" value="Upload an Image" ng-click="browse('step2', 'file_0')"/>
+                    </p>
+                    <span ng-if="status == 1" class="icon ion-checkmark-round"></span>
+                    <span ng-if="files.file_0.sync == 1" class="icon ion-load-c"></span>
+                </li>
+            </ul>
+            <p>&nbsp;</p>
+        </div>
+    </ion-content>
+</ion-view>
