@@ -1,0 +1,66 @@
+.agent_advanced_input {
+  color: #5B6770
+}
+
+.agent_advanced_input .no-padding {
+  padding: 0px !important;
+}
+
+.agent_advanced_input h5 {
+  font-size: 14px;
+}
+
+.agent_advanced_input .no-lines .item {
+  border: none !important;
+  margin-bottom: 40px;
+}
+
+.agent_advanced_input label.item-input {
+  padding-left: 0px;
+  border-bottom: 1px solid #5B6770;
+}
+
+.agent_advanced_input .col-left-padding {
+  padding-top: 60px;
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+
+.agent_advanced_input .input-label {
+  width: 20%;
+  max-width: 36px
+}
+
+.agent_advanced_input .col-left-padding h2 {
+  line-height: 40px;
+  margin-bottom: 30px;
+  color: #5B6770
+}
+
+.agent_advanced_input .notes {
+  font-size: 12px;
+  color: #5B6770;
+  padding-top: 5px;
+}
+
+.agent_advanced_input .notes span:nth-child(2) {
+  float: right
+}
+
+.agent_advanced_input .button-bar > .button {
+  border: 1px solid #333;
+  border-right: none
+}
+
+.agent_advanced_input .button-bar > .button:last-child {
+  border-right: 1px solid #333;
+}
+
+.agent_advanced_footer .button {
+  top: 5px;
+}
+
+
+/*===
+
+===*/

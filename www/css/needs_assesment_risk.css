@@ -1,0 +1,71 @@
+/* ========================== RISK PROFILE STYLE ========================== */
+.risk-profile .footer-text {
+    white-space: initial;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.risk-profile .item {
+  border: none;
+}
+
+.risk-profile .range {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.risk-profile .range input {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.risk-profile .key-objective-select {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 100%;
+  width: 100%;
+  color: rgba(91, 103, 112, 0.5);
+  padding: 5px;
+  padding-left: 0;
+  margin-top: 5px;
+  margin-left: 0;
+  border: none;
+}
+
+
+.risk-profile .range{
+  display: block;
+}
+
+.risk-profile .range-tip {
+  position: relative;
+  margin-top: -48px;
+}
+
+.risk-profile .row.range-divider{
+    position: relative;
+    top: -48px;
+    padding-left: 3px;
+    padding-right: 3px;
+    z-index: -9;
+    color: #EFECEC;
+}
+
+.risk-profile .row.range-divider div:first-child{
+  padding-left: 0;
+}
+
+.risk-profile .row.range-divider div:last-child{
+  padding-right: 0;
+}
+
+.risk-profile .range input {
+    background-size: 0%;
+}
+
+.risk-profile .float-right {
+  float: right;
+}

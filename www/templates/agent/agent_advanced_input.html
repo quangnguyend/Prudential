@@ -1,0 +1,114 @@
+<ion-view cache-view="false" view-title="Get Quote" class="agent_advanced_input">
+  <ion-content class="has-header  has-footer">
+    <form>
+      <div class="row">
+        <div class="col col-left-padding">
+          <h2>How much would you like to spend on insurance and investment?</h2>
+          <p>When selecting how much you would like to pay, consider the level of cover as well as how much you would like your
+            wealth to grow.</p>
+        </div>
+        <div class="col">
+          <div class="list list-inset no-lines">
+            <div class="item no-padding">
+              <h5>Spend on protection</h5>
+              <label class="item-input">
+                <span class="input-label">IDR</span>
+                <input type="text" placeholder="Enter">
+              </label>
+            </div>
+            <!-- item -->
+            <div class="item no-padding">
+              <h5>Contribute towards investment (PruSave)</h5>
+              <label class="item-input">
+                <span class="input-label">IDR</span>
+                <input type="text" placeholder="Enter">
+              </label>
+            </div>
+            <!-- item -->
+          </div>
+
+          <div class="list list-inset">
+            <h5>Payment frequency</h5>
+            <div class="button-bar">
+              <a class="button col col-50" grouped-radio="'monthly'" ng-model="data.payment">Monthly</a>
+              <a class="button col col-50" grouped-radio="'annual'" ng-model="data.payment">Annual</a>
+            </div>
+          </div>
+          <div class="list list-inset">
+            <h5>Pay premium for (years)</h5>
+            <div class="button-bar">
+              <a class="button col col-20" grouped-radio="'10'" ng-model="data.paymentyear">10</a>
+              <a class="button col col-20" grouped-radio="'20'" ng-model="data.paymentyear">15</a>
+              <a class="button col col-20" grouped-radio="'30'" ng-model="data.paymentyear">20</a>
+              <a class="button col col-40" grouped-radio="'40'" ng-model="data.paymentyear">Up to 65 years</a>
+            </div>
+          </div>
+
+
+          <div class="list list-inset">
+            <button class="button button-assertive button-full">Calculate</button>
+          </div>
+        </div>
+        <!--end col -->
+
+      </div>
+      <!--end row -->
+
+      <div class="row">
+
+        <div class="col col-left-padding">
+          <h2>Adjust your amounts to achieve the right balance.</h2>
+          <p>When selecting how much you would like to pay, consider the level of cover as well as how much you would like your
+            wealth to grow.</p>
+        </div>
+        <div class="col">
+          <div class="list list-inset no-lines">
+            <div class="item no-padding">
+              <h5>Sum assured for PRULink Assurance Account</h5>
+              <label class="item-input">
+                <span class="input-label">IDR</span>
+                <input type="text" placeholder="Enter">
+              </label>
+              <div class="notes">
+                <span>Min: IDR 1,000,000</span>
+                <span>Max: IDR 8,000,000</span>
+              </div>
+            </div>
+            <!-- item -->
+            <div class="item no-padding">
+              <h5>Sum assured for &lt;rider a&gt;</h5>
+              <label class="item-input">
+                <span class="input-label">IDR</span>
+                <input type="text" placeholder="Enter">
+              </label>
+              <div class="notes">
+                <span>Min: IDR 1,000,000</span>
+                <span>Max: IDR 8,000,000</span>
+              </div>
+            </div>
+            <!-- item -->
+            <div class="item no-padding">
+              <h5>Sum assured for &lt;rider b&gt;</h5>
+              <label class="item-input">
+                <span class="input-label">IDR</span>
+                <input type="text" placeholder="Enter">
+              </label>
+              <div class="notes">
+                <span>Min: IDR 1,000,000</span>
+                <span>Max: IDR 8,000,000</span>
+              </div>
+            </div>
+            <!-- item -->
+          </div>
+        </div>
+      </div>
+      <!--end row -->
+    </form>
+  </ion-content>
+</ion-view>
+<div class="bar bar-footer bar-assertive agent_advanced_footer">
+  <button class="button button-block item-icon-right button-clear">
+    Continue
+    <i class="icon ion-chevron-right"></i></button>
+
+</div>

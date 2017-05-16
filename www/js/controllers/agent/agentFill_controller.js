@@ -1,0 +1,2 @@
+  function AgenFillInCtrl ($scope, $rootScope) {
+  }
