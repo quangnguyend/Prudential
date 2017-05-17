@@ -1,11 +1,14 @@
-function customerCtrl ($scope, $rootScope) {
+function customerCtrl ($scope, $rootScope, DataService, $location) {
   $rootScope.showBar = true
   $rootScope.showBack = true
   $rootScope.showMenu = true
 
-  $scope.customer = {
-    lastname: '',
-    firstname: ''
+  var customer = DataService.getData('customer') || {}
+  $scope.customer = customer
+  
+  $scope.clickButtonHandle = function(nextRoute){
+    $location.url(nextRoute)
+    DataService.setData('customer', $scope.customer)
   }
 
   $scope.data = {

@@ -4,8 +4,8 @@
       <div class="customer-name">
         <div class="title">Just a few minutes and we will create a customized financial plan for you.</div>
         <div class="row">
-          <div class="col col-50"><input type="text" ng-model="$root.customer.firstname" placeholder="First Name"></div>
-          <div class="col col-50"><input type="text" ng-model="$root.customer.lastname" placeholder="Last Name"></div>   
+          <div class="col col-50"><input type="text" ng-model="customer.firstname" placeholder="First Name"></div>
+          <div class="col col-50"><input type="text" ng-model="customer.lastname" placeholder="Last Name"></div>   
         </div>
       </div>
     </div>
@@ -13,5 +13,5 @@
 </ion-view>
 
 <div class="bar bar-footer bar-assertive">
-   <a href="#/app/customer_dob" title="Continue" class="btn">Next<button class="button button-clear"><i class="icon ion-ios-arrow-forward"></i></button></a>
+   <a ng-click="clickButtonHandle('/app/customer_dob')" title="Continue" class="btn">Next<button class="button button-clear"><i class="icon ion-ios-arrow-forward"></i></button></a>
 </div>
