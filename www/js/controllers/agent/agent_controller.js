@@ -2,7 +2,7 @@
 'use strict'
 
 function agentCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService) {
-  $rootScope.showBar = false
+  $rootScope.showBar = true
   $rootScope.showBack = false
   $rootScope.showMenu = false
   $scope.agent = {}
