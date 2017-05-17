@@ -6,23 +6,23 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('prudential', ['ionic', 'prudential.controllers', 'prudential.services', 'ngCordova'])
 
-.run(function ($ionicPlatform, $rootScope) {
-  $ionicPlatform.ready(function () {
-        // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-        // for form inputs)
-    if (window.cordova && window.cordova.plugins.Keyboard) {
-      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true)
-      cordova.plugins.Keyboard.disableScroll(true)
-    }
-    if (window.StatusBar) {
-          // org.apache.cordova.statusbar required
-      StatusBar.styleDefault()
-    }
+  .run(function ($ionicPlatform, $rootScope) {
+    $ionicPlatform.ready(function () {
+      // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+      // for form inputs)
+      if (window.cordova && window.cordova.plugins.Keyboard) {
+        cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true)
+        cordova.plugins.Keyboard.disableScroll(true)
+      }
+      if (window.StatusBar) {
+        // org.apache.cordova.statusbar required
+        StatusBar.styleDefault()
+      }
+    })
   })
-})
 
-.config(function ($stateProvider, $urlRouterProvider) {
-  $stateProvider
+  .config(function ($stateProvider, $urlRouterProvider) {
+    $stateProvider
 
       .state('app', {
         url: '/app',
@@ -93,6 +93,6 @@ angular.module('prudential', ['ionic', 'prudential.controllers', 'prudential.ser
           }
         }
       })
-      // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/agent')
-})
+    // if none of the above states are matched, use this as the fallback
+    $urlRouterProvider.otherwise('/app/agent')
+  })
