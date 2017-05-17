@@ -109,8 +109,13 @@
 .cust-radio-other .item  .radio-icon{display: none;}
 .cust-radio-other .item-radio input:checked + .radio-content .item-content{background-color: #5b6770;color:#fff;}
 
-#customer.container{
+#customer .container{
   padding: 6vw;
+}
+
+#customer .bar.bar-footer.not-active{
+  background-color: #c2c2c2;
+  border: none;
 }
 
 #customer .title{
