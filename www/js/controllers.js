@@ -1,4 +1,4 @@
-angular.module('platinum.controllers', [])
+angular.module('prudential.controllers', [])
 
 .controller('AppCtrl', function ($scope, $rootScope, $cordovaNetwork, UserService, SyncService, CommonService) {
   $rootScope.synchronizing = false

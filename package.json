@@ -1,7 +1,7 @@
 {
-  "name": "todoss",
+  "name": "Prudential",
   "version": "1.1.1",
-  "description": "todoss: An Ionic project",
+  "description": "Prudential: An Ionic project",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^2.0.4",
