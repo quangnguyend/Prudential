@@ -164,8 +164,8 @@
 }
 
 #customer .customer-job ul .custom_radio{
-    width: 3vw;
-    height: 3vw;
+  width: 3vw;
+  height: 3vw;
 }
 
 #customer .customer-smoker .title.secondary{
@@ -182,7 +182,7 @@
   font-style: normal;
   font-weight: normal;
   font-size: 4vw;
-  line-height: 48 px;
+  height: auto;
   opacity: 1.00;
   padding-left: 0;
 }
