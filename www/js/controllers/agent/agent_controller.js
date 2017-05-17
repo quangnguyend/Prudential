@@ -7,9 +7,9 @@ function agentCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService) {
   $rootScope.showMenu = false
   $scope.agent = {}
   $scope.collectInfo = function () {
-    var formData = $scope.agent;
+    var formData = $scope.agent
+
     DataService.setData(formData)
-    console.log(DataService.getData())
   }
 }
 
@@ -24,17 +24,17 @@ function groupedRedRadio () {
     link: function (scope, element, attrs, ngModelCtrl) {
       element.on('click', function (e) {
         scope.$apply(function () {
-          ngModelCtrl.$setViewValue(scope.value);
-        });
-      });
+          ngModelCtrl.$setViewValue(scope.value)
+        })
+      })
       scope.$watch('model', function (newVal) {
-        element.removeClass('button-assertive');
+        element.removeClass('button-assertive')
         if (newVal === scope.value) {
-          element.addClass('button-assertive');
+          element.addClass('button-assertive')
         }
-      });
+      })
     }
-  };
+  }
 }
 function groupedMultiChoice () {
   return {
@@ -47,13 +47,12 @@ function groupedMultiChoice () {
     link: function (scope, element, attrs, ngModelCtrl) {
       element.on('click', function (e) {
         scope.$apply(function () {
-          ngModelCtrl.$setViewValue(scope.value);
-        });
-        element.toggleClass('button-assertive');
-      });
+          ngModelCtrl.$setViewValue(scope.value)
+        })
+        element.toggleClass('button-assertive')
+      })
       scope.$watch('model', function (newVal) {
-      });
+      })
     }
-  };
-
+  }
 }
