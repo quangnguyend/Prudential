@@ -6,14 +6,21 @@
   border-radius: 2px 0px 0px 1px;
 }
 
+.additional_question .no-lines .item {
+  border: none !important;
+}
+
 .additional_question .list.list-inset>h5 {
   display: block;
   line-height: 40px;
   font-size: 16px
 }
 
-.additional_question input[type="text"] {
-  /* border-bottom: 1px solid #5B6770;*/
+.additional_question .btn_next {
+  text-decoration: none
+}
+
+.additional_question input[type="date"], .additional_question input[type="text"], .additional_question input[type="number"] {
   width: 100%;
   font-size: 17px
 }
@@ -25,6 +32,18 @@
   height: 50px;
   line-height: 50px;
   font-size: 18px;
+}
+
+.additional_question .button.button-dark {
+  border-color: transparent;
+  background-color: #444;
+  color: #fff;
+}
+
+.additional_question .button.button-assertive {
+  border-color: transparent;
+  background-color: #ef473a;
+  color: #fff;
 }
 
 .additional_question .button.actived {
@@ -52,6 +71,76 @@
 .additional_question .list.list-inset label {
   width: 100%;
   height: 50px
+}
+
+.additional_question .range {
+  display: block;
+}
+
+.additional_question .range-option {
+  position: relative
+}
+
+.additional_question .range-option .range-tip {
+  position: relative;
+  margin-top: -48px;
+}
+
+.additional_question .range-option .row.range-divider {
+  position: relative;
+  top: -48px;
+  padding-left: 3px;
+  padding-right: 3px;
+  z-index: -9;
+  color: #EFECEC;
+}
+
+.additional_question .row.range-divider div:first-child {
+  padding-left: 0;
+}
+
+.additional_question .row.range-divider div:last-child {
+  padding-right: 0;
+}
+
+.additional_question .checkbox input:before, .additional_question .checkbox-icon:before {
+  border-radius: 0px;
+  background: #eee
+}
+
+.additional_question .checkbox input:checked:before, .additional_question .checkbox input:checked + .checkbox-icon:before {
+  background: #da291c;
+  border-radius: 0px;
+  border-color: #da291c;
+}
+
+.additional_question .key-objective-select {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 100%;
+  width: 100%;
+  color: rgba(91, 103, 112, 0.5);
+  padding: 5px;
+  padding-left: 0;
+  margin-top: 5px;
+  margin-left: 0;
+  border: none;
+}
+
+.additional_question .button.button-stable {
+  border-color: transparent;
+  background-color: #f8f8f8;
+  color: #444;
+}
+
+.additional_question .description +.button-bar {
+  margin-top: 15px
+}
+
+.footer-agent.bar-footer .button-clear {
+  top: 5px
 }
 
 .additional_question select {
