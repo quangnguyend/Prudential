@@ -50,5 +50,3 @@ angular.module('prudential.controllers', [])
   .directive('groupedRedRadio', groupedRedRadio)
   .directive('groupedMultiChoice', groupedMultiChoice)
   .directive('dataService', dataService)
-
-

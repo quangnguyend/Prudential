@@ -6,5 +6,4 @@ angular.module('prudential.services', [])
     .factory('SubmissionService', submissionService)
     .factory('SyncService', syncService)
     .factory('UserService', userService)
-    .factory('DataService', dataService);
-
+    .factory('DataService', dataService)
