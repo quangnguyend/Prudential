@@ -130,7 +130,7 @@
 
 #customer .customer-name input{
   height: auto;
-  font-size: 4vw;
+  font-size: 17px;
 }
 
 #customer .customer-dob{
@@ -138,12 +138,12 @@
 }
 
 #customer .customer-dob span{
-  font-size: 3vw;
+  font-size: 17px;
 }
 
 #customer .customer-dob .date-picker input{
   height: auto;
-  font-size: 5vw;
+  font-size: 17px;
   padding: 6vw;
   line-height: 6vw;
   background-color: transparent;
@@ -157,7 +157,7 @@
 
 #customer .customer-job ul .title{
   margin-left: 3vw;
-  font-size: 4.5vw;
+  font-size: 17px;
   line-height: 5vw;
 }
 
@@ -166,7 +166,7 @@
   margin-top: 5vw;
   margin-bottom: 5vw;
   display: block;
-  font-size: 3vw;
+  font-size: 17px;
   line-height: 4vw;
 }
 
@@ -188,7 +188,7 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: normal;
-  font-size: 4vw;
+  font-size: 17px;
   line-height: 48 px;
   opacity: 1.00;
   padding-left: 0;
@@ -199,7 +199,7 @@
   opacity: 1.00;
   border-radius: 2px;
   width: 100%;
-  font-size: 3vw;
+  font-size: 17px;
   line-height: 100%;
   letter-spacing: -0.408px;
   color: rgba(73, 84, 93, 0.5);
