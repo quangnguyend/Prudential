@@ -111,6 +111,7 @@
 
 #customer .container{
   padding: 6vw;
+  padding-bottom: 70px;
 }
 
 #customer .bar.bar-footer.not-active{
@@ -145,6 +146,7 @@
   padding: 0px;
   height: 40px;
   width: 100%;
+  background-color: transparent;
 }
 
 #customer .customer-job ul li{
