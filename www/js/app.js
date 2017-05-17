@@ -37,18 +37,20 @@ angular.module('platinum', ['ionic', 'platinum.controllers', 'platinum.services'
         views: {
           'menuContent': {
             templateUrl: 'templates/agent/agent_fill_in.html',
-            controller: 'AgentCtrl'
+            controller: 'AgentCtrl',
+            controllerAs: 'vm'
           }
         }
       })
 
       .state('app.customer', {
         cache: false,
-        url: '/list',
+        url: '/customer',
         views: {
           'menuContent': {
-            templateUrl: 'templates/agent/customer_name.html',
-            controller: 'CustomerCtrl'
+            templateUrl: 'templates/customer/customer_name.html',
+            controller: 'CustomerCtrl',
+            controllerAs: 'vm'
           }
         }
       })

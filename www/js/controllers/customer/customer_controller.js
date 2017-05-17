@@ -2,4 +2,8 @@ function customerCtrl ($scope, $rootScope, $ionicPopup, UserService, SubmissionS
   $rootScope.showBar = true
   $rootScope.showBack = true
   $rootScope.showMenu = true
+
+  var vm = this
+  vm.customers = []
+  vm.title = 'Customers'
 }
