@@ -50,12 +50,14 @@ function groupedMultiChoice () {
         scope.$apply(function () {
           ngModelCtrl.$setViewValue(scope.value);
         });
+        element.toggleClass('button-assertive');
       });
       scope.$watch('model', function (newVal) {
-        element.removeClass('button-assertive');
+        /*element.removeClass('button-assertive');
+        console.log(newVal + ' and ' + scope.value)
         if (newVal === scope.value) {
-          element.addClass('button-assertive');
-        }
+          element.toggleClass('button-assertive');
+        }*/
       });
     }
   };
