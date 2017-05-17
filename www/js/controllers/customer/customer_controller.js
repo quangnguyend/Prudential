@@ -5,7 +5,8 @@ function customerCtrl ($scope, $rootScope) {
 
   $scope.customer = {
     lastname: '',
-    firstname: ''
+    firstname: '',
+    smoke: false
   }
 
   $scope.data = {
