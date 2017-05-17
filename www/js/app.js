@@ -43,14 +43,53 @@ angular.module('prudential', ['ionic', 'prudential.controllers', 'prudential.ser
         }
       })
 
-      .state('app.customer', {
+      .state('app.customer_name', {
         cache: false,
-        url: '/customer',
+        url: '/customer_name',
         views: {
           'menuContent': {
             templateUrl: 'templates/customer/customer_name.html',
-            controller: 'CustomerCtrl',
-            controllerAs: 'vm'
+            controller: 'CustomerCtrl'
+          }
+        }
+      })
+      .state('app.customer_dob', {
+        cache: false,
+        url: '/customer_dob',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/customer/customer_dob.html',
+            controller: 'CustomerCtrl'
+          }
+        }
+      })
+      .state('app.customer_job', {
+        cache: false,
+        url: '/customer_job',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/customer/customer_job.html',
+            controller: 'CustomerCtrl'
+          }
+        }
+      })
+      .state('app.customer_goal', {
+        cache: false,
+        url: '/customer_goal',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/customer/customer_goal.html',
+            controller: 'CustomerCtrl'
+          }
+        }
+      })
+      .state('app.customer_existing', {
+        cache: false,
+        url: '/customer_existing',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/customer/customer_existing.html',
+            controller: 'CustomerCtrl'
           }
         }
       })
