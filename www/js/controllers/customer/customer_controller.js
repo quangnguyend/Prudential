@@ -1,5 +1,5 @@
-  function CustomerCtrl ($scope, $rootScope) {
-    $rootScope.showBar = true
-    $rootScope.showBack = true
-    $rootScope.showMenu = true
-  }
+function customerCtrl ($scope, $rootScope, $ionicPopup, UserService, SubmissionService, SyncService) {
+  $rootScope.showBar = true
+  $rootScope.showBack = true
+  $rootScope.showMenu = true
+}
