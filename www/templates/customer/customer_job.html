@@ -1,22 +1,27 @@
-<ion-view cache-view="false" view-title="Tell us about yourself">
+<ion-view cache-view="false" view-title="Tell us about yourself" id="customer">
   <ion-content>
-    <div id="customer" class="container">
+    <div class="container">
       <div class="customer-job">
         <div class="title">
           Which of the following best describes the nature of your occupation, {{customer.firstname}}?
         </div>
         <ul>
           <li ng-repeat="(key, item) in data.nature_occupation">
-            <input class='custom_radio' type="radio" name="nature_occupation" id="nature_occupation_{{key}}" />
+            <input ng-model="customer.nature_occupation" value="{{item.title}}" class='custom_radio' type="radio" name="nature_occupation"
+              id="nature_occupation_{{key}}" />
             <label class='title' for="nature_occupation_{{key}}">{{item.title}}</label>
             <br/>
             <span class='describe'>{{item.describe}}</span>
           </li>
         </ul>
       </div>
+    </div>
   </ion-content>
-</ion-view>
+  <div ng-if="customer.nature_occupation" class="bar bar-footer bar-assertive">
+    <a ng-click="clickButtonHandle('/app/customer_goal')" title="Continue" class="btn">Next<button class="button button-clear"><i class="icon ion-ios-arrow-forward"></i></button></a>
+  </div>
 
-<div class="bar bar-footer bar-assertive">
-  <a href="#/app/customer_goal" title="Continue" class="btn">Next<button class="button button-clear"><i class="icon ion-ios-arrow-forward"></i></button></a>
-</div>
+  <div ng-if="!customer.nature_occupation" class="bar bar-footer bar-assertive not-active">
+    <a title="Continue" class="btn">Next<button class="button button-clear"><i class="icon ion-ios-arrow-forward"></i></button></a>
+  </div>
+</ion-view>
