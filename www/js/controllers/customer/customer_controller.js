@@ -5,8 +5,8 @@ function customerCtrl ($scope, $rootScope, DataService, $location) {
 
   var customer = DataService.getData('customer') || { lastname: '', firstname: '', smoke: false, phone: ''}
   $scope.customer = customer
-  
-  $scope.clickButtonHandle = function(nextRoute){
+
+  $scope.clickButtonHandle = function (nextRoute) {
     $location.url(nextRoute)
     DataService.setData('customer', $scope.customer)
   }

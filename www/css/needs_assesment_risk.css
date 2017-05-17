@@ -1,9 +1,9 @@
 /* ========================== RISK PROFILE STYLE ========================== */
 .risk-profile .footer-text {
-    white-space: initial;
-    width: 90%;
-    margin: 0 auto;
-    margin-bottom: 50px;
+  white-space: initial;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 50px;
 }
 
 .risk-profile .item {
@@ -35,7 +35,6 @@
   border: none;
 }
 
-
 .risk-profile .range{
   display: block;
 }
@@ -46,12 +45,12 @@
 }
 
 .risk-profile .row.range-divider{
-    position: relative;
-    top: -48px;
-    padding-left: 3px;
-    padding-right: 3px;
-    z-index: -9;
-    color: #EFECEC;
+  position: relative;
+  top: -48px;
+  padding-left: 3px;
+  padding-right: 3px;
+  z-index: -9;
+  color: #EFECEC;
 }
 
 .risk-profile .row.range-divider div:first-child{
@@ -63,7 +62,7 @@
 }
 
 .risk-profile .range input {
-    background-size: 0%;
+  background-size: 0%;
 }
 
 .risk-profile .float-right {

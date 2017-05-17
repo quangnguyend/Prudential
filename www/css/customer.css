@@ -142,10 +142,11 @@
 }
 
 #customer .customer-dob .date-picker input{
-  height: auto;
   font-size: 17px;
-  padding: 6vw;
-  line-height: 6vw;
+  line-height: 41px;
+  padding: 0px;
+  height: 40px;
+  width: 100%;
   background-color: transparent;
 }
 
@@ -171,8 +172,8 @@
 }
 
 #customer .customer-job ul .custom_radio{
-    width: 3vw;
-    height: 3vw;
+  width: 3vw;
+  height: 3vw;
 }
 
 #customer .customer-smoker .title.secondary{
@@ -190,6 +191,7 @@
   font-weight: normal;
   font-size: 17px;
   line-height: 48 px;
+  height: auto;
   opacity: 1.00;
   padding-left: 0;
 }

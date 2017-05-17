@@ -8,7 +8,7 @@
         <ul>
           <li ng-repeat="(key, item) in data.nature_occupation">
             <input ng-model="customer.nature_occupation" value="{{item.title}}" class='custom_radio' type="radio" name="nature_occupation"
-              id="nature_occupation_{{key}}" />
+            id="nature_occupation_{{key}}" />
             <label class='title' for="nature_occupation_{{key}}">{{item.title}}</label>
             <br/>
             <span class='describe'>{{item.describe}}</span>
