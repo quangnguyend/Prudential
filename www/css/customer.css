@@ -123,6 +123,7 @@
 }
 
 #customer .customer-name input{
+  height: auto;
   font-size: 4vw;
 }
 
@@ -135,6 +136,7 @@
 }
 
 #customer .customer-dob .date-picker input{
+  height: auto;
   font-size: 5vw;
   padding: 6vw;
   line-height: 6vw;

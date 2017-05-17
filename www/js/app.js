@@ -49,7 +49,8 @@ angular.module('prudential', ['ionic', 'prudential.controllers', 'prudential.ser
         views: {
           'menuContent': {
             templateUrl: 'templates/customer/customer_name.html',
-            controller: 'CustomerCtrl'
+            controller: 'CustomerCtrl',
+            controllerAs: 'vm'
           }
         }
       })
@@ -59,7 +60,8 @@ angular.module('prudential', ['ionic', 'prudential.controllers', 'prudential.ser
         views: {
           'menuContent': {
             templateUrl: 'templates/customer/customer_dob.html',
-            controller: 'CustomerCtrl'
+            controller: 'CustomerCtrl',
+            controllerAs: 'vm'
           }
         }
       })
@@ -69,7 +71,8 @@ angular.module('prudential', ['ionic', 'prudential.controllers', 'prudential.ser
         views: {
           'menuContent': {
             templateUrl: 'templates/customer/customer_job.html',
-            controller: 'CustomerCtrl'
+            controller: 'CustomerCtrl',
+            controllerAs: 'vm'
           }
         }
       })
@@ -79,7 +82,8 @@ angular.module('prudential', ['ionic', 'prudential.controllers', 'prudential.ser
         views: {
           'menuContent': {
             templateUrl: 'templates/customer/customer_goal.html',
-            controller: 'CustomerCtrl'
+            controller: 'CustomerCtrl',
+            controllerAs: 'vm'
           }
         }
       })
@@ -89,7 +93,8 @@ angular.module('prudential', ['ionic', 'prudential.controllers', 'prudential.ser
         views: {
           'menuContent': {
             templateUrl: 'templates/customer/customer_existing.html',
-            controller: 'CustomerCtrl'
+            controller: 'CustomerCtrl',
+            controllerAs: 'vm'
           }
         }
       })
