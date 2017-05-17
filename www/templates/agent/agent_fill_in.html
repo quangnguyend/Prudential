@@ -28,8 +28,8 @@
                         <span>Gender</span>
                     </div>
                     <div class="button-bar">
-                        <a class="button col col-50" grouped-red-radio="'Yes'" ng-model="agent.gender">Male</a>
-                        <a class="button col col-50" grouped-red-radio="'No'" ng-model="agent.gender">Female</a>
+                        <a class="button col col-50" grouped-red-radio="'Male'" ng-model="agent.gender">Male</a>
+                        <a class="button col col-50" grouped-red-radio="'Female'" ng-model="agent.gender">Female</a>
                     </div>
                 </div>
                 <!--end item-->
@@ -63,12 +63,12 @@
                         <span>Occupation</span>
                     </div>
                     <div>
-                        <select class="key-objective-select">
-            <option selected value>Government Official</option>
-            <option>Blue</option>
-            <option>Green</option>
-            <option>Red</option>
-          </select>
+                        <select class="key-objective-select" ng-model='agent.occupation'>
+                        <option selected value>Government Official</option>
+                        <option>Blue</option>
+                        <option>Green</option>
+                        <option>Red</option>
+                      </select>
                     </div>
                 </div>
                 <!--end item-->
@@ -77,12 +77,12 @@
                         <span>Department</span>
                     </div>
                     <div>
-                        <select class="key-objective-select">
-            <option disabled selected value> Select </option>
-            <option>Blue</option>
-            <option>Green</option>
-            <option>Red</option>
-          </select>
+                        <select class="key-objective-select"  ng-model='agent.department'>
+                            <option disabled selected value> Select </option>
+                            <option>Blue</option>
+                            <option>Green</option>
+                            <option>Red</option>
+                        </select>
                     </div>
                 </div>
                 <!--end item-->
@@ -91,7 +91,7 @@
                         <span>Designation</span>
                     </div>
                     <div>
-                        <select class="key-objective-select">
+                        <select class="key-objective-select" ng-model='agent.designation'>
             <option disabled selected value> Select </option>
             <option>Blue</option>
             <option>Green</option>
@@ -148,7 +148,7 @@
                         </div>
                         <div class="range range-positive">
                             <div class="input-range row">
-                                <input class="custom-range" type="range" name="volume" min="1" max="3" step="1" value="3" ng-disabled='!agent.checkbox_health'>
+                                <input class="custom-range" type="range" name="volume" min="1" max="3" step="1" value="3" ng-disabled='!agent.checkbox_health'  ng-model='agent.checkbox_health_value'>
                             </div>
                             <div class="range-divider row">
                                 <div class="col col-33 text-left">
@@ -183,7 +183,7 @@
                         </div>
                         <div class="range range-positive">
                             <div class="input-range row">
-                                <input class="custom-range" type="range" name="volume" min="1" max="3" step="1" value="3" ng-disabled='!agent.checkbox_pension'>
+                                <input class="custom-range" type="range" name="volume" min="1" max="3" step="1" value="3" ng-disabled='!agent.checkbox_pension'  ng-model="agent.checkbox_pension_value">
                             </div>
                             <div class="range-divider row">
                                 <div class="col col-33 text-left">
@@ -217,7 +217,7 @@
                         </div>
                         <div class="range range-positive">
                             <div class="input-range row">
-                                <input class="custom-range" type="range" name="volume" min="1" max="3" step="1" value="3" ng-disabled='!agent.checkbox_tradititectiononal'>
+                                <input class="custom-range" type="range" name="volume" min="1" max="3" step="1" value="3" ng-disabled='!agent.checkbox_tradititectiononal' ng-model='agent.checkbox_tradititectiononal_value'>
                             </div>
                             <div class="range-divider row">
                                 <div class="col col-33 text-left">
@@ -251,7 +251,7 @@
                         </div>
                         <div class="range range-positive">
                             <div class="input-range row">
-                                <input class="custom-range" type="range" name="volume" min="1" max="3" step="1" value="3" ng-disabled='!agent.checkbox_illness'>
+                                <input class="custom-range" type="range" name="volume" min="1" max="3" step="1" value="3" ng-disabled='!agent.checkbox_illness'  ng-disabled='agent.checkbox_illness_value'>
                             </div>
                             <div class="range-divider row">
                                 <div class="col col-33 text-left">
@@ -285,7 +285,7 @@
                         </div>
                         <div class="range range-positive">
                             <div class="input-range row">
-                                <input class="custom-range" type="range" name="volume" min="1" max="3" step="1" value="3" ng-disabled='!agent.checkbox_erjanjian'>
+                                <input class="custom-range" type="range" name="volume" min="1" max="3" step="1" value="3" ng-disabled='!agent.checkbox_erjanjian'  ng-model='agent.checkbox_erjanjian_value'>
                             </div>
                             <div class="range-divider row">
                                 <div class="col col-33 text-left">
@@ -319,7 +319,7 @@
                         </div>
                         <div class="range range-positive">
                             <div class="input-range row">
-                                <input class="custom-range" type="range" name="volume" min="1" max="3" step="1" value="3" ng-disabled='!agent.checkbox_education'>
+                                <input class="custom-range" type="range" name="volume" min="1" max="3" step="1" value="3" ng-disabled='!agent.checkbox_education'  ng-model='agent.checkbox_education_value'>
                             </div>
                             <div class="range-divider row">
                                 <div class="col col-33 text-left">
@@ -353,7 +353,7 @@
                         </div>
                         <div class="range range-positive">
                             <div class="input-range row">
-                                <input class="custom-range" type="range" name="volume" min="1" max="3" step="1" value="3" ng-disabled='!agent.checkbox_inheritance'>
+                                <input class="custom-range" type="range" name="volume" min="1" max="3" step="1" value="3" ng-disabled='!agent.checkbox_inheritance'  ng-model='agent.checkbox_inheritance_value'>
                             </div>
                             <div class="range-divider row">
                                 <div class="col col-33 text-left">
@@ -387,7 +387,7 @@
                         </div>
                         <div class="range range-positive">
                             <div class="input-range row">
-                                <input class="custom-range" type="range" name="volume" min="1" max="3" step="1" value="3" ng-disabled="!agent.checkbox_investment">
+                                <input class="custom-range" type="range" name="volume" min="1" max="3" step="1" value="3" ng-disabled="!agent.checkbox_investment"  ng-model="agent.checkbox_investment_value">
                             </div>
                             <div class="range-divider row">
                                 <div class="col col-33 text-left">
@@ -415,7 +415,7 @@
                         </div>
                     </li>
                     </li class='item'>
-                    <a href="#app/customer" class="btn_next"><button class="button button-block button-stable">Next</button></a>
+                    <a href="#app/customer" class="btn_next"  ng-click='collectInfo()'><button class="button button-block button-stable">Next</button></a>
                     </li>
                     <!-- end item -->
 

@@ -23,7 +23,6 @@ function groupedRedRadio () {
     },
     link: function (scope, element, attrs, ngModelCtrl) {
       element.on('click', function (e) {
-        console.log('click')
         scope.$apply(function () {
           ngModelCtrl.$setViewValue(scope.value);
         });
@@ -53,11 +52,6 @@ function groupedMultiChoice () {
         element.toggleClass('button-assertive');
       });
       scope.$watch('model', function (newVal) {
-        /*element.removeClass('button-assertive');
-        console.log(newVal + ' and ' + scope.value)
-        if (newVal === scope.value) {
-          element.toggleClass('button-assertive');
-        }*/
       });
     }
   };
