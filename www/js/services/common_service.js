@@ -83,20 +83,18 @@ function commonService ($ionicPopup) {
 	return self;
 }
 function dataService ($http) {
-	var info;
+	var data = {};
 
 	return {
 		getData: getData,
 		setData: setData
 	};
 
-	// .................
-
-	function getData () {
-		return info;
+	function getData (key) {
+		return data[key];
 	}
 
-	function setData (value) {
-		info = value;
+	function setData (key, value) {
+		data[key] = value;
 	}
 };
