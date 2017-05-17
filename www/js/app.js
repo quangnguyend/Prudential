@@ -99,6 +99,16 @@ angular.module('prudential', ['ionic', 'prudential.controllers', 'prudential.ser
           }
         }
       })
+      .state('app.agentadvancedinput', {
+        cache: false,
+        url: '/agent_advanced_input',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/customer/customer_name.html',
+            controller: 'CustomerCtrl'
+          }
+        }
+      })
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/app/home')
   })

@@ -28,3 +28,5 @@ angular.module('prudential.controllers', [
   .controller('AssetmentRiskCtrl', AssetmentRiskCtrl)
 
   .controller('AgenFillInCtrl', AgenFillInCtrl)
+
+  .controller('CustomerCtrl', CustomerCtrl)
