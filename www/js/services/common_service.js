@@ -3,26 +3,26 @@ function commonService ($ionicPopup) {
 	var self = this;
 
 	// A alert dialog
-	self.showAlert = function(title, message) {
+	self.showAlert = function (title, message) {
 		var popup = $ionicPopup.alert({
-			title : title,
-			template : message
+			title: title,
+			template: message
 		});
 
-		popup.then(function(res) {
+		popup.then(function (res) {
 		});
 	}
 	// A confirm dialog
-	self.getConfirm = function(title, message) {
+	self.getConfirm = function (title, message) {
 		var confirmPopup = $ionicPopup.confirm({
-			title : title,
-			template : message,
-			buttons : [{
-				text : 'Cancel'
+			title: title,
+			template: message,
+			buttons: [{
+				text: 'Cancel'
 			}, {
-				text : '<b>Yes</b>',
-				type : 'button-positive',
-				onTap : function(e) {
+				text: '<b>Yes</b>',
+				type: 'button-positive',
+				onTap: function (e) {
 					return true;
 				}
 			}]
@@ -31,20 +31,20 @@ function commonService ($ionicPopup) {
 		return confirmPopup;
 	}
 	// A options dialog
-	self.getOptions = function(option1, option2) {
+	self.getOptions = function (option1, option2) {
 		var optionsPopup = $ionicPopup.confirm({
-			title : "Upload a File",
-			template : "Where is your file ?",
-			buttons : [{
-				text : '<b>' + option1 + '</b>',
-				type : 'button-positive',
-				onTap : function(e) {
+			title: "Upload a File",
+			template: "Where is your file ?",
+			buttons: [{
+				text: '<b>' + option1 + '</b>',
+				type: 'button-positive',
+				onTap: function (e) {
 					return 1;
 				}
 			}, {
-				text : '<b>' + option2 + '</b>',
-				type : 'button-positive',
-				onTap : function(e) {
+				text: '<b>' + option2 + '</b>',
+				type: 'button-positive',
+				onTap: function (e) {
 					return 2;
 				}
 			}]
@@ -53,7 +53,7 @@ function commonService ($ionicPopup) {
 		return optionsPopup;
 	}
 
-	self.dump = function(arr, level) {
+	self.dump = function (arr, level) {
 		var dumped_text = "";
 		if (!level)
 			level = 0;
@@ -62,11 +62,11 @@ function commonService ($ionicPopup) {
 		for (var j = 0; j < level + 1; j++)
 			level_padding += "    ";
 
-		if ( typeof (arr) == 'object') {
+		if (typeof (arr) == 'object') {
 			for (var item in arr) {
 				var value = arr[item];
 
-				if ( typeof (value) == 'object') {
+				if (typeof (value) == 'object') {
 					dumped_text += level_padding + "'" + item + "' ...\n";
 					dumped_text += self.dump(value, level + 1);
 				} else {
@@ -82,3 +82,21 @@ function commonService ($ionicPopup) {
 
 	return self;
 }
+function dataService ($http) {
+	var info;
+
+	return {
+		getData: getData,
+		setData: setData
+	};
+
+	// .................
+
+	function getData () {
+		return info;
+	}
+
+	function setData (value) {
+		info = value;
+	}
+};
