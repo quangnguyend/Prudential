@@ -1,130 +1,433 @@
 <ion-view cache-view="false" view-title="About the customer" class="additional_question">
-    <ion-content>
+    <ion-content class="has-footer has-header">
         <form>
-            <div class="list list-inset">
-                <h1 class="text-center">Basic Policyholder Information</h1>
-                <div class="row row-no-padding">
-                    <div class="col">
-                        <label class="item-stacked-label">
+            <div class="list list-inset no-lines">
+                </li class='item'>
+                <button class="button button-block button-stable" ng-click='collectInfo()'>Hand over your customer</button>
+                </li>
+                <div class='item'>
+                    <h1 class="text-center">Basic Policyholder Information</h1>
+                    <div class="row row-no-padding">
+                        <div class="col">
+                            <label class="item-stacked-label">
                             <span class="input-label">First Name</span>
-                            <input type="text" placeholder="Enter">
+                            <input type="text" placeholder="Enter"  ng-model="agent.firstname">
                         </label>
-                    </div>
-                    <div class="col">
-                        <label class="item-stacked-label">
+                        </div>
+                        <div class="col">
+                            <label class="item-stacked-label">
                             <span class="input-label">Last Name</span>
-                            <input type="text" placeholder="Enter">
+                            <input type="text" placeholder="Enter"   ng-model="agent.lastname">
                         </label>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="list list-inset">
-                <h5>Gender</h5>
-                <div class="button-bar">
-                    <a class="button col col-50">Male</a>
-                    <a class="button col col-50">Female</a>
+                <!--end item-->
+                <div class='item'>
+                    <div class="description">
+                        <span>Gender</span>
+                    </div>
+                    <div class="button-bar">
+                        <a class="button col col-50" grouped-red-radio="'Male'" ng-model="agent.gender">Male</a>
+                        <a class="button col col-50" grouped-red-radio="'Female'" ng-model="agent.gender">Female</a>
+                    </div>
                 </div>
-            </div>
-
-            <div class="list list-inset">
-                <h5>Date of Birth</h5>
-                <input type="text" placeholder="dd/mm/yyyy">
-            </div>
-
-            <div class="list list-inset">
-                <h5>Smoker ?</h5>
-                <div class="button-bar">
-                    <a class="button col col-50">Yes</a>
-                    <a class="button col col-50">No</a>
+                <!--end item-->
+                <div class='item'>
+                    <div class="description">
+                        <span>Date of birth</span>
+                    </div>
+                    <input type="date" placeholder="Enter">
                 </div>
-            </div>
+                <!--end item-->
+                <div class='item'>
+                    <div class="description">
+                        <span>Smoker ?</span>
+                    </div>
+                    <div class="button-bar">
+                        <a class="button col col-50" grouped-red-radio="'Yes'" ng-model="agent.smoke">Yes</a>
+                        <a class="button col col-50" grouped-red-radio="'No'" ng-model="agent.smoke">No</a>
+                    </div>
+                </div>
+                <!--end item-->
+                <div class='item'>
+                    <div class="description">
+                        <span>Mobile number</span>
+                    </div>
+                    <input type="number" placeholder="Enter">
+                </div>
+                <!--end item-->
 
-            <div class="list list-inset">
-                <h5>Mobile number</h5>
-                <input type="text" placeholder="Enter">
-            </div>
-
-            <div class="list list-inset">
-                <h5>Occupation</h5>
-                <div class="row row-no-padding">
-                    <label class="item-select">
-                        <select>
+                <div class='item'>
+                    <div class="description">
+                        <span>Occupation</span>
+                    </div>
+                    <div>
+                        <select class="key-objective-select" ng-model='agent.occupation'>
+                        <option selected value>Government Official</option>
+                        <option>Blue</option>
+                        <option>Green</option>
+                        <option>Red</option>
+                      </select>
+                    </div>
+                </div>
+                <!--end item-->
+                <div class='item'>
+                    <div class="description">
+                        <span>Department</span>
+                    </div>
+                    <div>
+                        <select class="key-objective-select"  ng-model='agent.department'>
+                            <option disabled selected value> Select </option>
                             <option>Blue</option>
-                            <option selected>Green</option>
+                            <option>Green</option>
                             <option>Red</option>
                         </select>
-                    </label>
+                    </div>
                 </div>
+                <!--end item-->
+                <div class='item'>
+                    <div class="description">
+                        <span>Designation</span>
+                    </div>
+                    <div>
+                        <select class="key-objective-select" ng-model='agent.designation'>
+            <option disabled selected value> Select </option>
+            <option>Blue</option>
+            <option>Green</option>
+            <option>Red</option>
+          </select>
+                    </div>
+                </div>
+                <!--end item-->
             </div>
 
-            <div class="list list-inset">
-                <h5>Department</h5>
-                <div class="row row-no-padding">
-                    <label class="item-select">
-                        <select>
-                            <option>Blue</option>
-                            <option selected>Green</option>
-                            <option>Red</option>
-                        </select>
-                    </label>
+
+            <div class="list list-inset no-lines">
+                <div class="item">
+                    <h1 class="text-center">Which existing policy protection does the customer have?</h1>
+                    <div class="row row-no-padding">
+                        <div class="button-bar">
+                            <a class="button col col-50" grouped-multi-choice="'Health Fund'" ng-model="agent.exiting_health">Health Fund</a>
+                            <a class="button col col-50" grouped-multi-choice="'Perjanjian Jual Beli*'" ng-model="agent.exiting_erjanjian">Perjanjian Jual Beli*</a>
+                        </div>
+                    </div>
+                    <div class="row row-no-padding">
+                        <div class="button-bar">
+                            <a class="button col col-50" grouped-multi-choice="'Critical Illness & Disability'" ng-model="agent.exiting_illness">Critical Illness & Disability</a>
+                            <a class="button col col-50" grouped-multi-choice="'Investment/ Tabungan/ Depotsits'" ng-model="agent.exiting_investment">Investment/ Tabungan/ Depotsits</a>
+                        </div>
+                    </div>
+                    <div class="row row-no-padding">
+                        <div class="button-bar">
+                            <a class="button col col-50" grouped-multi-choice="'Tradititectiononal Pro'" ng-model="agent.exiting_tradititectiononal">Tradititectiononal Pro</a>
+                            <a class="button col col-50" grouped-multi-choice="'Pension'" ng-model="agent.exiting_pension">Pension</a>
+                        </div>
+                    </div>
+                    <div class="row row-no-padding">
+                        <div class="button-bar">
+                            <a class="button col col-50" grouped-multi-choice="'Education'" ng-model="agent.exiting_education">Education</a>
+                            <a class="button col col-50" grouped-multi-choice="'Inheritance'" ng-model="agent.exiting_inheritance">Inheritance</a>
+                        </div>
+                    </div>
+                    <div class="row row-no-padding">
+                        <div class="button-bar">
+                            <a class="button col col-100" grouped-multi-choice="'Other'" ng-model="agent.exiting_other">Others</a>
+                        </div>
+                    </div>
                 </div>
+                <!-- end item -->
             </div>
 
-            <div class="list list-inset">
-                <h5>Designation</h5>
-                <div class="row row-no-padding">
+            <div class="list list-inset no-lines">
+                <h1 class="text-center">Select level for any 3 financial priorities?</h1>
+                <ul>
+                    <li class="item range-option">
+                        <div class="description">
+                            <ion-checkbox ng-model="agent.checkbox_health">Health Fund</ion-checkbox>
+                        </div>
+                        <div class="range range-positive">
+                            <div class="input-range row">
+                                <input class="custom-range" type="range" name="volume" min="1" max="3" step="1" value="3" ng-disabled='!agent.checkbox_health'  ng-model='agent.checkbox_health_value'>
+                            </div>
+                            <div class="range-divider row">
+                                <div class="col col-33 text-left">
+                                    <span class="divider">|</span>
+                                </div>
+                                <div class="col col-33 text-center">
+                                    <span class="divider">|</span>
+                                </div>
+                                <div class="col col-33 text-right">
+                                    <span class="divider">|</span>
+                                </div>
+                            </div>
+                            <div class="range-tip row">
+                                <div class="col col-33 text-left">
+                                    <span>Low</span>
+                                </div>
+                                <div class="col col-33 text-center">
+                                    <span>Medium</span>
+                                </div>
+                                <div class="col col-33 text-right">
+                                    <span>High</span>
+                                </div>
+                            </div>
+                        </div>
 
-                    <label class="item-select">
-                            <select>
-                                <option>Blue</option>
-                                <option selected>Green</option>
-                                <option>Red</option>
-                            </select>
-                        </label>
-                </div>
+                    </li>
+                    <!--end item-->
+
+                    <li class="item range-option">
+                        <div class="description">
+                            <ion-checkbox ng-model="agent.checkbox_pension">Pension</ion-checkbox>
+                        </div>
+                        <div class="range range-positive">
+                            <div class="input-range row">
+                                <input class="custom-range" type="range" name="volume" min="1" max="3" step="1" value="3" ng-disabled='!agent.checkbox_pension'  ng-model="agent.checkbox_pension_value">
+                            </div>
+                            <div class="range-divider row">
+                                <div class="col col-33 text-left">
+                                    <span class="divider">|</span>
+                                </div>
+                                <div class="col col-33 text-center">
+                                    <span class="divider">|</span>
+                                </div>
+                                <div class="col col-33 text-right">
+                                    <span class="divider">|</span>
+                                </div>
+                            </div>
+                            <div class="range-tip row">
+                                <div class="col col-33 text-left">
+                                    <span>Low</span>
+                                </div>
+                                <div class="col col-33 text-center">
+                                    <span>Medium</span>
+                                </div>
+                                <div class="col col-33 text-right">
+                                    <span>High</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </li>
+                    <!--end item-->
+                    <li class="item range-option">
+                        <div class="description">
+                            <ion-checkbox ng-model="agent.checkbox_tradititectiononal">Tradititectiononal Pro</ion-checkbox>
+                        </div>
+                        <div class="range range-positive">
+                            <div class="input-range row">
+                                <input class="custom-range" type="range" name="volume" min="1" max="3" step="1" value="3" ng-disabled='!agent.checkbox_tradititectiononal' ng-model='agent.checkbox_tradititectiononal_value'>
+                            </div>
+                            <div class="range-divider row">
+                                <div class="col col-33 text-left">
+                                    <span class="divider">|</span>
+                                </div>
+                                <div class="col col-33 text-center">
+                                    <span class="divider">|</span>
+                                </div>
+                                <div class="col col-33 text-right">
+                                    <span class="divider">|</span>
+                                </div>
+                            </div>
+                            <div class="range-tip row">
+                                <div class="col col-33 text-left">
+                                    <span>Low</span>
+                                </div>
+                                <div class="col col-33 text-center">
+                                    <span>Medium</span>
+                                </div>
+                                <div class="col col-33 text-right">
+                                    <span>High</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </li>
+                    <!--end item-->
+                    <li class="item range-option">
+                        <div class="description">
+                            <ion-checkbox ng-model="agent.checkbox_illness">Critical Illness & Disability</ion-checkbox>
+                        </div>
+                        <div class="range range-positive">
+                            <div class="input-range row">
+                                <input class="custom-range" type="range" name="volume" min="1" max="3" step="1" value="3" ng-disabled='!agent.checkbox_illness'  ng-disabled='agent.checkbox_illness_value'>
+                            </div>
+                            <div class="range-divider row">
+                                <div class="col col-33 text-left">
+                                    <span class="divider">|</span>
+                                </div>
+                                <div class="col col-33 text-center">
+                                    <span class="divider">|</span>
+                                </div>
+                                <div class="col col-33 text-right">
+                                    <span class="divider">|</span>
+                                </div>
+                            </div>
+                            <div class="range-tip row">
+                                <div class="col col-33 text-left">
+                                    <span>Low</span>
+                                </div>
+                                <div class="col col-33 text-center">
+                                    <span>Medium</span>
+                                </div>
+                                <div class="col col-33 text-right">
+                                    <span>High</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+                    <!--end item-->
+                    <li class="item range-option">
+                        <div class="description">
+                            <ion-checkbox ng-model="agent.checkbox_erjanjian">Perjanjian Jual Beli*</ion-checkbox>
+                        </div>
+                        <div class="range range-positive">
+                            <div class="input-range row">
+                                <input class="custom-range" type="range" name="volume" min="1" max="3" step="1" value="3" ng-disabled='!agent.checkbox_erjanjian'  ng-model='agent.checkbox_erjanjian_value'>
+                            </div>
+                            <div class="range-divider row">
+                                <div class="col col-33 text-left">
+                                    <span class="divider">|</span>
+                                </div>
+                                <div class="col col-33 text-center">
+                                    <span class="divider">|</span>
+                                </div>
+                                <div class="col col-33 text-right">
+                                    <span class="divider">|</span>
+                                </div>
+                            </div>
+                            <div class="range-tip row">
+                                <div class="col col-33 text-left">
+                                    <span>Low</span>
+                                </div>
+                                <div class="col col-33 text-center">
+                                    <span>Medium</span>
+                                </div>
+                                <div class="col col-33 text-right">
+                                    <span>High</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+                    <!--end item-->
+                    <li class="item range-option">
+                        <div class="description">
+                            <ion-checkbox ng-model="agent.checkbox_education">Education</ion-checkbox>
+                        </div>
+                        <div class="range range-positive">
+                            <div class="input-range row">
+                                <input class="custom-range" type="range" name="volume" min="1" max="3" step="1" value="3" ng-disabled='!agent.checkbox_education'  ng-model='agent.checkbox_education_value'>
+                            </div>
+                            <div class="range-divider row">
+                                <div class="col col-33 text-left">
+                                    <span class="divider">|</span>
+                                </div>
+                                <div class="col col-33 text-center">
+                                    <span class="divider">|</span>
+                                </div>
+                                <div class="col col-33 text-right">
+                                    <span class="divider">|</span>
+                                </div>
+                            </div>
+                            <div class="range-tip row">
+                                <div class="col col-33 text-left">
+                                    <span>Low</span>
+                                </div>
+                                <div class="col col-33 text-center">
+                                    <span>Medium</span>
+                                </div>
+                                <div class="col col-33 text-right">
+                                    <span>High</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+                    <!--end item-->
+                    <li class="item range-option">
+                        <div class="description">
+                            <ion-checkbox ng-model="agent.checkbox_inheritance">Inheritance</ion-checkbox>
+                        </div>
+                        <div class="range range-positive">
+                            <div class="input-range row">
+                                <input class="custom-range" type="range" name="volume" min="1" max="3" step="1" value="3" ng-disabled='!agent.checkbox_inheritance'  ng-model='agent.checkbox_inheritance_value'>
+                            </div>
+                            <div class="range-divider row">
+                                <div class="col col-33 text-left">
+                                    <span class="divider">|</span>
+                                </div>
+                                <div class="col col-33 text-center">
+                                    <span class="divider">|</span>
+                                </div>
+                                <div class="col col-33 text-right">
+                                    <span class="divider">|</span>
+                                </div>
+                            </div>
+                            <div class="range-tip row">
+                                <div class="col col-33 text-left">
+                                    <span>Low</span>
+                                </div>
+                                <div class="col col-33 text-center">
+                                    <span>Medium</span>
+                                </div>
+                                <div class="col col-33 text-right">
+                                    <span>High</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </li>
+                    <!--end item-->
+                    <li class="item range-option">
+                        <div class="description">
+                            <ion-checkbox ng-model="agent.checkbox_investment">Investment/Tabungan/Depotsits</ion-checkbox>
+                        </div>
+                        <div class="range range-positive">
+                            <div class="input-range row">
+                                <input class="custom-range" type="range" name="volume" min="1" max="3" step="1" value="3" ng-disabled="!agent.checkbox_investment"  ng-model="agent.checkbox_investment_value">
+                            </div>
+                            <div class="range-divider row">
+                                <div class="col col-33 text-left">
+                                    <span class="divider">|</span>
+                                </div>
+                                <div class="col col-33 text-center">
+                                    <span class="divider">|</span>
+                                </div>
+                                <div class="col col-33 text-right">
+                                    <span class="divider">|</span>
+                                </div>
+                            </div>
+                            <div class="range-tip row">
+                                <div class="col col-33 text-left">
+                                    <span>Low</span>
+                                </div>
+                                <div class="col col-33 text-center">
+                                    <span>Medium</span>
+                                </div>
+                                <div class="col col-33 text-right">
+                                    <span>High</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </li>
+                    </li class='item'>
+                    <a href="#app/customer" class="btn_next"  ng-click='collectInfo()'><button class="button button-block button-stable">Next</button></a>
+                    </li>
+                    <!-- end item -->
+
             </div>
-            <div class="list list-inset">
-                <h1 class="text-center">Which existing policy protection does the customer have?</h1>
-                <div class="row row-no-padding">
-                    <div class="button-bar">
-                        <a class="button col col-50">Health Fund</a>
-                        <a class="button col col-50">Perjanjian Jual Beli*</a>
-                    </div>
-                </div>
-                <div class="row row-no-padding">
-                    <div class="button-bar">
-                        <a class="button col col-50">Critical Illness & Disability</a>
-                        <a class="button col col-50">Investment/ Tabungan/ Depotsits</a>
-                    </div>
-                </div>
-                <div class="row row-no-padding">
-                    <div class="button-bar">
-                        <a class="button col col-50">Tradititectiononal Pro</a>
-                        <a class="button col col-50">Pension</a>
-                    </div>
-                </div>
-                <div class="row row-no-padding">
-                    <div class="button-bar">
-                        <a class="button col col-50">Education</a>
-                        <a class="button col col-50">Inheritance</a>
-                    </div>
-                </div>
-                <div class="row row-no-padding">
-                    <div class="button-bar">
-                        <a class="button col col-100">Others</a>
-                    </div>
-                </div>
-            </div>
-            <h1 class="text-center">Select level for any 3 financial priorities?</h1>
-            <div class="list list-inset">
-                <p class="text-center note">####################</p>
-            </div>
+
         </form>
     </ion-content>
 </ion-view>
-<div class="bar bar-footer bar-assertive">
-    <a href="#app/customer"><button class="button icon ion-home"></button></a>
-    <button class="button icon ion-star"></button>
-    <button class="button icon ion-checkmark-round"></button>
+
+<div class="bar bar-footer bar-assertive footer-agent">
+    <button class="button button-block item-icon-right button-clear">
+    Get a quote
+    <i class="icon ion-chevron-right"></i></button>
+
 </div>
