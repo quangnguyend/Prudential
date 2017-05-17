@@ -6,10 +6,5 @@ function agentCtrl ($scope, $state, $rootScope, $ionicPopup, UserService) {
 
   var vm = this
   vm.agents = []
-  vm.gotoCustomer = gotoCustomer
   vm.title = 'Agent'
-
-  function gotoCustomer () {
-    $state.go('app.customer')
-  }
 }
