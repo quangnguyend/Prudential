@@ -146,6 +146,7 @@
   font-size: 5vw;
   padding: 6vw;
   line-height: 6vw;
+  background-color: transparent;
 }
 
 #customer .customer-job ul li{
