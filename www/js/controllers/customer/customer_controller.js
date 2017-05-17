@@ -3,7 +3,7 @@ function customerCtrl ($scope, $rootScope, DataService, $location) {
   $rootScope.showBack = true
   $rootScope.showMenu = true
 
-  var customer = DataService.getData('customer') || {}
+  var customer = DataService.getData('customer') || { lastname: '', firstname: '', smoke: false, phone: ''}
   $scope.customer = customer
   
   $scope.clickButtonHandle = function(nextRoute){

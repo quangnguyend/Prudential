@@ -1,0 +1,28 @@
+<ion-view cache-view="false" view-title="Tell us about yourself">
+  <ion-content>
+    <div id="customer" class="container">
+      <div class="customer-smoker">
+        <div class='title'>Are you a smoker?</div>
+        <div class="row">
+          <div class="col col-50">
+            <button class="button smoker-btn" ng-class="{selected: customer.smoke}" ng-click="customer.smoke = true">Yes</button>
+          </div>
+          <div class="col col-50">
+            <button class="button smoker-btn" ng-class="{selected: !customer.smoke}" ng-click="customer.smoke = false">No</button>
+          </div>
+        </div>
+        <div class='title secondary'>Lastly, can we get your mobile number for future follow up?</div>
+        <div class="row">
+          <label class="item item-input phone-input">
+              <input ng-model='customer.phone' type="tel" placeholder="Phone Number">
+          </label>
+        </div>
+      </div>
+    </div>
+    </div>
+  </ion-content>
+</ion-view>
+
+<div class="bar bar-footer bar-assertive">
+  <a ng-click="clickButtonHandle('/app/customer_thanks')" title="Continue" class="btn">Next<button class="button button-clear"><i class="icon ion-ios-arrow-forward"></i></button></a>
+</div>
