@@ -108,3 +108,60 @@
 
 .cust-radio-other .item  .radio-icon{display: none;}
 .cust-radio-other .item-radio input:checked + .radio-content .item-content{background-color: #5b6770;color:#fff;}
+
+#customer.container{
+  padding: 6vw;
+}
+
+#customer .title{
+  margin-bottom: 3vw;
+  padding: 2vw;
+  font-size: 5vw;
+  line-height: 6vw;
+  text-align: center;
+  color: black;
+}
+
+#customer .customer-name input{
+  font-size: 4vw;
+}
+
+#customer .customer-dob{
+  text-align: center;
+}
+
+#customer .customer-dob span{
+  font-size: 3vw;
+}
+
+#customer .customer-dob .date-picker input{
+  font-size: 5vw;
+  padding: 6vw;
+  line-height: 6vw;
+}
+
+#customer .customer-job ul li{
+  padding-bottom: 3vmax;
+  padding-top: 2vmax;
+}
+
+
+#customer .customer-job ul .title{
+  margin-left: 3vw;
+  font-size: 4.5vw;
+  line-height: 5vw;
+}
+
+#customer .customer-job ul .describe{
+  margin-left: 7vw;
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+  display: block;
+  font-size: 3vw;
+  line-height: 4vw;
+}
+
+#customer .customer-job ul .custom_radio{
+    width: 3vw;
+    height: 3vw;
+}
