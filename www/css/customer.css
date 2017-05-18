@@ -114,6 +114,11 @@
   padding-bottom: 70px;
 }
 
+#customer .container div.is-enabled{
+  opacity: 0.4;
+  pointer-events: none;
+}
+
 #customer .bar.bar-footer.not-active{
   background-color: #c2c2c2;
   border: none;
@@ -136,6 +141,7 @@
 #customer .customer-name input{
   height: auto;
   font-size: 17px;
+  border-bottom: 1px solid rgb(91, 103, 112);
 }
 
 #customer .customer-dob{
