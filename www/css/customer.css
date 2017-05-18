@@ -141,6 +141,7 @@
 #customer .customer-name input{
   height: auto;
   font-size: 17px;
+  border-bottom: 1px solid rgb(91, 103, 112);
 }
 
 #customer .customer-dob{
