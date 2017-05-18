@@ -145,6 +145,26 @@ angular.module('prudential', ['ionic', 'prudential.controllers', 'prudential.ser
           'menuContent': {
             templateUrl: 'templates/illustration/illustration.html',
             controller: 'IllustrationCtrl'
+            }
+        }
+      })
+      .state('app.risk_profile', {
+        cache: false,
+        url: '/risk_profile',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/risk_profile/risk_profile.html',
+            controller: 'RiskProfileCtrl'
+            }
+        }
+      })
+      .state('app.projection', {
+        cache: false,
+        url: '/illustration',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/illustration/illustration.html',
+            controller: 'IllustrationCtrl'
           }
         }
       })
