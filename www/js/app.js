@@ -43,81 +43,18 @@ angular.module('prudential', ['ionic', 'prudential.controllers', 'prudential.ser
         }
       })
 
-      .state('app.customer_name', {
+      .state('app.customer', {
         cache: false,
-        url: '/customer_name',
+        url: '/customer',
         views: {
           'menuContent': {
-            templateUrl: 'templates/customer/customer_name.html',
+            templateUrl: 'templates/customer/index.html',
             controller: 'CustomerCtrl',
             controllerAs: 'vm'
           }
         }
       })
-      .state('app.customer_dob', {
-        cache: false,
-        url: '/customer_dob',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/customer/customer_dob.html',
-            controller: 'CustomerCtrl',
-            controllerAs: 'vm'
-          }
-        }
-      })
-      .state('app.customer_job', {
-        cache: false,
-        url: '/customer_job',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/customer/customer_job.html',
-            controller: 'CustomerCtrl',
-            controllerAs: 'vm'
-          }
-        }
-      })
-      .state('app.customer_goal', {
-        cache: false,
-        url: '/customer_goal',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/customer/customer_goal.html',
-            controller: 'CustomerCtrl',
-            controllerAs: 'vm'
-          }
-        }
-      })
-      .state('app.customer_existing', {
-        cache: false,
-        url: '/customer_existing',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/customer/customer_existing.html',
-            controller: 'CustomerCtrl',
-            controllerAs: 'vm'
-          }
-        }
-      })
-      .state('app.customer_smoker', {
-        cache: false,
-        url: '/customer_smoker',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/customer/customer_smoker.html',
-            controller: 'CustomerCtrl'
-          }
-        }
-      })
-      .state('app.customer_thanks', {
-        cache: false,
-        url: '/customer_thanks',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/customer/customer_thanks.html',
-            controller: 'CustomerCtrl'
-          }
-        }
-      })
+
       .state('app.spaj_start', {
         cache: false,
         url: '/spaj_start',
@@ -128,6 +65,7 @@ angular.module('prudential', ['ionic', 'prudential.controllers', 'prudential.ser
           }
         }
       })
+
       .state('app.addquestions', {
         cache: false,
         url: '/addquestions',

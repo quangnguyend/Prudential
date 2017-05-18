@@ -1,4 +1,4 @@
-function customerCtrl ($scope, $rootScope, DataService, $location) {
+function customerCtrl ($scope, $rootScope, DataService, $location, $ionicScrollDelegate) {
   $rootScope.showBar = true
   $rootScope.showBack = true
   $rootScope.showMenu = true
@@ -9,6 +9,12 @@ function customerCtrl ($scope, $rootScope, DataService, $location) {
   $scope.clickButtonHandle = function (nextRoute) {
     $location.url(nextRoute)
     DataService.setData('customer', $scope.customer)
+  }
+
+  $scope.clickNextHandle = function(classEl){  
+    var idElement = '#' + classEl
+    distance = $(idElement)[0].offsetTop
+    $ionicScrollDelegate.scrollTo(0, distance, true)
   }
 
   $scope.data = {
