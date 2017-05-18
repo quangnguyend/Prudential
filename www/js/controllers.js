@@ -50,7 +50,7 @@ angular.module('prudential.controllers', [])
   .controller('AddQuestionsCtrl', AddQuestionsCtrl)
   .controller('MyCustomerCtrl', MyCustomerCtrl)
   .controller('IllustrationCtrl', illustrationCtrl)
-
+  .controller('RiskProfileCtrl', riskProfileCtrl)
   .directive('groupedRedRadio', groupedRedRadio)
   .directive('groupedMultiChoice', groupedMultiChoice)
   .directive('dataService', dataService)
