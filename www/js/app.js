@@ -148,6 +148,16 @@ angular.module('prudential', ['ionic', 'prudential.controllers', 'prudential.ser
           }
         }
       })
+      .state('app.projection', {
+        cache: false,
+        url: '/illustration',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/illustration/illustration.html',
+            controller: 'IllustrationCtrl'
+          }
+        }
+      })
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/app/agent')
   })

@@ -1,0 +1,62 @@
+<div id='illustration-protection'>
+    <div class='title'><span>PRU</span>link Assurance Account</div>
+    <div class='banner'>
+        <img class='banner-img' src='../img/protection-banner.png' />
+        <div class='banner-content'>
+            <h3>Your peace of mind is our top priority</h3>
+            <div class='row'>
+                <ul class='col'>
+                    <li>Provides valuable benefits for your family on death.</li>
+                    <li>Provides lump sum for extra treatment or lifetime dream for critical illness.</li>
+                </ul>
+                <ul class='col'>
+                    <li>Covers cost of stay and treatment if you are hospitalised.</li>
+                    <li>Extra lump sum benefits to support you and family if you have accident.</li>
+                </ul>
+            </div>
+            <button class='button button-light'>More about PRUlink Assurance Account</button>
+        </div>
+    </div>
+    <div class='circle-chart row'>
+        <div ng-repeat="chart in data.protection_chart_1" class='protection-circle-chart col'>
+            <div class='chart-content'>
+                <span class='data-1'>{{chart.data_1}}</span>
+                <hr/>
+                <span class='data-2'>{{chart.data_2}}</span>
+            </div>
+        </div>
+    </div>
+
+    <div class='rect-chart row'>
+        <div ng-repeat="chart in data.protection_chart_2" class='col'>
+            <div class='protection-rect-chart'>
+                <div class='chart-content'>
+                    <span class='data-1'>{{chart.data_1}}</span>
+                    <br/>
+                    <span class='data-2'>{{chart.data_2}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>Options to customize the product</div>
+    <div class='protection-benefit'>
+        <span class='title'>{{data.protection_benefit.title}}</span>
+        <div class='row responsive-md'>
+            <h1 class='col'>Test</h1>
+            <h1 class='col'>Test</h1>
+            <h1 class='col'>Test</h1>
+            <h1 class='col'>Test</h1>
+            <h1 class='col'>Test</h1>
+            <h1 class='col'>Test</h1>
+            <h1 class='col'>Test</h1>
+            <h1 class='col'>Test</h1>
+            <h1 class='col'>Test</h1>
+            <h1 class='col'>Test</h1>
+            <h1 class='col'>Test</h1>
+            <h1 class='col'>Test</h1>
+            <h1 class='col'>Test</h1>
+            <h1 class='col'>Test</h1>
+        </div>
+    </div>
+</div>
