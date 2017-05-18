@@ -249,3 +249,7 @@ input[type="checkbox"], input[type="radio"] {
 .input-helper{
   padding: 5px 35px 10px;
 }
+
+.even-block {
+  background: #F7F5F5;
+}
