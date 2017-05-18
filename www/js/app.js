@@ -138,6 +138,16 @@ angular.module('prudential', ['ionic', 'prudential.controllers', 'prudential.ser
           }
         }
       })
+      .state('app.risk_profile', {
+        cache: false,
+        url: '/risk_profile',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/risk_profile/risk_profile.html',
+            controller: 'RiskProfileCtrl'
+          }
+        }
+      })
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/app/agent')
   })
