@@ -1,19 +1,10 @@
 <ion-view cache-view="false" view-title="Tell us about yourself" id='customer'>
   <ion-content>
     <div class="container">
-        <div id='customer_name' ng-include="'templates/customer/customer_name.html'"></div>
-        <button class="button next" ng-click="clickNextHandle('customer_dob')">Next</button>
-        <div id='customer_dob' ng-include="'templates/customer/customer_dob.html'"></div>
-        <button class="button next" ng-click="clickNextHandle('customer_job')">Next</button>
-        <div id='customer_job' ng-include="'templates/customer/customer_job.html'"></div>
-        <button class="button next" ng-click="clickNextHandle('customer_goal')">Next</button>
-        <div id='customer_goal' ng-include="'templates/customer/customer_goal.html'"></div>
-        <button class="button next" ng-click="clickNextHandle('customer_existing')">Next</button>
-        <div id='customer_existing' ng-include="'templates/customer/customer_existing.html'"></div>
-        <button class="button next" ng-click="clickNextHandle('customer_smoker')">Next</button>
-        <div id='customer_smoker' ng-include="'templates/customer/customer_smoker.html'"></div>
-        <button class="button next" ng-click="clickNextHandle('customer_thanks')">Next</button>
-        <div id='customer_thanks' ng-include="'templates/customer/customer_thanks.html'"></div>
+        <div ng-repeat="page in pageList" ng-class='page.enable ? "" :"is-enabled"'>
+            <div id='{{page.id}}' ng-include="page.path"></div>
+            <button class="button next" ng-click="clickNextHandle(page.id, page.next)">Next</button>
+        </div>
         <div class='shield'></div>
     </div>
   </ion-content>
