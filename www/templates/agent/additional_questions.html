@@ -4,9 +4,9 @@
       <div class="list list-inset">
         <h1 class="text-center">Who is the main insured for this policy?</h1>
         <div class="row row-no-padding">
-          <div class="button-bar">
-            <a class="button col col-50">The policy holder is the insured</a>
-            <a class="button col col-50 active">Someone else</a>
+          <div class="row responsive-sm" >
+            <a class="button col" ng-class='main_insured==="policy_holder"?"actived":""' ng-click='main_insured="policy_holder"'>The policy holder is the insured</a>
+            <a class="button col" ng-class='main_insured==="someone_else"?"actived":""' ng-click='main_insured="someone_else"'>Someone else</a>
           </div>
         </div>
       </div>
@@ -16,13 +16,13 @@
         <div class="row row-no-padding">
           <div class="col">
             <label class="item-stacked-label">
-              <span class="input-label">First Name</span>
+              <span class="input-label" style='width: 100%;'>First Name</span>
               <input type="text" placeholder="Enter">
             </label>
           </div>
           <div class="col">
             <label class="item-stacked-label">
-              <span class="input-label">Last Name</span>
+              <span class="input-label"  style='width: 100%;'>Last Name</span>
               <input type="text" placeholder="Enter">
             </label>
           </div>
@@ -33,20 +33,20 @@
         <h5>Relationship with policyholder</h5>
         <div class="row row-no-padding">
           <div class="button-bar">
-            <a class="button col col-50">Grand parent</a>
-            <a class="button col col-50">Parent</a>
+            <a class="button col col-50" ng-class='relationship==="grand_parent"?"actived":""' ng-click='relationship="grand_parent"'>Grand parent</a>
+            <a class="button col col-50" ng-class='relationship==="parent"?"actived":""' ng-click='relationship="parent"'>Parent</a>
           </div>
         </div>
         <div class="row row-no-padding">
           <div class="button-bar">
-            <a class="button col col-50">Child</a>
-            <a class="button col col-50">Grand child</a>
+            <a class="button col col-50" ng-class='relationship==="child"?"actived":""' ng-click='relationship="child"'>Child</a>
+            <a class="button col col-50" ng-class='relationship==="grand_child"?"actived":""' ng-click='relationship="grand_child"'>Grand child</a>
           </div>
         </div>
         <div class="row row-no-padding">
           <div class="button-bar">
-            <a class="button col col-50">Spouse</a>
-            <a class="button col col-50">Others</a>
+            <a class="button col col-50" ng-class='relationship==="spouse"?"actived":""' ng-click='relationship="spouse"'>Spouse</a>
+            <a class="button col col-50" ng-class='relationship==="others"?"actived":""' ng-click='relationship="others"'>Others</a>
           </div>
         </div>
       </div>
@@ -54,26 +54,26 @@
       <div class="list list-inset">
         <h5>Gender</h5>
         <div class="button-bar">
-          <a class="button col col-50">Male</a>
-          <a class="button col col-50">Female</a>
+          <a class="button col col-50" ng-class='gender==="male"?"actived":""' ng-click='gender="male"'>Male</a>
+          <a class="button col col-50" ng-class='gender==="female"?"actived":""' ng-click='gender="female"'>Female</a>
         </div>
       </div>
 
       <div class="list list-inset">
         <h5>Date of Birth</h5>
-        <input type="text" placeholder="dd/mm/yyyy">
+        <input type="date"/>
       </div>
 
       <div class="list list-inset">
         <h5>Occupation</h5>
-        <input type="text" placeholder="dd/mm/yyyy">
+        <input type="date"/>
       </div>
 
       <div class="list list-inset">
         <h5>Smoker ?</h5>
         <div class="button-bar">
-          <a class="button col col-50">Yes</a>
-          <a class="button col col-50">No</a>
+          <a class="button col col-50" ng-class='smoker?"actived":""' ng-click='smoker=true'>Yes</a>
+          <a class="button col col-50" ng-class='!smoker?"actived":""' ng-click='smoker=false'>No</a>
         </div>
       </div>
 
@@ -83,20 +83,20 @@
         <h5>Income range</h5>
         <div class="row row-no-padding">
           <div class="button-bar">
-            <a class="button col col-50">&lt;Range&gt;</a>
-            <a class="button col col-50">&lt;Range&gt;</a>
+            <a class="button col col-50" ng-class='range==="1"?"actived":""' ng-click='range="1"'>&lt;Range&gt;</a>
+            <a class="button col col-50" ng-class='range==="2"?"actived":""' ng-click='range="2"'>&lt;Range&gt;</a>
           </div>
         </div>
         <div class="row row-no-padding">
           <div class="button-bar">
-            <a class="button col col-50">&lt;Range&gt;</a>
-            <a class="button col col-50">&lt;Range&gt;</a>
+            <a class="button col col-50" ng-class='range==="3"?"actived":""' ng-click='range="3"'>&lt;Range&gt;</a>
+            <a class="button col col-50" ng-class='range==="4"?"actived":""' ng-click='range="4"'>&lt;Range&gt;</a>
           </div>
         </div>
         <div class="row row-no-padding">
           <div class="button-bar">
-            <a class="button col col-50">&lt;Range&gt;</a>
-            <a class="button col col-50">&lt;Range&gt;</a>
+            <a class="button col col-50" ng-class='range==="5"?"actived":""' ng-click='range="5"'>&lt;Range&gt;</a>
+            <a class="button col col-50" ng-class='range==="6"?"actived":""' ng-click='range="6"'>&lt;Range&gt;</a>
           </div>
         </div>
       </div>
@@ -104,10 +104,10 @@
       <h1 class="text-center">Who is the payor for this policy?</h1>
       <div class="list list-inset">
 
-        <div class="button-bar">
-          <a class="button col col-50">The policy holder</a>
-          <a class="button col col-50">The main insured</a>
-          <a class="button col col-50 active">Someone else</a>
+        <div class="row responsive-sm">
+          <a class="button col" ng-class='payor_policy==="policy_holder"?"actived":""' ng-click='payor_policy="policy_holder"'>The policy holder</a>
+          <a class="button col" ng-class='payor_policy==="main_insured"?"actived":""' ng-click='payor_policy="main_insured"'>The main insured</a>
+          <a class="button col" ng-class='payor_policy==="someone_else"?"actived":""' ng-click='payor_policy="someone_else"'>Someone else</a>
         </div>
         <p class="text-center note">Payor information will be required during policy application.</p>
       </div>
