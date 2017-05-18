@@ -118,6 +118,26 @@ angular.module('prudential', ['ionic', 'prudential.controllers', 'prudential.ser
           }
         }
       })
+      .state('app.addquestions', {
+        cache: false,
+        url: '/addquestions',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/agent/additional_questions.html',
+            controller: 'AddQuestionsCtrl'
+          }
+        }
+      })
+      .state('app.mycustomer', {
+        cache: false,
+        url: '/mycustomer',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/customer/customer_my_customer.html',
+            controller: 'MyCustomerCtrl'
+          }
+        }
+      })
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/app/agent')
   })
