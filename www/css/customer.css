@@ -151,13 +151,14 @@
 }
 
 #customer .customer-job ul li{
-  padding-bottom: 3vmax;
-  padding-top: 2vmax;
+  /*padding-bottom: 3vmax;
+  padding-top: 2vmax;*/
+  margin-bottom: 1.5rem;
 }
 
 
 #customer .customer-job ul .title{
-  margin-left: 3vw;
+  /*margin-left: 3vw;*/
   font-size: 17px;
   line-height: 5vw;
 }
@@ -172,8 +173,8 @@
 }
 
 #customer .customer-job ul .custom_radio{
-  width: 3vw;
-  height: 3vw;
+  /*width: 3vw;
+  height: 3vw;*/
 }
 
 #customer .customer-smoker .title.secondary{
@@ -190,7 +191,7 @@
   font-style: normal;
   font-weight: normal;
   font-size: 17px;
-  line-height: 48 px;
+  line-height: 48px;
   height: auto;
   opacity: 1.00;
   padding-left: 0;
