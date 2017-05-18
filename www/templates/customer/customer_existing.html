@@ -1,25 +1,12 @@
-<ion-view cache-view="false" view-title="Tell us about yourself" id="customer">
-  <ion-content>
-    <div class="container">
-      <div class="customer-job">
-        <div class="title">
-          If any, what insurance policies do you currently hold?
-        </div>
-        <ul>
-          <li ng-repeat="(key, item) in data.existing">
-            <input ng-model="customer.existing" value="{{item.title}}" class='custom_radio' type="radio" name="nature_occupation" id="nature_occupation_{{key}}"
-            />
-            <label class='' for="nature_occupation_{{key}}">{{item.title}}</label>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </ion-content>
-  <div ng-if="customer.existing" class="bar bar-footer bar-assertive">
-    <a ng-click="clickButtonHandle('/app/customer_smoker')" title="Continue" class="btn">Next<button class="button button-clear"><i class="icon ion-ios-arrow-forward"></i></button></a>
+<div class="customer-existing">
+  <div class="title">
+    If any, what insurance policies do you currently hold?
   </div>
-
-  <div ng-if="!customer.existing" class="bar bar-footer bar-assertive not-active">
-    <a title="Continue" class="btn">Next<button class="button button-clear"><i class="icon ion-ios-arrow-forward"></i></button></a>
-  </div>
-</ion-view>
+  <ul>
+    <li ng-repeat="(key, item) in data.existing">
+      <input ng-model="customer.existing" value="{{item.title}}" class='custom_radio' type="radio" name="nature_occupation" id="nature_occupation_{{key}}"
+      />
+      <label class='' for="nature_occupation_{{key}}">{{item.title}}</label>
+    </li>
+  </ul>
+</div>

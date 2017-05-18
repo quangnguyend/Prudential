@@ -128,6 +128,11 @@
   color: black;
 }
 
+#customer .container button.next{
+  width: 100%;
+  margin: 20px 0px 20px 0px;
+}
+
 #customer .customer-name input{
   height: auto;
   font-size: 17px;

@@ -1,26 +1,13 @@
-<ion-view cache-view="false" view-title="Tell us about yourself" id="customer">
-  <ion-content>
-    <div class="container">
-      <div class="customer-job">
-        <div class="title">
-          Which of the following best describes the nature of your occupation, {{customer.firstname}}?
-        </div>
-        <ul>
-          <li ng-repeat="(key, item) in data.nature_occupation">
-            <input ng-model="customer.nature_occupation" value="{{item.title}}" class='custom_radio' type="radio" name="nature_occupation"
-            id="nature_occupation_{{key}}" />
-            <label class='' for="nature_occupation_{{key}}">{{item.title}}</label>
-            <div class='input-helper'>{{item.describe}}</div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </ion-content>
-  <div ng-if="customer.nature_occupation" class="bar bar-footer bar-assertive">
-    <a ng-click="clickButtonHandle('/app/customer_goal')" title="Continue" class="btn">Next<button class="button button-clear"><i class="icon ion-ios-arrow-forward"></i></button></a>
+<div class="customer-job">
+  <div class="title">
+    Which of the following best describes the nature of your occupation, {{customer.firstname}}?
   </div>
-
-  <div ng-if="!customer.nature_occupation" class="bar bar-footer bar-assertive not-active">
-    <a title="Continue" class="btn">Next<button class="button button-clear"><i class="icon ion-ios-arrow-forward"></i></button></a>
-  </div>
-</ion-view>
+  <ul>
+    <li ng-repeat="(key, item) in data.nature_occupation">
+      <input ng-model="customer.nature_occupation" value="{{item.title}}" class='custom_radio' type="radio" name="nature_occupation"
+        id="nature_occupation_{{key}}" />
+      <label class='' for="nature_occupation_{{key}}">{{item.title}}</label>
+      <div class='input-helper'>{{item.describe}}</div>
+    </li>
+  </ul>
+</div>
