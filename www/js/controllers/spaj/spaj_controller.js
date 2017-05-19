@@ -8,12 +8,19 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService) {
 
   // default view is POLICY
   $scope.view = 'POLICY'
+  $scope.policyStep = '1'
   $scope.changeView = function (view) {
-    console.log('ssss')
     $scope.view = view || $scope.view
   }
-  $scope.changeVCon = function (view) {
-    console.log('aaaa')
-    $scope.aaaa = view || $scope.aaaa
+
+  $scope.policy = {
+    changeStep: function (step) {
+      $scope.policyStep = step || $scope.policyStep
+    }
+  }
+
+  $scope.goTo = function (id) {
+    $location.hash(id)
+    $ionicScrollDelegate.anchorScroll()
   }
 }

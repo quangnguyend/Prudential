@@ -58,7 +58,8 @@ angular.module('prudential', ['ionic', 'prudential.controllers', 'prudential.ser
         views: {
           'menuContent': {
             templateUrl: 'templates/spaj_form/spaj_start.html',
-            controller: 'SpajFormCtrl'
+            controller: 'SpajFormCtrl',
+            controllerAs: 'vm'
           }
         }
       })
@@ -68,7 +69,8 @@ angular.module('prudential', ['ionic', 'prudential.controllers', 'prudential.ser
         views: {
           'menuContent': {
             templateUrl: 'templates/agent/additional_questions.html',
-            controller: 'AddQuestionsCtrl'
+            controller: 'AddQuestionsCtrl',
+            controllerAs: 'vm'
           }
         }
       })
@@ -78,7 +80,8 @@ angular.module('prudential', ['ionic', 'prudential.controllers', 'prudential.ser
         views: {
           'menuContent': {
             templateUrl: 'templates/customer/customer_my_customer.html',
-            controller: 'MyCustomerCtrl'
+            controller: 'MyCustomerCtrl',
+            controllerAs: 'vm'
           }
         }
       })
@@ -88,7 +91,8 @@ angular.module('prudential', ['ionic', 'prudential.controllers', 'prudential.ser
         views: {
           'menuContent': {
             templateUrl: 'templates/illustration/illustration.html',
-            controller: 'IllustrationCtrl'
+            controller: 'IllustrationCtrl',
+            controllerAs: 'vm'
           }
         }
       })
@@ -98,7 +102,8 @@ angular.module('prudential', ['ionic', 'prudential.controllers', 'prudential.ser
         views: {
           'menuContent': {
             templateUrl: 'templates/risk_profile/risk_profile.html',
-            controller: 'RiskProfileCtrl'
+            controller: 'RiskProfileCtrl',
+            controllerAs: 'vm'
           }
         }
       })
@@ -108,13 +113,10 @@ angular.module('prudential', ['ionic', 'prudential.controllers', 'prudential.ser
         views: {
           'menuContent': {
             templateUrl: 'templates/spaj/spaj.html',
-            controller: 'SpajCtrl'
+            controller: 'SpajCtrl',
+            controllerAs: 'vm'
           }
         }
-      })
-      .state('app.ph_info', {
-        url: '/ph_info',
-        templateUrl: 'templates/spaj/policy/ph_info.html'
       })
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/app/spaj')
