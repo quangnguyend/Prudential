@@ -1,0 +1,54 @@
+.multi-step {
+  margin: 20px 0
+}
+
+.multi-step .col span {
+  background: #efecec;
+  color: #b4b7ba;
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+  line-height: 30px;
+  border-radius: 50%;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.multi-step .col {
+  position: relative
+}
+
+.multi-step .col:before {
+  width: 100%;
+  height: 1px;
+  content: '';
+  border: 1px solid #efecec;
+  position: absolute;
+  top: 20px;
+  z-index: -1;
+  left: 0px
+}
+
+.multi-step .col:first-child:before {
+  width: 50%;
+  left: 50%
+}
+
+.multi-step .col:last-child:before {
+  width: 50%;
+}
+
+.multi-step .col.active {
+  color: #DA291C
+}
+
+.multi-step .col.active span {
+  background: #DA291C;
+  color: #FFF
+}
+
+.multi-step .col.active:before {
+  border-color: #DA291C;
+  ;
+}

@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('prudential', ['ionic', 'prudential.controllers', 'prudential.services', 'ngCordova'])
+angular.module('prudential', ['ionic', 'prudential.controllers', 'prudential.services', 'ngAnimate', 'ui.router', 'ngCordova'])
 
   .run(function ($ionicPlatform, $rootScope) {
     $ionicPlatform.ready(function () {
@@ -30,7 +30,6 @@ angular.module('prudential', ['ionic', 'prudential.controllers', 'prudential.ser
         templateUrl: 'templates/layout/menu.html',
         controller: 'AppCtrl'
       })
-
       .state('app.agent', {
         cache: false,
         url: '/agent',
@@ -42,7 +41,6 @@ angular.module('prudential', ['ionic', 'prudential.controllers', 'prudential.ser
           }
         }
       })
-
       .state('app.customer', {
         cache: false,
         url: '/customer',
@@ -54,7 +52,6 @@ angular.module('prudential', ['ionic', 'prudential.controllers', 'prudential.ser
           }
         }
       })
-
       .state('app.spaj_start', {
         cache: false,
         url: '/spaj_start',
@@ -65,7 +62,6 @@ angular.module('prudential', ['ionic', 'prudential.controllers', 'prudential.ser
           }
         }
       })
-
       .state('app.addquestions', {
         cache: false,
         url: '/addquestions',
@@ -106,6 +102,20 @@ angular.module('prudential', ['ionic', 'prudential.controllers', 'prudential.ser
           }
         }
       })
+      .state('app.spaj', {
+        cache: false,
+        url: '/spaj',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/spaj/spaj.html',
+            controller: 'SpajCtrl'
+          }
+        }
+      })
+      .state('app.ph_info', {
+        url: '/ph_info',
+        templateUrl: 'templates/spaj/policy/ph_info.html'
+      })
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/app/agent')
+    $urlRouterProvider.otherwise('/app/spaj')
   })

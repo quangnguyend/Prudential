@@ -1,0 +1,12 @@
+<ion-view cache-view="false" view-title="SPAJ New Business Application" id="SPAJ">
+  <ion-content>
+    <div class='row tab-menu'>
+      <span class='col' ng-class="{'active':view === 'POLICY'}" ng-click="changeView('POLICY')">Policy Holder (Main Insured)</span>
+      <span class='col' ng-class="{'active':view === 'ADDITIONAL'}" ng-click="changeView('ADDITIONAL')">Additional Insured</span>
+    </div>
+    <div ng-show="view==='POLICY'" ng-include="'templates/spaj/policy/policy.html'"></div>
+    <div ng-show="view==='ADDITIONAL'" ng-include="'templates/illustration/illustration_investment.html'"></div>
+  </div>
+
+</ion-content>
+</ion-view>

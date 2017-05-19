@@ -1,0 +1,25 @@
+<ul class="row text-center multi-step">
+  <li class='col col-20 active' ng-click="changeVCon('q1')">
+    <span>1</span>
+    <p>Policy Holder<br>Information</p>
+  </li>
+  <li class='col col-20' ng-click="changeVCon('q2')">
+    <span>2</span>
+    <p>Policy Holder<br>Information</p>
+  </li>
+  <li class='col col-20'>
+    <span>3</span>
+    <p>Policy Holder<br>Information</p>
+  </li>
+  <li class='col col-20'>
+    <span>4</span>
+    <p>Policy Holder<br>Information</p>
+  </li>
+  <li class='col col-20'>
+    <span>5</span>
+    <p>Policy Holder<br>Information</p>
+  </li>
+</ul>
+
+<div ng-show="view==='q1'" ng-include="'templates/spaj/policy/ph_info.html'"></div>
+<div ng-show="view==='q2'" ng-include="'templates/spaj/policy/health.html'"></div>

@@ -53,6 +53,8 @@ angular.module('prudential.controllers', [])
   .controller('IllustrationCtrl', illustrationCtrl)
   .controller('RiskProfileCtrl', riskProfileCtrl)
   .controller('IllustrationCtrl', illustrationCtrl)
+  .controller('SpajCtrl', spajCtrl)
+
   .directive('groupedRedRadio', groupedRedRadio)
   .directive('groupedMultiChoice', groupedMultiChoice)
   .directive('dataService', dataService)
