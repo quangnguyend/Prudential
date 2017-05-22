@@ -1,22 +1,153 @@
-
 'use strict'
 
 function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService) {
   $rootScope.showBar = true
-  $rootScope.showBack = false
+  $rootScope.showBack = true
   $rootScope.showMenu = true
 
+  var vm = this
+  var POLICY = 'POLICY', ADDITIONAL = 'ADDITIONAL'
+
+// data of policy page
+  vm.pageList = [
+    { step: '1', title: 'Policy Holder Information', template: 'templates/spaj/policy/ph_info.html', valid: false },
+    { step: '2', title: 'Active Insurance Policies', template: 'templates/spaj/policy/active_insurance.html', valid: false },
+    { step: '3', title: 'Prospective Beneficiaries', template: 'templates/spaj/policy/beneficiaries.html', valid: false },
+    { step: '4', title: 'Health Questions', template: 'templates/spaj/policy/health.html', valid: false },
+    { step: '5', title: 'Document Upload', template: 'templates/spaj/policy/document_upload.html', valid: false }
+  ]
+
+  vm.dataBeneficiary = [
+    {name: '', birthday: null, relationship: '', share: '', gender: ''},
+    {name: '', birthday: null, relationship: '', share: '', gender: ''},
+    {name: '', birthday: null, relationship: '', share: '', gender: ''},
+    {name: '', birthday: null, relationship: '', share: '', gender: ''}
+  ]
+
+  vm.insurancePolicies = [
+    {
+      'type_of_insurance': '',
+      'insurance_company': '',
+      'sum_assured': '',
+      'substandard_policy': false
+    },
+    {
+      'type_of_insurance': '',
+      'insurance_company': '',
+      'sum_assured': '',
+      'substandard_policy': false
+    }
+  ]
+  vm.typeOfInsurance = [
+      {name: 'Option 1', value: 1},
+      {name: 'Option 2', value: 2},
+      {name: 'Option 3', value: 3}
+  ]
   // default view is POLICY
-  $scope.view = 'POLICY'
-  $scope.policyStep = '1'
-  $scope.changeView = function (view) {
-    $scope.view = view || $scope.view
+  vm.view = POLICY
+  vm.policyStep = '1'
+
+  vm.changeView = function (view) {
+    vm.view = view || vm.view
   }
 
-  $scope.policy = {
+  // handle when user click on bottom button
+  vm.submitHandle = function () {
+    if (vm.view == POLICY) {
+      vm.policy.checker()
+    } else if (vm.view == ADDITIONAL) { }
+  }
+
+  // Zone for policy page
+  vm.policy = {
+    // this function will validate policy step page,
+    // then will update the "valid" status, which will enable or disable submit function
+    validator: function (step) {
+      var pageList = vm.pageList
+      function changeValid (step, isValid) {
+        pageList.forEach(function (page) {
+          if (page.step === step) {
+            page.valid = isValid
+          }
+        })
+      }
+
+      switch (step) {
+        case '1':
+          // TODO
+          // EXAMPLE HERE
+          // if($scope.policy.firstname !== null && $scope.policy.firstname !== null)
+          //   changeValid('1', true)
+          // esle
+          //   changeValid('1', false)
+
+          changeValid('1', true)
+          break
+        case '2':
+          // TODO
+          changeValid('2', true)
+          break
+        case '3':
+          // TODO
+          changeValid('3', true)
+          break
+        case '4':
+          // TODO
+          changeValid('4', true)
+          break
+        case '5':
+          // TODO
+          changeValid('5', true)
+          break
+        default:
+      }
+    },
+
+    // this will check validation before move to next step
+    checker: function () {
+      var self = this
+      this.validator(vm.policyStep)
+      vm.pageList.forEach(function (page) {
+        if (page.step === vm.policyStep && page.valid) {
+          vm.policy.nextStep()
+        }
+      })
+    },
+
+    // move to next step
+    nextStep: function () {
+      vm.policyStep = Number.parseInt(vm.policyStep) < vm.pageList.length
+        ? (Number.parseInt(vm.policyStep) + 1) + '' : vm.policyStep
+    },
+
+    // move to special step
     changeStep: function (step) {
-      $scope.policyStep = step || $scope.policyStep
+      vm.policyStep = step || vm.policyStep
+    },
+    // date of beneficiary
+    beneficiary: {
+      addRow: function () {
+        this.rows.push({name: '', birthday: null, relationship: '', share: '', gender: ''})
+      },
+      setGender: function (rowIndex, gender) {
+        console.log(rowIndex)
+        this.rows.forEach(function (row, index) {
+          if (index === rowIndex) {
+            row.gender = gender
+          }
+        })
+      }
     }
+
+    // addPolicy : function () {
+    //   var policy = {
+    //     "type_of_insurance" : "",
+    //     "insurance_company" : "",
+    //     "sum_assured" : "",
+    //     "substandard_policy" : false
+    //   };
+    //   $scope.policy.insurancePolicies.push(policy);
+    // }
   }
 
   $scope.goTo = function (id) {

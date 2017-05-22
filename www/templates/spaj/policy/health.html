@@ -1,156 +1,144 @@
 
-    <form>
-      <div class="list list-inset no-lines">
-        <div class='item'>
-          <h1 class='text-center'>Apakah anak Anda telah divaksinasi sesuai standar usia?</h1>
-          <div class="row">
-            <div class="col">
-              <input type="text" placeholder="Height" ng-model='spaj.height'>
-              <span class="item-note">cm</span>
-            </div>
-            <div class="col">
-              <input type="text" placeholder="Weight" ng-model='spaj.weight'>
-              <span class="item-note">kg</span>
-            </div>
-          </div>
-          <button class="button next" ng-class="{'button-assertive': spaj.height&&spaj.weight}" ng-disabled="!spaj.height || !spaj.weight">Next</button>
+<form id="health_question1">
+  <div class="list list-inset no-lines">
+    <div class='item'>
+      <h1 class='text-center'>Apakah anak Anda telah divaksinasi sesuai standar usia?</h1>
+      <div class="row">
+        <div class="col">
+          <input type="text" placeholder="Height" ng-model='spaj.height'>
+          <span class="item-note">cm</span>
         </div>
-
-        <div class='item' id="page2_6_step2">
-          <h1 class='text-center'>Are you a smoker?</h1>
-          <div class="row">
-            <div class="col col-50">
-              <button class="button smoker-btn" ng-class="{selected: question2}" ng-click="question2 = true">Yes</button>
-            </div>
-            <div class="col col-50">
-              <button class="button smoker-btn" ng-class="{selected: !question2}" ng-click="question2 = false">No</button>
-            </div>
-          </div>
-          <h1 class='text-center'>How many sticks of cigarettes do you smoke in a day?</h1>
-          <div class="row">
-            <input type="text" placeholder="Enter" />
-          </div>
-          <button class="button next" ng-click="clickNextHandle(page.id, page.next)">Next</button>
-        </div>
-
-        <div class='item'>
-          <h1 class='text-center'>Are you on any medication?</h1>
-          <div class="row">
-            <div class="col col-50">
-              <button class="button smoker-btn" ng-class="{selected: question0}" ng-click="question0 = true">Yes</button>
-            </div>
-            <div class="col col-50">
-              <button class="button smoker-btn" ng-class="{selected: !question0}" ng-click="question0 = false">No</button>
-            </div>
-          </div>
-          <h1 class='text-center'>Please specify the medication type and the reason for that.</h1>
-          <div class="row">
-            <input type="text" placeholder="Enter" />
-          </div>
-          <button class="button next" ng-click="clickNextHandle(page.id, page.next)">Next</button>
-        </div>
-
-        <div class='item'>
-
-
-          <div class="row">
-            <div class="col col-50">
-              High blood pressure
-            </div>
-            <div class="col col-50">
-              <div class="row">
-                <div class="col">
-                  <button class="button smoker-btn" ng-class="{selected: question3}" ng-click="question3 = true">Yes</button>
-                </div>
-                <div class="col">
-                  <button class="button smoker-btn" ng-class="{selected: !question3}" ng-click="question3 = false">No</button>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <div class="row">
-            <div class="col col-50">
-              High cholestrol
-            </div>
-            <div class="col col-50">
-              <div class="row">
-                <div class="col">
-                  <button class="button smoker-btn" ng-class="{selected: question4}" ng-click="question4 = true">Yes</button>
-                </div>
-                <div class="col">
-                  <button class="button smoker-btn" ng-class="{selected: !question4}" ng-click="question4 = false">No</button>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <div class="row">
-            <div class="col col-50">
-              Congenital heart disease or other congenital diseases
-            </div>
-            <div class="col col-50">
-              <div class="row">
-                <div class="col">
-                  <button class="button smoker-btn" ng-class="{selected: question5}" ng-click="question5 = true">Yes</button>
-                </div>
-                <div class="col">
-                  <button class="button smoker-btn" ng-class="{selected: !question5}" ng-click="question5 = false">No</button>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <div class="row">
-            <div class="col col-50">
-              Heart/blood vessel abnormality
-            </div>
-            <div class="col col-50">
-              <div class="row">
-                <div class="col">
-                  <button class="button smoker-btn" ng-class="{selected: question6}" ng-click="question6 = true">Yes</button>
-                </div>
-                <div class="col">
-                  <button class="button smoker-btn" ng-class="{selected: !question6}" ng-click="question6 = false">No</button>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <div class="row">
-            <div class="col col-50">
-              Stroke
-            </div>
-            <div class="col col-50">
-              <div class="row">
-                <div class="col">
-                  <button class="button smoker-btn" ng-class="{selected: question8}" ng-click="question8 = true">Yes</button>
-                </div>
-                <div class="col">
-                  <button class="button smoker-btn" ng-class="{selected: !question8}" ng-click="question8 = false">No</button>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <div class="row">
-            <div class="col col-50">
-              Rheumatoid fever/rheumatoid heart disease
-            </div>
-            <div class="col col-50">
-              <div class="row">
-                <div class="col">
-                  <button class="button smoker-btn" ng-class="{selected: question7}" ng-click="question7 = true">Yes</button>
-                </div>
-                <div class="col">
-                  <button class="button smoker-btn" ng-class="{selected: !question7}" ng-click="question7 = false">No</button>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <!--end item -->
-
+        <div class="col">
+          <input type="text" placeholder="Weight" ng-model='spaj.weight'>
+          <span class="item-note">kg</span>
         </div>
       </div>
-    </form>
+      <button class="button next" ng-class="{'button-assertive': spaj.height&&spaj.weight}" ng-disabled="!spaj.height || !spaj.weight">Next</button>
+    </div>
+    <div class='item' id="page2_6_step2">
+      <h1 class='text-center'>Are you a smoker?</h1>
+      <div class="row">
+        <div class="col col-50">
+          <button class="button smoker-btn" ng-class="{selected: question2}" ng-click="question2 = true">Yes</button>
+        </div>
+        <div class="col col-50">
+          <button class="button smoker-btn" ng-class="{selected: !question2}" ng-click="question2 = false">No</button>
+        </div>
+      </div>
+      <h1 class='text-center'>How many sticks of cigarettes do you smoke in a day?</h1>
+      <div class="row">
+        <input type="text" placeholder="Enter" />
+      </div>
+      <button class="button next" ng-click="clickNextHandle(page.id, page.next)">Next</button>
+    </div>
+    <div class='item'>
+      <h1 class='text-center'>Are you on any medication?</h1>
+      <div class="row">
+        <div class="col col-50">
+          <button class="button smoker-btn" ng-class="{selected: question0}" ng-click="question0 = true">Yes</button>
+        </div>
+        <div class="col col-50">
+          <button class="button smoker-btn" ng-class="{selected: !question0}" ng-click="question0 = false">No</button>
+        </div>
+      </div>
+      <h1 class='text-center'>Please specify the medication type and the reason for that.</h1>
+      <div class="row">
+        <input type="text" placeholder="Enter" />
+      </div>
+      <button class="button next" ng-click="clickNextHandle(page.id, page.next)">Next</button>
+    </div>
+    <div class='item'>
+      <div class="row">
+        <div class="col col-50">
+          High blood pressure
+        </div>
+        <div class="col col-50">
+          <div class="row">
+            <div class="col">
+              <button class="button smoker-btn" ng-class="{selected: question3}" ng-click="question3 = true">Yes</button>
+            </div>
+            <div class="col">
+              <button class="button smoker-btn" ng-class="{selected: !question3}" ng-click="question3 = false">No</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-50">
+          High cholestrol
+        </div>
+        <div class="col col-50">
+          <div class="row">
+            <div class="col">
+              <button class="button smoker-btn" ng-class="{selected: question4}" ng-click="question4 = true">Yes</button>
+            </div>
+            <div class="col">
+              <button class="button smoker-btn" ng-class="{selected: !question4}" ng-click="question4 = false">No</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-50">
+          Congenital heart disease or other congenital diseases
+        </div>
+        <div class="col col-50">
+          <div class="row">
+            <div class="col">
+              <button class="button smoker-btn" ng-class="{selected: question5}" ng-click="question5 = true">Yes</button>
+            </div>
+            <div class="col">
+              <button class="button smoker-btn" ng-class="{selected: !question5}" ng-click="question5 = false">No</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-50">
+          Heart/blood vessel abnormality
+        </div>
+        <div class="col col-50">
+          <div class="row">
+            <div class="col">
+              <button class="button smoker-btn" ng-class="{selected: question6}" ng-click="question6 = true">Yes</button>
+            </div>
+            <div class="col">
+              <button class="button smoker-btn" ng-class="{selected: !question6}" ng-click="question6 = false">No</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-50">
+          Stroke
+        </div>
+        <div class="col col-50">
+          <div class="row">
+            <div class="col">
+              <button class="button smoker-btn" ng-class="{selected: question8}" ng-click="question8 = true">Yes</button>
+            </div>
+            <div class="col">
+              <button class="button smoker-btn" ng-class="{selected: !question8}" ng-click="question8 = false">No</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-50">
+          Rheumatoid fever/rheumatoid heart disease
+        </div>
+        <div class="col col-50">
+          <div class="row">
+            <div class="col">
+              <button class="button smoker-btn" ng-class="{selected: question7}" ng-click="question7 = true">Yes</button>
+            </div>
+            <div class="col">
+              <button class="button smoker-btn" ng-class="{selected: !question7}" ng-click="question7 = false">No</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--end item -->
+    </div>
+  </div>
+</form>

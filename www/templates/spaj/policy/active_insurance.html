@@ -1,1 +1,54 @@
-active_insurance.html
+<div class="wrapper">
+  <form>
+    <h4>Your Active Insurance Policies</h4>
+    <div class="ins-toggle item-toggle">
+      Do you have active insurance policies with other  insurance companies?
+      <label class="toggle toggle-assertive">
+        <input type="checkbox" checked>
+        <div class="track">
+          <div class="handle"></div>
+        </div>
+      </label>
+    </div>
+    <div class="m-gap-30">
+      <ul>
+        <li class="heading-row">
+          <div class="float-left col-5 col-padding"></div>
+          <div class="float-left col-95">
+            <div class="row row-no-padding">
+              <div class="col col-25 padding-5 col-padding">Type of Insurance</div>
+              <div class="col col-25 padding-5 col-padding">Insurance Company</div>
+              <div class="col col-25 padding-5 col-padding">Sum Assured</div>
+              <div class="col col-25 padding-5 col-padding">Is this a substandard policy?</div>
+            </div>
+          </div>
+        </li>
+        <li class="clearfix" ng-repeat="item in policy.insurancePolicies">
+          <div class="float-left col-5 col-padding"><span class="row-number">{{$index + 1}}</span></div>
+          <div class="float-left col-95">
+            <div class="row row-no-padding">
+              <div class="col col-25 col-padding">
+                <select class=" form-input" ng-model="item.type_of_insurance">
+                  <option value="">Please Select</option>
+                  <option ng-repeat="type in policy.typeOfInsurance" value="{{type.value}}">{{type.name}}</option>
+                </select>
+              </div>
+              <div class="col col-25 col-padding"><input type="text" class="form-input" placeholder="Company name" ng-model="item.insurance_company"></div>
+              <div class="col col-25 col-padding"><input type="text" class="form-input" placeholder="IDR" ng-model="item.sum_assured"></div>
+              <div class="col col-25 col-padding">
+                <label class="toggle toggle-assertive">
+                  <input type="checkbox" ng-model="item.substandard_policy">
+                  <div class="track">
+                    <div class="handle"></div>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="clearfix"></div>
+      <div class="m-gap-30"><a href="" class="red-link" ng-click="policy.addPolicy()" >  <i class="ion-ios-plus-empty"></i> <span class="txt-add-policy">Add more policies</span></a></div>
+    </div>
+  </form>
+</div>

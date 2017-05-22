@@ -52,6 +52,7 @@
   border-color: #DA291C;
   ;
 }
+
 /*Css health_question*/
 #health_question1 h1 {
   white-space: normal
@@ -86,4 +87,169 @@
 
 #health_question1 .item-note {
   margin-top: -27px
+}
+
+#beneficiary{
+  padding: 10px;
+}
+
+#beneficiary table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+/* Css PH Info */
+#policy_info_ph_info, #policy_info_ph_info h2, #policy_info_ph_info .button, #policy_info_ph_info .input-label, #policy_info_ph_info input[type="text"], #policy_info_ph_info input[type="date"], #policy_info_ph_info .form_select{
+  font-family: "Roboto", "Frutiger-Regular", "Helvetica Neue", "Segoe UI", sans-serif !important;
+}
+
+#policy_info_ph_info h2.headline {
+  color: #5B6770;
+  font-size: 17px;
+  margin-bottom: 39px;
+}
+
+#policy_info_ph_info input[type="text"], #policy_info_ph_info input[type="date"] {
+  width: 100%;
+  font-size: 16px;
+  color: #49545D;
+}
+
+#policy_info_ph_info input[type="date"]{
+  width: 94%;
+}
+
+#policy_info_ph_info .small_input {
+  width: 78% !important;
+}
+
+#policy_info_ph_info .input-label {
+  font-size: 11px;
+}
+
+#policy_info_ph_info .label_medium_size {
+  font-size: 12px;
+  color: #9B9B9B;
+}
+
+#policy_info_ph_info .button-block > .button:first-child{
+  margin-right: 30px;
+}
+
+#policy_info_ph_info .button-block .button {
+  font-size: 14px;
+  font-weight: 500;
+  display: block;
+  float: left;
+  padding: 7px 28px;
+  min-height: 10px;
+  line-height: inherit;
+}
+
+#policy_info_ph_info .button-block .button:hover, #policy_info_ph_info .button-block .button.active {
+  background-color: #d6d6d6;
+}
+
+#policy_info_ph_info .icon-calendar {
+  font-size: 35px;
+  float: left;
+  display: block;
+  margin-right: 10px;
+}
+
+#policy_info_ph_info .item {
+  border: none;
+}
+
+#policy_info_ph_info .form_select {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 100%;
+  width: 100%;
+  color: rgba(91, 103, 112, 0.5);
+  padding: 5px;
+  padding-left: 0;
+  margin-top: 5px;
+  margin-left: 0;
+  background-color: #fff;
+  border: none;
+}
+
+#policy_info_ph_info input[type="date"], #policy_info_ph_info .form_select, #policy_info_ph_info input[type="text"] {
+  border-bottom: 1px solid #D8D8D8;
+  padding-bottom: 4px;
+}
+
+/* Active Insurance Policies */
+.wrapper{
+  width: 90%;
+  margin: 0 auto;
+}
+.ins-toggle {
+  background-color: #fff;
+  color: #444;
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin: -1px;
+  padding: 5px 99px 5px 0px;
+}
+.m-gap-30{
+  margin-top: 30px;
+}
+.clearfix{
+  clear: both;
+}
+.lst-insurance-policy .input-label{
+  width: 50%;
+}
+.heading-row{
+  font-size: 80%;
+  line-height: 110%;
+}
+.clearfix:after{
+  content: '';
+  display: inline;
+  clear: both;
+}
+.float-left{
+  float: left;
+}
+.col-5{
+  width: 5%;
+}
+.col-95{
+  width: 95%;
+}
+.row .col-padding, .col-padding{
+  padding: 5px;
+}
+input[type="text"].form-input{
+  border-bottom: 1px solid #5b6770;
+  max-width: 100%;
+}
+select.form-input{
+  max-width: 100%;
+  display: block;
+  padding-top: 2px;
+  padding-left: 0;
+  height: 34px;
+  color: #111;
+  vertical-align: middle;
+  font-size: 14px;
+  line-height: 16px;
+  border: none;
+  border-bottom: 1px solid #5b6770;
+}
+.row-number{
+  height: 34px;
+  line-height: 34px;
+  display: inline-block;
+}
+.red-link{
+  color: #DA291C;
+  text-decoration: none;
+}
+.txt-add-policy{
+  margin-left: 10px;
 }

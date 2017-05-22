@@ -1,12 +1,14 @@
 <ion-view cache-view="false" view-title="SPAJ New Business Application" id="SPAJ">
-  <ion-content>
+  <ion-content class="has-footer has-header">
     <div class='row tab-menu'>
-      <span class='col' ng-class="{'active':view === 'POLICY'}" ng-click="changeView('POLICY')">Policy Holder (Main Insured)</span>
-      <span class='col' ng-class="{'active':view === 'ADDITIONAL'}" ng-click="changeView('ADDITIONAL')">Additional Insured</span>
+      <span class='col' ng-class="{'active':view === 'POLICY'}" ng-click="vm.changeView('POLICY')">Policy Holder (Main Insured)</span>
+      <span class='col' ng-class="{'active':view === 'ADDITIONAL'}" ng-click="vm.changeView('ADDITIONAL')">Additional Insured</span>
     </div>
-    <div ng-show="view==='POLICY'" ng-include="'templates/spaj/policy/policy.html'"></div>
-    <div ng-show="view==='ADDITIONAL'" ng-include="'templates/illustration/illustration_investment.html'"></div>
-  </div>
-
-</ion-content>
+    <div ng-show="vm.view==='POLICY'" ng-include="'templates/spaj/policy/policy.html'"></div>
+    <div ng-show="vm.view==='ADDITIONAL'" ng-include="'templates/illustration/illustration_investment.html'"></div>
+    </div>
+  </ion-content>
 </ion-view>
+  <div ng-show="true" class="bar bar-footer bar-assertive">
+    <a ng-click="vm.submitHandle()" title="Continue" class="btn">Next<button class="button button-clear"><i class="icon ion-ios-arrow-forward"></i></button></a>
+  </div>
