@@ -118,6 +118,17 @@ angular.module('prudential', ['ionic', 'prudential.controllers', 'prudential.ser
           }
         }
       })
+      .state('app.spaj_esignature', {
+        cache: false,
+        url: '/spaj_esignature',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/spaj/e-signature.html',
+            controller: 'ESignatureCtrl',
+            controllerAs: 'vm'
+          }
+        }
+      })
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/app/spaj')
   })

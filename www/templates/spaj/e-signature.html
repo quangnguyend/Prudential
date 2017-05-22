@@ -1,0 +1,81 @@
+<ion-view cache-view="false" view-title="SPAJ New Business Application eSign" id="SPAJ">
+    <ion-content class="has-footer has-header">
+        <div id='spaj-esignature'>
+            <div class='additional-notes'>
+                Amendment / Additional Notes
+                <input type='input' ng-model='data.additional_notes' placeholder="Please add any comment or amendment relevant to this policy"></input>
+            </div>
+            <div class='declaration'>
+                <section class='agent-declaration'>
+                    <header>Agent Declaration</header>
+                    <div class='agent-info row responsive-sm'>
+                        <div class='col'>
+                            <span>Agent Name</span>
+                            <p>{{data.agent_declaration.name}}</p>
+                        </div>
+                        <div class='col'>
+                            <span>Agency Unit</span>
+                            <p>{{data.agent_declaration.unit}}</p>
+                        </div>
+                        <div class='col'>
+                            <span>Agent Code</span>
+                            <p>{{data.agent_declaration.code}}</p>
+                        </div>
+                        <div class='col'>
+                            <span>Contact Number</span>
+                            <p>{{data.agent_declaration.contact_number}}</p>
+                        </div>
+                    </div>
+                    <div class='custom-checkbox'>
+                        <input type='checkbox' ng-model='data.agent_confirm_checkbox' name='agent-confirm-checkbox' id='agent-confirm-checkbox'></input>
+                        <label for='agent-confirm-checkbox'>I declare that I have provided the customer a reommendation based on his needs and risk profile</label>
+                    </div>
+                    <div class='signature-pad'>
+                        <span>AGENT SIGNATURE</span>
+                        <canvas id='agent-signature-canvas'></canvas>
+                    </div>
+                </section>
+                <section class='customer-declaration'>
+                    <header>Customer Declaration</header>
+                    <div class='agent-info row responsive-sm'>
+                        <div class='col'>
+                            <span>Agent Name</span>
+                            <p>{{data.customer_declaration.name}}</p>
+                        </div>
+                        <div class='col'>
+                            <span>Policy Refeence</span>
+                            <p>{{data.customer_declaration.policy_refeence}}</p>
+                        </div>
+                        <div class='col'>
+                            <span>Contact Number </span>
+                            <p>{{data.customer_declaration.contact_number}}</p>
+                        </div>
+                    </div>
+                    <div class='custom-checkbox'>
+                        <input type='checkbox' ng-model="data.accepted_agent_checkbox" name='accepted-agent-checkbox' id='accepted-agent-checkbox'></input>
+                        <label for='accepted-agent-checkbox'>Completed and accepted my agent's recommendation through my financial goals and <span>risk assessment<span></label>
+                    </div>
+                    <div class='custom-checkbox'>
+                        <input type='checkbox' ng-model="data.completed_form_checkbox" name='completed-form-checkbox' id='completed-form-checkbox'></input>
+                        <label for='completed-form-checkbox'>Completed the <span>SPAJ form</span> to the best of my knowledge, if otherwise this application would be deemed void.</label>
+                    </div>
+                    <div class='signature-pad'>
+                        <span>Policy Holder</span>
+                        <canvas id='policyholder-signature-canvas'></canvas>
+                    </div>
+                    <div class='signature-pad'>
+                        <span>MAIN LIFE ASSURED</span>
+                        <canvas id='mainlife-signature-canvas'></canvas>
+                    </div>
+                    <div class='signature-pad'>
+                        <span>PARENT SIGNATURE (IF INSURE BELOW 21)</span>
+                        <canvas id='parent-signature-canvas'></canvas>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
+<div ng-show="true" class="bar bar-footer bar-assertive">
+    <a title="Continue" class="btn">Next<button class="button button-clear"><i class="icon ion-ios-arrow-forward"></i></button></a>
+</div>
