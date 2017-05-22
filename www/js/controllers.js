@@ -50,6 +50,7 @@ angular.module('prudential.controllers', [])
   .controller('RiskProfileCtrl', riskProfileCtrl)
   .controller('IllustrationCtrl', illustrationCtrl)
   .controller('SpajCtrl', spajCtrl)
+  .controller('Spaj2_11Ctrl', spaj2_11Ctrl)
   .controller('ESignatureCtrl', eSignatureCtrl)
 
   .directive('groupedRedRadio', groupedRedRadio)

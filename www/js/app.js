@@ -129,6 +129,17 @@ angular.module('prudential', ['ionic', 'prudential.controllers', 'prudential.ser
           }
         }
       })
+      .state('app.spaj2_11', {
+        cache: false,
+        url: '/spaj_page2_11',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/spaj/policy/page2_11.html',
+            controller: 'SpajCtrl',
+            controllerAs: 'vm'
+          }
+        }
+      })
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/app/spaj')
   })

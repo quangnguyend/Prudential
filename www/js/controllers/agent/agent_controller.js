@@ -55,3 +55,7 @@ function groupedMultiChoice () {
     }
   }
 }
+
+function spaj2_11Ctrl () {
+  // Todo
+}
