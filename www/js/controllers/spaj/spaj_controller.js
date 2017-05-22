@@ -18,10 +18,10 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService) {
   ]
 
   vm.dataBeneficiary = [
-    {name: '', birthday: null, relationship: '', share: '', gender: ''},
-    {name: '', birthday: null, relationship: '', share: '', gender: ''},
-    {name: '', birthday: null, relationship: '', share: '', gender: ''},
-    {name: '', birthday: null, relationship: '', share: '', gender: ''}
+    {name: '', birthday: null, relationship: '', relationship_placeholder:'Mother', share: '', gender: ''},
+    {name: '', birthday: null, relationship: '', relationship_placeholder:'Father', share: '', gender: ''},
+    {name: '', birthday: null, relationship: '', relationship_placeholder:'Brother', share: '', gender: ''},
+    {name: '', birthday: null, relationship: '', relationship_placeholder:'Sister', share: '', gender: ''}
   ]
 
   vm.insurancePolicies = [
@@ -45,7 +45,7 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService) {
   ]
   // default view is POLICY
   vm.view = POLICY
-  vm.policyStep = '3'
+  vm.policyStep = '1'
 
   vm.changeView = function (view) {
     vm.view = view || vm.view
@@ -130,7 +130,6 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService) {
         vm.dataBeneficiary.push({name: '', birthday: null, relationship: '', share: '', gender: ''})
       },
       setGender: function (rowIndex, gender) {
-        console.log(1)
         vm.dataBeneficiary.forEach(function (row, index) {
           if (index === rowIndex) {
             row.gender = gender
