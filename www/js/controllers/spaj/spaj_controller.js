@@ -166,7 +166,30 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService) {
       };
       vm.policy.insurancePolicies.push(policy);
     },
-  }
+    /* document upload page */
+    documents: [
+      {
+        "document_name" : "Proof of Identification",
+        "document_type" : "",
+        "document_image" : ""
+      },{
+        "document_name" : "Document 2",
+        "document_type" : "",
+        "document_image" : ""
+      },{
+        "document_name" : "Document 3",
+        "document_type" : "",
+        "document_image" : ""
+      },{
+        "document_name" : "Document 4",
+        "document_type" : "",
+        "document_image" : ""
+      }
+    ],
+    documentType : [
+      {name : "Identity Card", value : 1}
+    ]
+  };
 
   $scope.goTo = function (id) {
     $location.hash(id)

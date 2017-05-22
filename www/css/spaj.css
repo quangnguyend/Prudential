@@ -258,3 +258,75 @@
 .active-insurance-page.has-bottom-bar{
   padding-bottom: 100px;
 }
+/* Upload document page*/
+.upload-document-page .upload-document-name{
+  margin-top: 7px;
+  display: inline-block;
+}
+.upload-document-page.wrapper{
+  width: 90%;
+  margin: 0 auto;
+}
+.upload-document-page .m-gap-30{
+  margin-top: 30px;
+}
+.upload-document-page .clearfix{
+  clear: both;
+}
+.upload-document-page .float-left{
+  float: left;
+}
+.upload-document-page .col-5{
+  width: 5%;
+}
+.upload-document-page .col-95{
+  width: 95%;
+}
+.upload-document-page .row .col-padding, .upload-document-page .col-padding{
+  padding: 5px;
+}
+.upload-document-page input[type="text"].form-input{
+  border-bottom: 1px solid #5b6770;
+  max-width: 100%;
+}
+.upload-document-page select.form-input{
+  max-width: 100%;
+  display: block;
+  padding-top: 2px;
+  padding-left: 0;
+  height: 34px;
+  color: #111;
+  vertical-align: middle;
+  font-size: 14px;
+  line-height: 16px;
+  border: none;
+  border-bottom: 1px solid #5b6770;
+  background-color: #fff;
+}
+.upload-document-page .row-number{
+  height: 34px;
+  line-height: 34px;
+  display: inline-block;
+}
+.upload-document-page.has-bottom-bar{
+  padding-bottom: 100px;
+}
+.document-upload-file{
+  position: relative;
+}
+.document-upload-file input[type=file]{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  opacity: 0;
+  z-index: 1;
+}
+.document-upload-file .btn-upload-img{
+  font-size: 14px;
+  padding: 0 5px;
+  line-height: 120%;
+  background: #efecec;
+}
