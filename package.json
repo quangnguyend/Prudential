@@ -22,7 +22,7 @@
     "pre-git": {
       "pre-push": [
         "echo 'Pre-push checks...' && exit 0",
-        "grunt lint"
+        "gulp lint"
       ]
     }
   }
