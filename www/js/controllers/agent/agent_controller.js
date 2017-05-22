@@ -1,4 +1,3 @@
-
 'use strict'
 
 function agentCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService) {
@@ -22,7 +21,7 @@ function groupedRedRadio () {
       value: '=groupedRedRadio'
     },
     link: function (scope, element, attrs, ngModelCtrl) {
-      element.on('click', function (e) {
+      element.on('click', function () {
         scope.$apply(function () {
           ngModelCtrl.$setViewValue(scope.value)
         })
