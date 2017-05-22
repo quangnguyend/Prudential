@@ -1,7 +1,7 @@
 function riskProfileCtrl ($scope, $rootScope) {
-  $rootScope.showBar = true;
-  $rootScope.showBack = true;
-  $rootScope.showMenu = true;
+  $rootScope.showBar = true
+  $rootScope.showBack = true
+  $rootScope.showMenu = true
 
   $scope.data = {
     investment_knowledge: null,
@@ -11,7 +11,6 @@ function riskProfileCtrl ($scope, $rootScope) {
     goal: null
   }
 
-  $scope.click = function(){
-    console.log($scope.data)
+  $scope.click = function () {
   }
 }
