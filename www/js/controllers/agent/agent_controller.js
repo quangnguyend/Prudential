@@ -11,7 +11,7 @@ function agentCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService) {
     DataService.setData(formData)
   }
 }
-
+function spaj2_11Ctrl () { }
 function groupedRedRadio () {
   return {
     restrict: 'A',

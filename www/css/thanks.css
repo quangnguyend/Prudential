@@ -1,0 +1,20 @@
+#thanks{}
+#thanks .title_small{    font-size: 16px;
+    white-space: normal;}
+#thanks .list-inset{margin-left:0px; margin-right:0px; }
+#thanks .item{border-left:none; border-right:none; padding:30px}
+#thanks .item h1{font-size:17px; margin-bottom:20px}
+#thanks .no-lines .item .row{    justify-content: space-between; margin-bottom:15px}
+#thanks .no-lines .item .row:last-child{
+  margin-bottom:0px
+}
+#thanks .no-lines .item .first{line-height:44px}
+#thanks .no-lines .item .first span{font-size:75%; vertical-align:top;     padding-right: 5px;}
+#thanks .no-lines .item .button{min-width:170px}
+
+#thanks .btn_img {
+ background: #f8f8f8 url(../img/icon_img.png) 15px no-repeat;
+    background-size: 20px auto;
+    -webkit-background-size: 20px auto;
+    padding-left: 30px;
+}
