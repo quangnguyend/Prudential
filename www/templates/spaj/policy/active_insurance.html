@@ -1,4 +1,4 @@
-<div class="wrapper">
+<div id="" class="wrapper has-bottom-bar active-insurance-page">
   <form>
     <h4>Your Active Insurance Policies</h4>
     <div class="ins-toggle item-toggle">
@@ -23,7 +23,7 @@
             </div>
           </div>
         </li>
-        <li class="clearfix" ng-repeat="item in policy.insurancePolicies">
+        <li class="clearfix" ng-repeat="item in vm.policy.insurancePolicies">
           <div class="float-left col-5 col-padding"><span class="row-number">{{$index + 1}}</span></div>
           <div class="float-left col-95">
             <div class="row row-no-padding">
@@ -48,7 +48,7 @@
         </li>
       </ul>
       <div class="clearfix"></div>
-      <div class="m-gap-30"><a href="" class="red-link" ng-click="policy.addPolicy()" >  <i class="ion-ios-plus-empty"></i> <span class="txt-add-policy">Add more policies</span></a></div>
+      <div class="m-gap-30"><a href="" class="red-link" ng-click="vm.policy.addPolicy()" >  <i class="ion-ios-plus-empty"></i> <span class="txt-add-policy">Add more policies</span></a></div>
     </div>
   </form>
 </div>

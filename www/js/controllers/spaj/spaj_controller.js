@@ -137,17 +137,35 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService) {
           }
         })
       }
-    }
-
-    // addPolicy : function () {
-    //   var policy = {
-    //     "type_of_insurance" : "",
-    //     "insurance_company" : "",
-    //     "sum_assured" : "",
-    //     "substandard_policy" : false
-    //   };
-    //   $scope.policy.insurancePolicies.push(policy);
-    // }
+    },
+    /* script active insurance page */
+    insurancePolicies: [
+      {
+        "type_of_insurance" : "",
+        "insurance_company" : "",
+        "sum_assured" : "",
+        "substandard_policy" : false
+      },{
+        "type_of_insurance" : "",
+        "insurance_company" : "",
+        "sum_assured" : "",
+        "substandard_policy" : false
+      }
+    ],
+    typeOfInsurance : [
+      {name : "Option 1", value : 1},
+      {name : "Option 2", value : 2},
+      {name : "Option 3", value : 3}
+    ],
+    addPolicy : function () {
+      var policy = {
+        "type_of_insurance" : "",
+        "insurance_company" : "",
+        "sum_assured" : "",
+        "substandard_policy" : false
+      };
+      vm.policy.insurancePolicies.push(policy);
+    },
   }
 
   $scope.goTo = function (id) {
