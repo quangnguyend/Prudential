@@ -16,11 +16,11 @@
             <td><input type='input' placeholder="Mother" ng-model="row.relationship"/></td>
             <td><input type='input' placeholder="%" ng-model="row.share"/></td>
             <td class="row">
-                <button ng-click="policy.beneficiary.setGender(index, 'male')">Male</button>
-                <button ng-click="policy.beneficiary.setGender(index, 'female')">Female</button>
+                <button ng-click="vm.policy.beneficiary.setGender(index, 'male')">Male</button>
+                <button ng-click="vm.policy.beneficiary.setGender(index, 'female')">Female</button>
             </td>
         </tr>
     </table>
-    {{policy.beneficiary.rows}}
-    <div ng-click="policy.beneficiary.addRow()"><i class="icon ion-plus"></i> Add more policies</div>
+    {{vm.dataBeneficiary}}
+    <div ng-click="vm.policy.beneficiary.addRow()"><i class="icon ion-plus"></i> Add more policies</div>
 </div>

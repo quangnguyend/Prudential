@@ -45,7 +45,7 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService) {
   ]
   // default view is POLICY
   vm.view = POLICY
-  vm.policyStep = '1'
+  vm.policyStep = '3'
 
   vm.changeView = function (view) {
     vm.view = view || vm.view
@@ -124,14 +124,14 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService) {
     changeStep: function (step) {
       vm.policyStep = step || vm.policyStep
     },
-    // date of beneficiary
+
     beneficiary: {
       addRow: function () {
-        this.rows.push({name: '', birthday: null, relationship: '', share: '', gender: ''})
+        vm.dataBeneficiary.push({name: '', birthday: null, relationship: '', share: '', gender: ''})
       },
       setGender: function (rowIndex, gender) {
-        console.log(rowIndex)
-        this.rows.forEach(function (row, index) {
+        console.log(1)
+        vm.dataBeneficiary.forEach(function (row, index) {
           if (index === rowIndex) {
             row.gender = gender
           }
