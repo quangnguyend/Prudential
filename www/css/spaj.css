@@ -145,6 +145,9 @@
 }
 
 /* Css PH Info */
+#policy_info_ph_info {
+  padding-bottom: 50px;
+}
 #policy_info_ph_info, #policy_info_ph_info h2, #policy_info_ph_info .button, #policy_info_ph_info .input-label, #policy_info_ph_info input[type="text"], #policy_info_ph_info input[type="date"], #policy_info_ph_info .form_select{
   font-family: "Roboto", "Frutiger-Regular", "Helvetica Neue", "Segoe UI", sans-serif !important;
 }
@@ -192,7 +195,7 @@
   line-height: inherit;
 }
 
-#policy_info_ph_info .button-block .button:hover, #policy_info_ph_info .button-block .button.active {
+#policy_info_ph_info .button-block .button:hover {
   background-color: #d6d6d6;
 }
 
@@ -225,6 +228,82 @@
 #policy_info_ph_info input[type="date"], #policy_info_ph_info .form_select, #policy_info_ph_info input[type="text"] {
   border-bottom: 1px solid #D8D8D8;
   padding-bottom: 4px;
+}
+
+#policy_info_ph_info .indent_label{
+  margin-top: 25px;
+}
+
+#policy_info_ph_info .checkbox input:before, #policy_info_ph_info .checkbox-icon:before {
+  border-radius: 0px;
+  background: #eee
+}
+
+#policy_info_ph_info .checkbox input:checked:before, #policy_info_ph_info .checkbox input:checked + .checkbox-icon:before {
+  background: #da291c;
+  border-radius: 0px;
+  border-color: #da291c;
+}
+#policy_info_ph_info .checkbox, #policy_info_ph_info .no_padding .row{
+  padding-left: 0;
+}
+#policy_info_ph_info .no_padding .row {
+  padding-right: 0;
+}
+#policy_info_ph_info .item-checkbox .checkbox {
+  left: 0;
+}
+#policy_info_ph_info .item-checkbox {
+  padding-left: 52px;
+}
+
+#policy_info_ph_info .cust-checkbox .checkbox input:checked:before,
+#policy_info_ph_info .cust-checkbox .checkbox input:checked + .checkbox-icon:before{background: #da291c;border-color: #da291c;}
+#policy_info_ph_info .cust-checkbox .desc{display: block;font-size: 14px;margin-top: 15px;}
+#policy_info_ph_info .button-block.full_width_button .button:first-child{
+  margin-right: 0
+}
+#policy_info_ph_info .button-block.full_width_button .button{
+  width: 100%;
+}
+#policy_info_ph_info .indent_row {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+#policy_info_ph_info .add_icon {
+  color: #da291c;
+  cursor: pointer;
+}
+#policy_info_ph_info .add_icon, #policy_info_ph_info .add_icon label {
+  cursor: pointer;
+}
+#policy_info_ph_info .add_icon i{
+  font-size: 32px;
+  font-weight: bold;
+  display: block;
+  margin-right: 20px;
+  float: left;
+}
+#policy_info_ph_info .add_icon label {
+  display: block;
+  float: left;
+  margin-top: 7px;
+}
+
+#policy_info_ph_info hr{
+  border: 1px solid #efecec;
+}
+#policy_info_ph_info .agree_text{
+  display: block;
+  white-space: normal;
+  margin-left: 50px;
+}
+#policy_info_ph_info .custom_checkbox {
+  display: block;
+}
+#policy_info_ph_info .custom_checkbox .item-checkbox{
+  padding-left: 35px;
+  float: left;
 }
 
 
