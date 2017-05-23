@@ -6,7 +6,7 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService) {
   $rootScope.showMenu = true
 
   var vm = this
-  var POLICY = 'POLICY', ADDITIONAL = 'ADDITIONAL'
+  var POLICY = 'Polis', MAIN_ENSURED = 'Utama', ADDITIONAL = 'Tambahan'
 
 // data of policy page
   vm.pageList = [
@@ -44,7 +44,7 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService) {
       {name: 'Option 3', value: 3}
   ]
   // default view is POLICY
-  vm.view = POLICY
+  vm.view = MAIN_ENSURED
   vm.policyStep = '1'
   vm.showStepBar = true
 
@@ -57,6 +57,8 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService) {
     if (vm.view == POLICY) {
       vm.policy.checker()
     } else if (vm.view == ADDITIONAL) {
+      // TODO
+    } else if (vm.view == MAIN_ENSURED) {
       // TODO
     }
   }
