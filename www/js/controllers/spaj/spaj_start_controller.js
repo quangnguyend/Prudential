@@ -26,11 +26,6 @@ function spajStartCtrl ($scope, $rootScope, UserService, DataService) {
       otherValue: ""
     }
   }
-  
-  $scope.debug = function () {
-    console.log($scope.data);
-  }
-
   $scope.validate = function() {
     // To do
   }
