@@ -118,6 +118,17 @@ angular.module('prudential', ['ionic', 'prudential.controllers', 'prudential.ser
           }
         }
       })
+      .state('app.terms_conditions', {
+        cache: false,
+        url: '/terms_conditions',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/spaj/policy/terms_conditions.html',
+            controller: 'termsConditionsCtrl',
+            controllerAs: 'vm'
+          }
+        }
+      })
       .state('app.spaj_esignature', {
         cache: false,
         url: '/spaj_esignature',

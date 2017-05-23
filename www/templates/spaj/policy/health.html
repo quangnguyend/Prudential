@@ -1,53 +1,62 @@
-
 <form id="health_question1">
   <div class="list list-inset no-lines">
-    <div class='item'>
-      <h1 class='text-center'>Apakah anak Anda telah divaksinasi sesuai standar usia?</h1>
+
+    <div class='item' id="health1_step1">
+      <h1 class='text-center'>My height and weight</h1>
       <div class="row">
-        <div class="col">
+        <div class="col col-50">
           <input type="text" placeholder="Height" ng-model='spaj.height'>
           <span class="item-note">cm</span>
         </div>
-        <div class="col">
+        <div class="col col-50">
           <input type="text" placeholder="Weight" ng-model='spaj.weight'>
           <span class="item-note">kg</span>
         </div>
       </div>
-      <button class="button next" ng-class="{'button-assertive': spaj.height&&spaj.weight}" ng-disabled="!spaj.height || !spaj.weight">Next</button>
+      <button 
+        class="button next" 
+        ng-class="{'button-dark': spaj.height&&spaj.weight}" 
+        ng-disabled="!spaj.height || !spaj.weight" 
+        ng-click="health1NextStep('health1_step2')">Next</button>
     </div>
-    <div class='item' id="page2_6_step2">
+
+
+    <div class='item' id="health1_step2" ng-class="{'_active': health1Steps[1]}">
       <h1 class='text-center'>Are you a smoker?</h1>
-      <div class="row">
-        <div class="col col-50">
-          <button class="button smoker-btn" ng-class="{selected: question2}" ng-click="question2 = true">Yes</button>
-        </div>
-        <div class="col col-50">
-          <button class="button smoker-btn" ng-class="{selected: !question2}" ng-click="question2 = false">No</button>
-        </div>
+      <div class="button-bar">
+        <a class="button col col-50" grouped-radio="'Yes'" ng-model="spaj.smoker">Yes</a>
+        <a class="button col col-50" grouped-radio="'No'" ng-model="spaj.smoker">No</a>
       </div>
       <h1 class='text-center'>How many sticks of cigarettes do you smoke in a day?</h1>
       <div class="row">
-        <input type="text" placeholder="Enter" />
+        <input type="text" placeholder="Enter"  ng-model='spaj.sticks_cigarettes'/>
       </div>
-      <button class="button next" ng-click="clickNextHandle(page.id, page.next)">Next</button>
+      <button class="button next" 
+       ng-disabled="!spaj.sticks_cigarettes || !spaj.smoker" 
+       ng-class="{'button-dark': spaj.sticks_cigarettes&&spaj.smoker}" 
+       ng-click="health1NextStep('health1_step3')"
+      >Next</button>
     </div>
-    <div class='item'>
+
+
+    <div class='item' id="health1_step3"  ng-class="{'_active': health1Steps[2]}">
       <h1 class='text-center'>Are you on any medication?</h1>
-      <div class="row">
-        <div class="col col-50">
-          <button class="button smoker-btn" ng-class="{selected: question0}" ng-click="question0 = true">Yes</button>
-        </div>
-        <div class="col col-50">
-          <button class="button smoker-btn" ng-class="{selected: !question0}" ng-click="question0 = false">No</button>
-        </div>
+      <div class="button-bar">
+        <a class="button col col-50" grouped-radio="'Yes'" ng-model="spaj.medication">Yes</a>
+        <a class="button col col-50" grouped-radio="'No'" ng-model="spaj.medication">No</a>
       </div>
       <h1 class='text-center'>Please specify the medication type and the reason for that.</h1>
       <div class="row">
-        <input type="text" placeholder="Enter" />
+        <input type="text" placeholder="Enter"   ng-model="spaj.medication_detail"/>
       </div>
-      <button class="button next" ng-click="clickNextHandle(page.id, page.next)">Next</button>
+      <button class="button next" 
+       ng-disabled="!spaj.medication || !spaj.medication_detail" 
+       ng-class="{'button-dark': spaj.medication_detail&&spaj.medication_detail}" 
+       ng-click="health1NextStep('health1_step4')">Next</button>
     </div>
-    <div class='item'>
+
+    <div class='item' id="health1_step4"  ng-class="{'_active': health1Steps[3]}">
+      <h1 class='text-center'>Do you suffer from the following conditions?</h1>
       <div class="row">
         <div class="col col-50">
           High blood pressure

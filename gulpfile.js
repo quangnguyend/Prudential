@@ -35,7 +35,7 @@ gulp.task('lint', () => {
 })
 
 gulp.task('sass', function (done) {
-  gulp.src('./scss/ionic.app.scss')
+  gulp.src('./scss/*.scss')
     .pipe(sass())
     .on('error', sass.logError)
     .pipe(gulp.dest('./www/css/'))
