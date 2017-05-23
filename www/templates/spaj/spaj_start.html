@@ -4,81 +4,122 @@
             <div class="list">
                 <div class="item">
                     <div class="description">
-                        Please check the following info which might affect your premium or required documents
+                        Silahkan cek info berikut yang mana dapat mempengaruhi dokumen premium atau dokumen yang dipersyaratkan
                     </div>
                 </div>
-                <div class="item even-block">
+                <div class="item gray-block">
                     <div class="description">
-                        I, the policy holder confirm that I am…
+                        Saya, pemegang polis mengkonfirmasi bahwa saya ...
                     </div>
                     <div class="row responsive-sm mini-center-container">
-                        <div class="col">
-                            <ion-checkbox class="policy-checkbox" ng-model="policyHolder.main_primary_insured">Main Primary Insured</ion-checkbox>
+                        <div class="col-50">
+                            <ion-checkbox class="policy-checkbox" ng-model="data.policyHolder.main_primary_insured">Tertanggung Utama</ion-checkbox>
                         </div>
-                        <div class="col">
-                            <ion-checkbox class="policy-checkbox" ng-model="policyHolder.policy_payor">Policy Payor</ion-checkbox>
+                        <div class="col-50">
+                            <ion-checkbox class="policy-checkbox" ng-model="data.policyHolder.policy_payor">Tertanggung Tambahan 1</ion-checkbox>
                         </div>
                     </div>
                     <div class="row responsive-sm mini-center-container">
+                        <div class="col-50">
+                            <ion-checkbox class="policy-checkbox" ng-model="data.policyHolder.additional_insured">Tertanggung Tambahan 2</ion-checkbox>
+                        </div>
+                        <div class="col-50">
+                            <ion-checkbox class="policy-checkbox" ng-model="data.policyHolder.no_insured">Bukan Tertanggung</ion-checkbox>
+                        </div>
+                    </div>
+                </div>
+                <div class="item gray-block mt-30">
+                    <div class="description">
+                        Saya, pemegang polis mengkonfirmasi bahwa saya ...
+                    </div>
+                    <div class="row responsive-sm mini-center-container radio-block">
+                        <div class="col-50">
+                            <input ng-model="data.policyRadio" class='custom_radio' type="radio" value="Pemegang Polis" name="pemegang_polis" id="pemegang_polis"
+                            />
+                            <label class='' for="pemegang_polis">Pemegang Polis</label>
+                        </div>
+                        <div class="col-50">
+                            <input ng-model="data.policyRadio" class='custom_radio' type="radio" value="Tertanggung Utama" name="tertanggung_utama" id="tertanggung_utama"
+                            />
+                            <label class='' for="tertanggung_utama">Tertanggung Utama</label>
+                        </div>
+                    </div>
+                    <div class="row responsive-sm mini-center-container radio-block">
+                        <div class="col-50">
+                            <input ng-model="data.policyRadio" class='custom_radio' type="radio" value="Tertanggung Utama 1" name="tertanggung_tambahan_1"
+                                id="tertanggung_tambahan_1" />
+                            <label class='' for="tertanggung_tambahan_1">Tertanggung Utama 1</label>
+                        </div>
+                        <div class="col-50">
+                            <input ng-model="data.policyRadio" class='custom_radio' type="radio" value="Tertanggung Utama 2" name="tertanggung_tambahan_2"
+                                id="tertanggung_tambahan_2" />
+                            <label class='' for="tertanggung_tambahan_2">Tertanggung Utama 2</label>
+                        </div>
+                    </div>
+                    <div class="row responsive-sm mini-center-container radio-block">
                         <div class="col">
-                            <ion-checkbox class="policy-checkbox" ng-model="policyHolder.additional_insured">Additional Insured 1</ion-checkbox>
+                            <input ng-click="debug()" ng-model="data.policyRadio" class='custom_radio' type="radio" value="Lainnya" name="lainnya" id="lainnya" />
+                            <label class='' for="lainnya">Lainnya</label>
                         </div>
+                    </div>
+                    <div ng-show="data.policyRadio === 'Lainnya'" class="row responsive-sm mini-center-container radio-block">
                         <div class="col">
-                            <ion-checkbox class="policy-checkbox" ng-model="policyHolder.no_insured">Not Insured</ion-checkbox>
+                            <input class="other-policy-input" ng-model="policyOtherText" type="text" placeholder="Enter">
                         </div>
                     </div>
                 </div>
                 <div class="item">
                     <div class="description">
-                        Have you ever owned insurance policy from PT Prudential Life assurance with the same insured members, whereby it has lapsed
-                        or serenaded, OR have you decreased the premium more than 25% from the previous policy value in less
-                        than 365 days from the date you signed this life insurance application?
+                        {{data.beforeProceed_1.title}}
                     </div>
                     <div class="row">
                         <div class="col col-50">
-                            <button class="button value-btn" ng-class="{selected: data.option1}" ng-click="data.option1 = true">Yes</button>
+                            <button class="button value-btn" ng-class="{selected: data.beforeProceed_1.value}" ng-click="data.beforeProceed_1.value = true">Ya</button>
                         </div>
                         <div class="col col-50">
-                            <button class="button value-btn" ng-class="{selected: !data.option1}" ng-click="data.option1 = false">No</button>
+                            <button class="button value-btn" ng-class="{selected: !data.beforeProceed_1.value}" ng-click="data.beforeProceed_1.value = false">Tidak</button>
                         </div>
                     </div>
                 </div>
                 <div class="item">
                     <div class="description">
-                        Do you understand that there may be consequences that arise as regulated by the policy related to your previous policy condition
-                        and this life insurance application?
+                        {{data.beforeProceed_2.title}}
                     </div>
                     <div class="row">
                         <div class="col col-50">
-                            <button class="button value-btn" ng-class="{selected: data.option2}" ng-click="data.option2 = true">Yes</button>
+                            <button class="button value-btn" ng-class="{selected: data.beforeProceed_2.value}" ng-click="data.beforeProceed_2.value = true">Ya</button>
                         </div>
                         <div class="col col-50">
-                            <button class="button value-btn" ng-class="{selected: !data.option2}" ng-click="data.option2 = false">No</button>
+                            <button class="button value-btn" ng-class="{selected: !data.beforeProceed_2.value}" ng-click="data.beforeProceed_2.value = false">Tidak</button>
                         </div>
                     </div>
                 </div>
                 <div class="item">
                     <div class="description">
-                        Do you agree that this new SPAJ is a replacement of previous applied SPAJ which prospective policy holder and prospective
-                        insured are the same person. Any premium paid in the previous SPAJ automatically will be transfered
-                        to this SPAJ (Item 11 from end disclaimer)
+                        {{data.beforeProceed_2.title}}
                     </div>
                     <div class="row">
                         <div class="col col-50">
-                            <button class="button value-btn" ng-class="{selected: data.option3}" ng-click="data.option3 = true">Yes</button>
+                            <button class="button value-btn" ng-class="{selected: data.beforeProceed_3.value}" ng-click="data.beforeProceed_3.value = true">Ya</button>
                         </div>
                         <div class="col col-50">
-                            <button class="button value-btn" ng-class="{selected: !data.option3}" ng-click="data.option3 = false">No</button>
+                            <button class="button value-btn" ng-class="{selected: !data.beforeProceed_3.value}" ng-click="data.beforeProceed_3.value = false">Tidak</button>
                         </div>
                     </div>
+                    <div class="before-proceed-3 left-align" ng-show="data.beforeProceed_3.value == true" class="row">
+                        <label class="item item-input item-floating-label">
+                            <span class="input-label">No. SPAJ Sebelumnya</span>
+                            <input ng-model="data.beforeProceed_3.otherValue" type="text" placeholder="Enter">
+                        </label>
+                    </div>
+                    <!--<div class="gray-background left-align" ng-show="data.beforeProceed_3.value== false" class="row">
+                        321
+                    </div>-->
                 </div>
             </div>
         </div>
     </ion-content>
-    <div ng-if="customer.existing" class="bar bar-footer bar-assertive">
-        <a ng-click="clickButtonHandle('/app/spaj')" title="Continue" class="btn">Continue<button class="button button-clear"><i class="icon ion-ios-arrow-forward"></i></button></a>
-    </div>
-    <div ng-if="!customer.existing" class="bar bar-footer bar-assertive not-active">
-        <a title="Continue" class="btn">Continue<button class="button button-clear"><i class="icon ion-ios-arrow-forward"></i></button></a>
+    <div class="bar bar-footer bar-assertive">
+        <a href="#/app/spaj" title="Continue" class="btn">Continue<button class="button button-clear"><i class="icon ion-ios-arrow-forward"></i></button></a>
     </div>
 </ion-view>
