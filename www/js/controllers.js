@@ -47,5 +47,4 @@ angular.module('prudential.controllers', [])
 
   .controller('SpajFormCtrl', spajFormCtrl)
   .controller('SpajCtrl', spajCtrl)
-  .controller('ESignatureCtrl', eSignatureCtrl)
   .directive('dataService', dataService)
