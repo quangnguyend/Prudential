@@ -52,7 +52,7 @@ angular.module('prudential.controllers', [])
   .controller('SpajCtrl', spajCtrl)
   .controller('Spaj2_11Ctrl', spaj2_11Ctrl)
   .controller('ESignatureCtrl', eSignatureCtrl)
-  .controller('termsConditionsCtrl', termsConditionsCtrl)
+
   .directive('groupedRedRadio', groupedRedRadio)
   .directive('groupedMultiChoice', groupedMultiChoice)
   .directive('dataService', dataService)
