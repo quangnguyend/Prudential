@@ -3,7 +3,9 @@
     <span>SPAJ New Business Application</span>
     <button ng-class='vm.showStepBar ? "up-arrow" : "down-arrow"' ng-click='vm.policy.toogleStepBar()'>Step {{vm.policyStep}} of {{vm.pageList.length}}</button>
   </ion-nav-title>
+ 
   <ion-content class="has-footer has-header">
+    <div class="multiStep-wrapper" ng-show="vm.showStepBar"  ng-include="'templates/spaj/policy/policy.html'"></div>
     <div class='row tab-menu'>
       <span class='col' ng-class="{'active':view === 'Polis'}" ng-click="vm.changeView('Polis')">Pemegang Polis</span>
       <span class='col' ng-class="{'active':view === 'Utama'}" ng-click="vm.changeView('Utama')">Tertanggung Utama</span>
