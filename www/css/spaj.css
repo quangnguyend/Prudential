@@ -1,6 +1,6 @@
 /*import component css*/
-@import 'e_signature.css';
 
+@import 'e_signature.css';
 .multi-step {
   margin: 20px 0
 }
@@ -56,7 +56,9 @@
   ;
 }
 
+
 /*Css health_question*/
+
 #health_question1 h1 {
   white-space: normal
 }
@@ -92,29 +94,30 @@
   margin-top: -27px
 }
 
+
 /*Css for beneficiary*/
-#policy_beneficiary{
+
+#policy_beneficiary {
   padding: 10px 10px 100px 10px;
   font-size: 17px;
 }
 
-#policy_beneficiary div.title{
+#policy_beneficiary div.title {
   margin: 25px 0px;
 }
 
 #policy_beneficiary table {
-  overflow-x:auto;
+  overflow-x: auto;
 }
 
 #policy_beneficiary table, th {
-   font-size: 11px;
-   text-align: left;
+  font-size: 11px;
+  text-align: left;
 }
 
 #policy_beneficiary table, th, td {
   padding: 3px;
 }
-
 
 #policy_beneficiary table td input {
   border: transparent;
@@ -123,11 +126,10 @@
   height: 35px;
 }
 
-#policy_beneficiary table td.birthdate-column i.icon{
+#policy_beneficiary table td.birthdate-column i.icon {
   font-size: 25px;
   margin: 0px 5px;
 }
-
 
 #policy_beneficiary table td button {
   line-height: initial;
@@ -143,6 +145,7 @@
 #policy_beneficiary div.add-new-row i {
   margin: 0px 20px 0px 10px;
 }
+
 
 /* Css PH Info */
 #policy_info_ph_info {
@@ -164,7 +167,7 @@
   color: #49545D;
 }
 
-#policy_info_ph_info input[type="date"]{
+#policy_info_ph_info input[type="date"] {
   width: 94%;
 }
 
@@ -181,7 +184,7 @@
   color: #9B9B9B;
 }
 
-#policy_info_ph_info .button-block > .button:first-child{
+#policy_info_ph_info .button-block > .button:first-child {
   margin-right: 30px;
 }
 
@@ -308,10 +311,12 @@
 
 
 /* Active Insurance Policies */
-.active-insurance-page.wrapper{
+
+.active-insurance-page.wrapper {
   width: 90%;
   margin: 0 auto;
 }
+
 .active-insurance-page .ins-toggle {
   background-color: #fff;
   color: #444;
@@ -321,41 +326,52 @@
   margin: -1px;
   padding: 5px 99px 5px 0px;
 }
-.active-insurance-page .m-gap-30{
+
+.active-insurance-page .m-gap-30 {
   margin-top: 30px;
 }
-.active-insurance-page .clearfix{
+
+.active-insurance-page .clearfix {
   clear: both;
 }
-.lst-insurance-policy .input-label{
+
+.lst-insurance-policy .input-label {
   width: 50%;
 }
-.heading-row{
+
+.heading-row {
   font-size: 80%;
   line-height: 110%;
 }
-.clearfix:after{
+
+.clearfix:after {
   content: '';
   display: inline;
   clear: both;
 }
-.active-insurance-page .float-left{
+
+.active-insurance-page .float-left {
   float: left;
 }
-.active-insurance-page .col-5{
+
+.active-insurance-page .col-5 {
   width: 5%;
 }
-.active-insurance-page .col-95{
+
+.active-insurance-page .col-95 {
   width: 95%;
 }
-.active-insurance-page .row .col-padding, .active-insurance-page .col-padding{
+
+.active-insurance-page .row .col-padding, .active-insurance-page .col-padding {
   padding: 5px;
 }
-.active-insurance-page input[type="text"].form-input{
+
+.active-insurance-page input[type="text"].form-input {
   border-bottom: 1px solid #5b6770;
   max-width: 100%;
 }
-.active-insurance-page select.form-input{
+
+.active-insurance-page select.form-input {
   max-width: 100%;
   display: block;
   padding-top: 2px;
@@ -369,54 +385,69 @@
   border-bottom: 1px solid #5b6770;
   background-color: #fff;
 }
-.active-insurance-page .row-number{
+
+.active-insurance-page .row-number {
   height: 34px;
   line-height: 34px;
   display: inline-block;
 }
-.active-insurance-page .red-link{
+
+.active-insurance-page .red-link {
   color: #DA291C;
   text-decoration: none;
 }
+
 .active-insurance-page .txt-add-policy {
   margin-left: 10px;
 }
-.active-insurance-page.has-bottom-bar{
+
+.active-insurance-page.has-bottom-bar {
   padding-bottom: 100px;
 }
 
+
 /* Upload document page*/
-.upload-document-page .upload-document-name{
+
+.upload-document-page .upload-document-name {
   margin-top: 7px;
   display: inline-block;
 }
-.upload-document-page.wrapper{
+
+.upload-document-page.wrapper {
   width: 90%;
   margin: 0 auto;
 }
-.upload-document-page .m-gap-30{
+
+.upload-document-page .m-gap-30 {
   margin-top: 30px;
 }
-.upload-document-page .clearfix{
+
+.upload-document-page .clearfix {
   clear: both;
 }
-.upload-document-page .float-left{
+
+.upload-document-page .float-left {
   float: left;
 }
-.upload-document-page .col-5{
+
+.upload-document-page .col-5 {
   width: 5%;
 }
-.upload-document-page .col-95{
+
+.upload-document-page .col-95 {
   width: 95%;
 }
-.upload-document-page .row .col-padding, .upload-document-page .col-padding{
+
+.upload-document-page .row .col-padding, .upload-document-page .col-padding {
   padding: 5px;
 }
-.upload-document-page input[type="text"].form-input{
+
+.upload-document-page input[type="text"].form-input {
   border-bottom: 1px solid #5b6770;
   max-width: 100%;
 }
-.upload-document-page select.form-input{
+
+.upload-document-page select.form-input {
   max-width: 100%;
   display: block;
   padding-top: 2px;
@@ -430,18 +461,22 @@
   border-bottom: 1px solid #5b6770;
   background-color: #fff;
 }
-.upload-document-page .row-number{
+
+.upload-document-page .row-number {
   height: 34px;
   line-height: 34px;
   display: inline-block;
 }
-.upload-document-page.has-bottom-bar{
+
+.upload-document-page.has-bottom-bar {
   padding-bottom: 100px;
 }
-.document-upload-file{
+
+.document-upload-file {
   position: relative;
 }
-.document-upload-file input[type=file]{
+
+.document-upload-file input[type=file] {
   position: absolute;
   left: 0;
   top: 0;
@@ -451,31 +486,78 @@
   opacity: 0;
   z-index: 1;
 }
-.document-upload-file .btn-upload-img{
+
+.document-upload-file .btn-upload-img {
   font-size: 14px;
   padding: 0 5px;
   line-height: 120%;
   background: #efecec;
 }
 
+
 /*thanks css page*/
-#thanks{}
-#thanks .title_small{    font-size: 16px;
-    white-space: normal;}
-#thanks .list-inset{margin-left:0px; margin-right:0px; }
-#thanks .item{border-left:none; border-right:none; padding:30px}
-#thanks .item h1{font-size:17px; margin-bottom:20px}
-#thanks .no-lines .item .row{    justify-content: space-between; margin-bottom:15px}
-#thanks .no-lines .item .row:last-child{
-  margin-bottom:0px
+
+#thanks {}
+
+#thanks .title_small {
+  font-size: 16px;
+  white-space: normal;
 }
-#thanks .no-lines .item .first{line-height:44px}
-#thanks .no-lines .item .first span{font-size:75%; vertical-align:top;     padding-right: 5px;}
-#thanks .no-lines .item .button{min-width:170px}
+
+#thanks .list-inset {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+#thanks .item {
+  border-left: none;
+  border-right: none;
+  padding: 30px
+}
+
+#thanks .item h1 {
+  font-size: 17px;
+  margin-bottom: 20px
+}
+
+#thanks .no-lines .item .row {
+  justify-content: space-between;
+  margin-bottom: 15px
+}
+
+#thanks .no-lines .item .row:last-child {
+  margin-bottom: 0px
+}
+
+#thanks .no-lines .item .first {
+  line-height: 44px
+}
+
+#thanks .no-lines .item .first span {
+  font-size: 75%;
+  vertical-align: top;
+  padding-right: 5px;
+}
+
+#thanks .no-lines .item .button {
+  min-width: 170px
+}
 
 #thanks .btn_img {
- background: #f8f8f8 url(../img/icon_img.png) 15px no-repeat;
-    background-size: 20px auto;
-    -webkit-background-size: 20px auto;
-    padding-left: 30px;
+  background: #f8f8f8 url(../img/icon_img.png) 15px no-repeat;
+  background-size: 20px auto;
+  -webkit-background-size: 20px auto;
+  padding-left: 30px;
+}
+
+.thanks-footer {
+  padding: 0px !important
+}
+
+.thanks-footer .btn {
+  line-height: 60px
+}
+
+.thanks-footer .btn-dark {
+  background: #5B6770
 }
