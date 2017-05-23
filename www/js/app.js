@@ -57,8 +57,8 @@ angular.module('prudential', ['ionic', 'prudential.controllers', 'prudential.ser
         url: '/spaj_start',
         views: {
           'menuContent': {
-            templateUrl: 'templates/spaj_form/spaj_start.html',
-            controller: 'SpajFormCtrl',
+            templateUrl: 'templates/spaj/spaj_start.html',
+            controller: 'SpajStartCtrl',
             controllerAs: 'vm'
           }
         }

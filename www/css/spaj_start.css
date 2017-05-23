@@ -16,6 +16,7 @@
 #spaj-start .item.even-block{
     border-top: solid 1px #EFECEC;
     border-bottom: solid 2px #EFECEC;
+    background: #F7F5F5;
 }
 
 #spaj-start .value-btn {
@@ -36,12 +37,11 @@
 }
 
 #spaj-start .mini-center-container {
-    width: 50%;
+    text-align: left;
     margin: 0 auto;
 }
 
 #spaj-start .mini-center-container .policy-checkbox{
-    width: 50%;
     display: inline-block;
     border: none;
     background: #F7F5F5;
@@ -51,4 +51,11 @@
     white-space: initial;
     padding-bottom: 20px;
     padding-top: 20px;
+}
+
+
+@media screen and (min-width: 568px) {
+    #spaj-start .mini-center-container{
+        width: 50%;
+    }
 }
