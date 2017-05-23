@@ -1,6 +1,10 @@
 /*import component css*/
 
 @import 'e_signature.css';
+
+#SPAJ .tab-menu{ height: 40px;}
+#SPAJ .tab-menu .col{ text-align: center; height: 40px; line-height: 40px;}
+#SPAJ .tab-menu .col.active{border-bottom:3px solid #F00}
 .multi-step {
   margin: 20px 0
 }
@@ -28,7 +32,7 @@
   content: '';
   border: 1px solid #efecec;
   position: absolute;
-  top: 20px;
+  top: 15px;
   z-index: -1;
   left: 0px
 }
@@ -60,14 +64,38 @@
 /*Css health_question*/
 
 #health_question1 h1 {
-  white-space: normal
+  white-space: normal;
+  font-size: 28px;
+  color: #212121;
+  line-height: 34px;
+  overflow: visible;
+  margin-bottom: 25px
+}
+
+#health_question1 input[type=text] {
+  font-size: 20px; width:100%
+}
+#health_question1 .button.button-dark{
+    background-color: #5B6770;
+}
+#health_question1 #health1_step1 .col-50:nth-child(1) .item-note {
+  padding-right: 10px
 }
 
 #health_question1 .item {
   border: none;
-  padding: 30px 0
+  padding: 40px 0 0;
+  opacity: 0.4;
+  pointer-events: none;
 }
-
+#health_question1 .item:nth-child(1),
+#health_question1 .item._active{
+  opacity: 1;
+  pointer-events: auto
+}
+#health_question1 .item:last-child{
+  padding-bottom:40px
+}
 #health_question1 .smoker-btn {
   background: #F7F5F5;
   opacity: 1.00;
@@ -91,7 +119,14 @@
 }
 
 #health_question1 .item-note {
-  margin-top: -27px
+  margin-top: -27px;
+  font-size: 20px;
+}
+
+#health_question1 #health1_step4 .row .col:nth-child(1) {
+  white-space: normal;
+  align-self: center;
+  font-size: 16px
 }
 
 
