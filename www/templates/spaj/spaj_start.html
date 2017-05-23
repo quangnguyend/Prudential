@@ -11,13 +11,21 @@
                     <div class="description">
                         I, the policy holder confirm that I am…
                     </div>
-                    <div class="mini-center-container">
-                    <ion-checkbox class="policy-checkbox" ng-model="data.checkbox_main_primary_insured">Main Primary Insured</ion-checkbox>
-                    <ion-checkbox class="policy-checkbox" ng-model="data.policy_payor">Policy Payor</ion-checkbox>
+                    <div class="row responsive-sm mini-center-container">
+                        <div class="col">
+                            <ion-checkbox class="policy-checkbox" ng-model="policyHolder.main_primary_insured">Main Primary Insured</ion-checkbox>
+                        </div>
+                        <div class="col">
+                            <ion-checkbox class="policy-checkbox" ng-model="policyHolder.policy_payor">Policy Payor</ion-checkbox>
+                        </div>
                     </div>
-                    <div class="mini-center-container">
-                    <ion-checkbox class="policy-checkbox" ng-model="data.additional_insured">Additional Insured 1</ion-checkbox>
-                    <ion-checkbox class="policy-checkbox" ng-model="data.no_insured">Not Insured</ion-checkbox>
+                    <div class="row responsive-sm mini-center-container">
+                        <div class="col">
+                            <ion-checkbox class="policy-checkbox" ng-model="policyHolder.additional_insured">Additional Insured 1</ion-checkbox>
+                        </div>
+                        <div class="col">
+                            <ion-checkbox class="policy-checkbox" ng-model="policyHolder.no_insured">Not Insured</ion-checkbox>
+                        </div>
                     </div>
                 </div>
                 <div class="item">
@@ -68,7 +76,7 @@
         </div>
     </ion-content>
     <div ng-if="customer.existing" class="bar bar-footer bar-assertive">
-        <a ng-click="clickButtonHandle('/app')" title="Continue" class="btn">Continue<button class="button button-clear"><i class="icon ion-ios-arrow-forward"></i></button></a>
+        <a ng-click="clickButtonHandle('/app/spaj')" title="Continue" class="btn">Continue<button class="button button-clear"><i class="icon ion-ios-arrow-forward"></i></button></a>
     </div>
     <div ng-if="!customer.existing" class="bar bar-footer bar-assertive not-active">
         <a title="Continue" class="btn">Continue<button class="button button-clear"><i class="icon ion-ios-arrow-forward"></i></button></a>

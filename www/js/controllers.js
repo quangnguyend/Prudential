@@ -45,7 +45,7 @@ angular.module('prudential.controllers', [])
     setTimeout($scope.sync, 1800000)
   })
 
-  .controller('SpajFormCtrl', spajFormCtrl)
+  .controller('SpajStartCtrl', spajStartCtrl)
   .controller('IllustrationCtrl', illustrationCtrl)
   .controller('RiskProfileCtrl', riskProfileCtrl)
   .controller('IllustrationCtrl', illustrationCtrl)
