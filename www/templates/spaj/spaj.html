@@ -1,4 +1,8 @@
-<ion-view cache-view="false" view-title="SPAJ New Business Application" id="SPAJ">
+<ion-view cache-view="false"  id="SPAJ">
+  <ion-nav-title class="header-bar-spaj">
+    <span>SPAJ New Business Application</span>
+    <button ng-class='vm.showStepBar ? "up-arrow" : "down-arrow"' ng-click='vm.policy.toogleStepBar()'>Step {{vm.policyStep}} of {{vm.pageList.length}}</button>
+  </ion-nav-title>
   <ion-content class="has-footer has-header">
     <div class='row tab-menu'>
       <span class='col' ng-class="{'active':view === 'POLICY'}" ng-click="vm.changeView('POLICY')">Policy Holder (Main Insured)</span>

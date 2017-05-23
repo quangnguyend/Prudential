@@ -46,6 +46,7 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService) {
   // default view is POLICY
   vm.view = POLICY
   vm.policyStep = '1'
+  vm.showStepBar = true
 
   vm.changeView = function (view) {
     vm.view = view || vm.view
@@ -186,8 +187,11 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService) {
         'document_image': ''
       }],
     documentType: [
-      {name: 'Identity Card', value: 1}
-    ]
+      { name: 'Identity Card', value: 1 }
+    ],
+    toogleStepBar: function(){
+      vm.showStepBar = !vm.showStepBar
+    }
   }
 
   $scope.goTo = function (id) {
