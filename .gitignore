@@ -1,3 +1,4 @@
+.gitignore
 .DS_Store
 bower_components
 node_modules
@@ -7,4 +8,3 @@ package
 www/index.html
 www/css/ionic.app.css
 www/css/ionic.app.min.css
-.gitignore

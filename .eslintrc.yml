@@ -8,6 +8,9 @@ globals:
   "$": true
   "$location": true
   "$ionicScrollDelegate": true
+  "document": true
+  "window": true
+  "SignaturePad": true
 
 rules:
   "no-confusing-arrow": 2

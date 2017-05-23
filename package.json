@@ -17,5 +17,13 @@
     "gulp-util": "^2.2.14",
     "pre-git": "^3.14.0",
     "shelljs": "^0.3.0"
+  },
+  "config": {
+    "pre-git": {
+      "pre-push": [
+        "echo 'Pre-push checks...' && exit 0",
+        "gulp lint"
+      ]
+    }
   }
 }
