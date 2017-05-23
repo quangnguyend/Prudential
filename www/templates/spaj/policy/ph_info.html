@@ -47,7 +47,7 @@
           </div>
           <div class="col-33">
             <div class="button-block">
-              <a class="button active" grouped-red-radio="'Male'" ng-model="agent.gender">Male</a>
+              <a class="button" grouped-red-radio="'Male'" ng-model="agent.gender">Male</a>
               <a class="button" grouped-red-radio="'Female'" ng-model="agent.gender">Female</a>
             </div>
           </div>
@@ -91,7 +91,7 @@
       <div class='item'>
         <div class="row row-no-padding">
           <div class="col-40">
-            <label class="item-stacked-label">
+            <label class="item-stacked-label indent_label">
               <span class="input-label">Country of Birth</span>
             </label>
           </div>
@@ -109,7 +109,7 @@
       <div class='item'>
         <div class="row row-no-padding">
           <div class="col-40">
-            <label class="item-stacked-label">
+            <label class="item-stacked-label indent_label">
               <span class="input-label">Citizenship</span>
             </label>
           </div>
@@ -158,11 +158,16 @@
               <span class="input-label">Tax Status</span>
             </label>
           </div>
-          <div class="col-60">
-            <span class="icon-calendar">
-              <i class="icon ion-android-calendar"></i>
-            </span>
-            <input type="date" placeholder="Enter">
+          <div class="col-60 no_padding">
+            <div class="row">
+              <ion-checkbox>Indonesian Taxpayer</ion-checkbox>
+            </div>
+            <div class="row">
+              <ion-checkbox>US Taxpayer</ion-checkbox>
+            </div>
+            <div class="row">
+              <ion-checkbox>Other</ion-checkbox>
+            </div>
           </div>
         </div>
       </div>
@@ -209,8 +214,76 @@
               <span class="input-label">Current Residential Address</span>
             </label>
           </div>
+          
+          <div class="col-60 no_padding">
+            <div class="row indent_row">
+              <div class="col-50">
+                <input value="" class='custom_radio' type="radio"/>
+                <label class='' for="">Indonesia</label>
+              </div>
+              <div class="col-50">
+                <input value="" class='custom_radio' type="radio"/>
+                <label class='' for="">Outside Indonesia</label>
+              </div>
+            </div>
+            <div class="row indent_row"><ion-checkbox>Provide different mailing address</ion-checkbox></div>
+            <div class="row indent_row">
+              <div class="col-75"><input type="text" placeholder="Kode Pos"></div>
+              <div class="col-25">
+                <div class="button-block full_width_button">
+                  <a class="button"  ng-model="">Check Address</a>
+                </div>
+              </div>
+            </div>
+            <div class="row indent_row"><input type="text" placeholder="Province"></div>
+            <div class="row indent_row"><input type="text" placeholder="Kabupatan / Kota"></div>
+            <div class="row indent_row"><input type="text" placeholder="Kecamatan"></div>
+            <div class="row indent_row"><input type="text" placeholder="Kelurahan"></div>
+            <div class="row indent_row">
+              <div class="col-33"><input type="text" placeholder="RT"></div>
+              <div class="col-33"><input type="text" placeholder="RW"></div>
+              <div class="col-33"><input type="text" placeholder="KM"></div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div class='item'>
+        <div class="row row-no-padding">
+          <div class="col-40">
+            <label class="item-stacked-label">
+              <span class="input-label">Contact Numbers</span>
+            </label>
+          </div>
           <div class="col-60">
-            <input type="text" placeholder="Address">
+            <div class="row indent_row"><input type="text" placeholder="Home number"></div>
+            <div class="row indent_row"><input type="text" placeholder="Office number"></div>
+            <div class="row indent_row"><input type="text" placeholder="Mobile number"></div>
+            <div class="row indent_row">
+              <div class="add_icon">
+                <i class="icon ion-ios-plus-empty"></i>
+                <label for="">Add additional contact number</label>
+              </div>
+            </div>
+            
+            
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class='item'>
+        <div class="row row-no-padding">
+          <div class="col-40">
+            <label class="item-stacked-label">
+              <span class="input-label">Email</span>
+            </label>
+          </div>
+          <div class="col-60">
+            <div class="row indent_row"><input type="text" placeholder="Email address"></div>
+            <div class="row indent_row custom_checkbox">
+              <ion-checkbox></ion-checkbox>
+              <span for="" class='agree_text'>I agree that Prudential may contact me for any purposes relating to this policy. Prudential has the right to use customer information and share with 3rd party where necessary (Section B Item 2 &3)</span>
+            </div>
           </div>
         </div>
       </div>
