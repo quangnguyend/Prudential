@@ -171,7 +171,7 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService, $i
       {
         'document_name': 'Proof of Identification',
         'document_type': '',
-        'document_image': ''
+        'document_image': 'image.img'
       }, {
         'document_name': 'Document 2',
         'document_type': '',
@@ -189,6 +189,26 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService, $i
       { name: 'Identity Card', value: 1 }
     ]
   }
+
+  // Upload file to server
+  $scope.uploadFiles = function(files) {
+    // console.log(files[0]);
+    // var fileFormData  = new FormData();
+    //Take the first selected file
+    //fileFormData .append("file", files[0]);
+    //$scope.testdata = file[0].name;
+    /*var uploadUrl = '';
+    $http.post(uploadUrl, fileFormData , {
+      withCredentials: true,
+      headers: {'Content-Type': undefined },
+      transformRequest: angular.identity
+    }).success(function (response) {
+      console.log(response);
+    }).error(function (response) {
+      console.log(response);
+    });*/
+
+  };
 
   $scope.goTo = function (id) {
     $location.hash(id)
