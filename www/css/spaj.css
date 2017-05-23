@@ -2,6 +2,23 @@
 
 @import 'e_signature.css';
 
+.header-bar-spaj button{
+  border: none;
+  background: transparent;
+  color: white;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+
+.header-bar-spaj button.up-arrow::after{
+  content: ' ⏶';
+}
+
+.header-bar-spaj button.down-arrow::after{
+  content: ' ⏷';
+}
+
 #SPAJ .tab-menu{ height: 40px;}
 #SPAJ .tab-menu .col{ text-align: center; height: 40px; line-height: 40px;}
 #SPAJ .tab-menu .col.active{border-bottom:3px solid #F00}

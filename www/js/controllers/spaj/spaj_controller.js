@@ -46,6 +46,7 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService, $i
   // default view is POLICY
   vm.view = POLICY
   vm.policyStep = '1'
+  vm.showStepBar = true
 
   vm.changeView = function (view) {
     vm.view = view || vm.view
@@ -187,7 +188,10 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService, $i
       }],
     documentType: [
       { name: 'Identity Card', value: 1 }
-    ]
+    ],
+    toogleStepBar: function(){
+      vm.showStepBar = !vm.showStepBar
+    }
   }
 
   // Upload file to server
