@@ -30,28 +30,6 @@ angular.module('prudential', ['ionic', 'prudential.controllers', 'prudential.ser
         templateUrl: 'templates/layout/menu.html',
         controller: 'AppCtrl'
       })
-      .state('app.agent', {
-        cache: false,
-        url: '/agent',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/agent/agent_fill_in.html',
-            controller: 'AgentCtrl',
-            controllerAs: 'vm'
-          }
-        }
-      })
-      .state('app.customer', {
-        cache: false,
-        url: '/customer',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/customer/index.html',
-            controller: 'CustomerCtrl',
-            controllerAs: 'vm'
-          }
-        }
-      })
       .state('app.spaj_start', {
         cache: false,
         url: '/spaj_start',
@@ -59,39 +37,6 @@ angular.module('prudential', ['ionic', 'prudential.controllers', 'prudential.ser
           'menuContent': {
             templateUrl: 'templates/spaj_form/spaj_start.html',
             controller: 'SpajFormCtrl',
-            controllerAs: 'vm'
-          }
-        }
-      })
-      .state('app.addquestions', {
-        cache: false,
-        url: '/addquestions',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/agent/additional_questions.html',
-            controller: 'AddQuestionsCtrl',
-            controllerAs: 'vm'
-          }
-        }
-      })
-      .state('app.mycustomer', {
-        cache: false,
-        url: '/mycustomer',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/customer/customer_my_customer.html',
-            controller: 'MyCustomerCtrl',
-            controllerAs: 'vm'
-          }
-        }
-      })
-      .state('app.illustration', {
-        cache: false,
-        url: '/illustration',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/illustration/illustration.html',
-            controller: 'IllustrationCtrl',
             controllerAs: 'vm'
           }
         }
@@ -114,28 +59,6 @@ angular.module('prudential', ['ionic', 'prudential.controllers', 'prudential.ser
           'menuContent': {
             templateUrl: 'templates/spaj/spaj.html',
             controller: 'SpajCtrl',
-            controllerAs: 'vm'
-          }
-        }
-      })
-      .state('app.terms_conditions', {
-        cache: false,
-        url: '/terms_conditions',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/spaj/policy/terms_conditions.html',
-            controller: 'termsConditionsCtrl',
-            controllerAs: 'vm'
-          }
-        }
-      })
-      .state('app.spaj_esignature', {
-        cache: false,
-        url: '/spaj_esignature',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/spaj/e-signature.html',
-            controller: 'ESignatureCtrl',
             controllerAs: 'vm'
           }
         }

@@ -47,16 +47,16 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .bar.bar-header
 {
   height: 55px;
-  border-color: #da291c !important;
-  background-color: #da291c  !important;
-  background-image: linear-gradient(0deg, #da291c, #da291c 50%, transparent 50%)  !important;
-  color: #fff  !important;
+  border-color: #da291c;
+  background-color: #da291c;
+  background-image: linear-gradient(0deg, #da291c, #da291c 50%, transparent 50%);
+  color: #fff;
   padding: 5px 10px;
 }
 
 .bar.bar-header .title
 {
-  color:#fff  !important;
+  color:#fff;
   font-weight: normal;
   height: 55px;
   line-height: 65px;

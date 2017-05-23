@@ -9,3 +9,5 @@ www/index.html
 www/css/ionic.app.css
 www/css/ionic.app.min.css
 .idea/
+platforms/
+plugins/
