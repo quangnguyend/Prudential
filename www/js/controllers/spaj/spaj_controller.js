@@ -44,7 +44,7 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService) {
       {name: 'Option 3', value: 3}
   ]
   // default view is POLICY
-  vm.view = MAIN_ENSURED
+  vm.view = POLICY
   vm.policyStep = '1'
   vm.showStepBar = true
 
@@ -191,7 +191,7 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService) {
     documentType: [
       { name: 'Identity Card', value: 1 }
     ],
-    toogleStepBar: function(){
+    toogleStepBar: function () {
       vm.showStepBar = !vm.showStepBar
     }
   }

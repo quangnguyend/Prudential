@@ -1,25 +1,43 @@
-/*import component css*/
+.header-bar-spaj button{
+  border: none;
+  background: transparent;
+  color: white;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
 
-@import 'e_signature.css';
+.header-bar-spaj button.up-arrow::after{
+  content: ' ⏶';
+}
+
+.header-bar-spaj button.down-arrow::after{
+  content: ' ⏷';
+}
 
 #SPAJ .tab-menu{ height: 40px;}
 #SPAJ .tab-menu .col{ text-align: center; height: 40px; line-height: 40px;}
 #SPAJ .tab-menu .col.active{border-bottom:3px solid #F00}
+#SPAJ .bar.bar-header{padding-left: 0px; padding-right:0px;}
+.multiStep-wrapper{width: 100%}
 .multi-step {
-  margin: 20px 0
+  margin: 0px 0 20px 0;
+  background: #DA291C;
+  padding:40px 0 !important
 }
 
 .multi-step .col span {
-  background: #efecec;
-  color: #b4b7ba;
+  background: #F8383F;
+  color: #FFF;
   display: block;
-  width: 30px;
-  height: 30px;
+  width: 26px;
+  height: 26px;
   margin: 0 auto;
-  line-height: 30px;
+  line-height: 26px;
   border-radius: 50%;
-  font-size: 17px;
-  margin-bottom: 10px;
+  font-size: 16px;
+  position: relative;
+  z-index: 2;
 }
 
 .multi-step .col {
@@ -30,10 +48,10 @@
   width: 100%;
   height: 1px;
   content: '';
-  border: 1px solid #efecec;
+  border: 1px solid #F8383F;
   position: absolute;
-  top: 15px;
-  z-index: -1;
+  top: 16px;
+  z-index: 0;
   left: 0px
 }
 
@@ -51,13 +69,8 @@
 }
 
 .multi-step .col.active span {
-  background: #DA291C;
-  color: #FFF
-}
-
-.multi-step .col.active:before {
-  border-color: #DA291C;
-  ;
+  background: #FFF;
+  color: #DA291C;
 }
 
 

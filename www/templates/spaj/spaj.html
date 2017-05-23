@@ -1,12 +1,12 @@
 <ion-view cache-view="false"  id="SPAJ">
   <ion-nav-title class="header-bar-spaj">
-    <span>SPAJ New Business Application</span>
+    <span>Data informasi</span>
     <button ng-class='vm.showStepBar ? "up-arrow" : "down-arrow"' ng-click='vm.policy.toogleStepBar()'>Step {{vm.policyStep}} of {{vm.pageList.length}}</button>
   </ion-nav-title>
  
   <ion-content class="has-footer has-header">
     <div class="multiStep-wrapper" ng-show="vm.showStepBar"  ng-include="'templates/spaj/policy/policy.html'"></div>
-    <div class='row tab-menu'>
+   <!--  <div class='row tab-menu'>
       <span class='col' ng-class="{'active':view === 'Polis'}" ng-click="vm.changeView('Polis')">Pemegang Polis</span>
       <span class='col' ng-class="{'active':view === 'Utama'}" ng-click="vm.changeView('Utama')">Tertanggung Utama</span>
       <span class='col' ng-class="{'active':view === 'Tambahan'}" ng-click="vm.changeView('Tambahan')">+ Tertanggung Tambahan</span>
@@ -14,7 +14,7 @@
     <div ng-show="vm.view==='Polis'" ng-include="'templates/spaj/policy/policy.html'"></div>
     <div ng-show="vm.view==='Utama'" ng-include="'templates/spaj/main_ensured/index.html'"></div>
     <div ng-show="vm.view==='Tambahan'" ng-include="'templates/spaj/addittional_ensured/index.html'"></div>
-    </div>
+    </div> -->
   </ion-content>
 </ion-view>
   <div ng-show="true" class="bar bar-footer bar-assertive">

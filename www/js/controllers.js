@@ -46,8 +46,6 @@ angular.module('prudential.controllers', [])
   })
 
   .controller('SpajStartCtrl', spajStartCtrl)
-  .controller('IllustrationCtrl', illustrationCtrl)
   .controller('RiskProfileCtrl', riskProfileCtrl)
-  .controller('IllustrationCtrl', illustrationCtrl)
   .controller('SpajCtrl', spajCtrl)
   .directive('dataService', dataService)
