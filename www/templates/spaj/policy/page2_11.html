@@ -1,11 +1,7 @@
 <ion-view cache-view="false" view-title="Thank You For Your E-Signature" id="thanks">
   <ion-content class="has-footer has-header">
     <div class="list list-inset no-lines">
-      <div class="item text-center">
-        <p class='title_small'>We are almost there! But we still need a bit more information and documents before we can submit this policy for
-          approval...
-        </p>
-      </div>
+      <div class="item text-center"><p class='title_small'>We are almost there! But we still need a bit more information and documents before we can submit this policy for approval...</p></div>
       <div class='item'>
         <h1>Additional Information Required</h1>
         <div class="row">
@@ -22,23 +18,16 @@
         <h1>Additional Information Required</h1>
         <div class="row">
           <span class="first"><span class="notes">3.</span> Document 1</span>
-          <div class="document-upload-file">
-            <input type="file" ng-model="item.document_image">
-            <button class="button button-stable  btn_img">Upload image</button>
-          </div>
+          <button class="btn_img button">Upload image</button>
         </div>
         <div class="row">
           <span class="first"><span class="notes">4.</span> Document 1</span>
-          <div class="document-upload-file">
-            <input type="file" ng-model="item.document_image">
-            <button class="button button-stable  btn_img">Upload image</button>
-          </div>
+          <button class="btn_img  button">Upload image</button>
         </div>
       </div>
     </div>
   </ion-content>
 </ion-view>
-<div ng-show="true" class="bar bar-footer bar-assertive thanks-footer">
-  <a class="btn btn-dark">Email PDF</a>
-  <a class="btn">Update Now</a>
+<div ng-show="true" class="bar bar-footer bar-assertive">
+  <a ng-click="vm.submitHandle()" title="Continue" class="btn">Next<button class="button button-clear"><i class="icon ion-ios-arrow-forward"></i></button></a>
 </div>
