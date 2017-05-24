@@ -10,11 +10,11 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService, $i
 
 // data of policy page
   vm.pageList = [
-    { step: '1', title: 'Policy Holder Information', template: 'templates/spaj/policy/ph_info.html', valid: false },
-    { step: '2', title: 'Active Insurance Policies', template: 'templates/spaj/policy/active_insurance.html', valid: false },
-    { step: '3', title: 'Prospective Beneficiaries', template: 'templates/spaj/policy/beneficiaries.html', valid: false },
-    { step: '4', title: 'Health Questions', template: 'templates/spaj/policy/health.html', valid: false },
-    { step: '5', title: 'Document Upload', template: 'templates/spaj/policy/document_upload.html', valid: false }
+    { step: '1', title: 'Policy Holder Information', template: 'templates/spaj/policy/step1.html', valid: false },
+    { step: '2', title: 'Health Questions', template: 'templates/spaj/policy/step2.html', valid: false },
+    { step: '3', title: 'Prospective Beneficiaries', template: 'templates/spaj/policy/step1/beneficiaries.html', valid: false },
+    { step: '4', title: 'Health Questions', template: 'templates/spaj/policy/step1/health.html', valid: false },
+    { step: '5', title: 'Document Upload', template: 'templates/spaj/policy/step1/document_upload.html', valid: false }
   ]
 
   vm.dataBeneficiary = [
@@ -45,11 +45,24 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService, $i
   ]
   // default view is POLICY
   vm.view = POLICY
+  vm.step1 = 'info'
+  vm.step2 = 'Utama'
   vm.policyStep = '1'
   vm.showStepBar = true
 
+  vm.nextpagePh = function () {
+  }
+
   vm.changeView = function (view) {
     vm.view = view || vm.view
+  }
+
+  vm.viewStep1 = function (view) {
+    vm.step1 = view || vm.step1
+  }
+
+  vm.viewStep2 = function (view) {
+    vm.step2 = view || vm.step2
   }
 
   // handle when user click on bottom button
@@ -169,10 +182,10 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService, $i
       vm.policy.insurancePolicies.push(policy)
     },
     changeActiveStatus: function (val, id) {
-      document.getElementById("active-insurance-yes").classList.remove("button-active");
-      document.getElementById("active-insurance-no").classList.remove("button-active");
-      var $idActive = document.getElementById(id);
-      $idActive.className += " button-active";
+      document.getElementById('active-insurance-yes').classList.remove('button-active')
+      document.getElementById('active-insurance-no').classList.remove('button-active')
+      var $idActive = document.getElementById(id)
+      $idActive.className += ' button-active'
     },
     /* document upload page */
     documents: [
@@ -203,14 +216,14 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService, $i
   }
 
   // Upload file to server
-  $scope.uploadFiles = function(files, item) {
-    //console.log(item);
+  $scope.uploadFiles = function (files, item) {
+    // console.log(item);
     // console.log(files[0]);
     // var fileFormData  = new FormData();
-    //Take the first selected file
-    //fileFormData .append("file", files[0]);
-    //$scope.testdata = file[0].name;
-    /*var uploadUrl = '';
+    // Take the first selected file
+    // fileFormData .append("file", files[0]);
+    // $scope.testdata = file[0].name;
+    /* var uploadUrl = '';
     $http.post(uploadUrl, fileFormData , {
       withCredentials: true,
       headers: {'Content-Type': undefined },
@@ -219,9 +232,9 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService, $i
       console.log(response);
     }).error(function (response) {
       console.log(response);
-    });*/
+    }); */
 
-  };
+  }
 
   $scope.goTo = function (id) {
     $location.hash(id)
@@ -230,10 +243,10 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService, $i
 
   /// Spaj Health 1
   $scope.health1Steps = ['health1_step1']
-  $scope.health1NextStep=function(id){
-    var STEP_HEIGHT=$('.multi-step').height()+90;
-    var distance = $('#'+id) && $('#'+id) .position().top +STEP_HEIGHT;
-    if($scope.health1Steps.indexOf(id)<0) $scope.health1Steps.push(id)
+  $scope.health1NextStep = function (id) {
+    var STEP_HEIGHT = $('.multi-step').height() + 90
+    var distance = $('#' + id) && $('#' + id).position().top + STEP_HEIGHT
+    if ($scope.health1Steps.indexOf(id) < 0) $scope.health1Steps.push(id)
     $ionicScrollDelegate.scrollTo(0, distance, true)
   }
 }

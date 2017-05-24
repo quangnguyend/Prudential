@@ -3,20 +3,19 @@
     <span>Data informasi</span>
     <button ng-class='vm.showStepBar ? "up-arrow" : "down-arrow"' ng-click='vm.policy.toogleStepBar()'>Step {{vm.policyStep}} of {{vm.pageList.length}}</button>
   </ion-nav-title>
- 
+  
   <ion-content class="has-footer has-header">
-    <div class="multiStep-wrapper" ng-show="vm.showStepBar"  ng-include="'templates/spaj/policy/policy.html'"></div>
-   <!--  <div class='row tab-menu'>
-      <span class='col' ng-class="{'active':view === 'Polis'}" ng-click="vm.changeView('Polis')">Pemegang Polis</span>
-      <span class='col' ng-class="{'active':view === 'Utama'}" ng-click="vm.changeView('Utama')">Tertanggung Utama</span>
-      <span class='col' ng-class="{'active':view === 'Tambahan'}" ng-click="vm.changeView('Tambahan')">+ Tertanggung Tambahan</span>
-    </div>
-    <div ng-show="vm.view==='Polis'" ng-include="'templates/spaj/policy/policy.html'"></div>
-    <div ng-show="vm.view==='Utama'" ng-include="'templates/spaj/main_ensured/index.html'"></div>
-    <div ng-show="vm.view==='Tambahan'" ng-include="'templates/spaj/addittional_ensured/index.html'"></div>
-    </div> -->
+    <div class="multiStep-wrapper" ng-show="vm.showStepBar"></div>
+
+    <ul class="row text-center multi-step">
+      <li ng-repeat="page in vm.pageList" class='col col-20' ng-class="vm.policyStep == page.step?'active':''" ng-click="vm.policy.changeStep(page.step)">
+        <span>{{page.step}}</span>
+      </li>
+    </ul>
+
+    <div ng-repeat="page in vm.pageList" ng-show="vm.policyStep===page.step" ng-include="page.template"></div>
   </ion-content>
 </ion-view>
-  <div ng-show="true" class="bar bar-footer bar-assertive">
-    <a ng-click="vm.submitHandle()" title="Continue" class="btn">Next<button class="button button-clear"><i class="icon ion-ios-arrow-forward"></i></button></a>
-  </div>
+<div ng-show="true" class="bar bar-footer bar-assertive">
+  <a ng-click="vm.submitHandle()" title="Continue" class="btn">Next<button class="button button-clear"><i class="icon ion-ios-arrow-forward"></i></button></a>
+</div>
