@@ -2,7 +2,7 @@
   <form>
     <h4>Your Necessary Documents</h4>
     <div class="m-gap-30">
-      <ul class="list-documents">
+      <ul>
         <li class="heading-row">
           <div class="float-left col-5 col-padding"></div>
           <div class="float-left col-95">
@@ -14,7 +14,7 @@
           </div>
         </li>
         <li class="clearfix" ng-repeat="item in vm.policy.documents">
-          <div class="float-left col-5 "><span class="row-number">{{$index + 1}}</span></div>
+          <div class="float-left col-5 col-padding"><span class="row-number">{{$index + 1}}</span></div>
           <div class="float-left col-95">
             <div class="row row-no-padding">
               <div class="col col-33 col-padding"><span class="upload-document-name">{{item.document_name}}</span></div>
