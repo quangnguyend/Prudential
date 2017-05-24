@@ -144,13 +144,12 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService, $i
         'type_of_insurance': '',
         'insurance_company': '',
         'sum_assured': '',
-        'substandard_policy': false
-      }, {
-        'type_of_insurance': '',
-        'insurance_company': '',
-        'sum_assured': '',
+        'currency': '',
         'substandard_policy': false
       }
+    ],
+    currencyUnits: [
+      { name: 'IDR', value: 'IDR' }
     ],
     typeOfInsurance: [
       { name: 'Option 1', value: 1 },
@@ -165,6 +164,12 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService, $i
         'substandard_policy': false
       }
       vm.policy.insurancePolicies.push(policy)
+    },
+    changeActiveStatus: function (val, id) {
+      document.getElementById("active-insurance-yes").classList.remove("button-active");
+      document.getElementById("active-insurance-no").classList.remove("button-active");
+      var $idActive = document.getElementById(id);
+      $idActive.className += " button-active";
     },
     /* document upload page */
     documents: [
@@ -184,14 +189,16 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService, $i
         'document_name': 'Document 4',
         'document_type': '',
         'document_image': ''
-      }],
+      }
+    ],
     documentType: [
       { name: 'Identity Card', value: 1 }
     ]
   }
 
   // Upload file to server
-  $scope.uploadFiles = function(files) {
+  $scope.uploadFiles = function(files, item) {
+    //console.log(item);
     // console.log(files[0]);
     // var fileFormData  = new FormData();
     //Take the first selected file
