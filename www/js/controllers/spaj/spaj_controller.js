@@ -5,21 +5,26 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService, $i
   $rootScope.showBack = true
   $rootScope.showMenu = true
 
-  var vm = this
-  var POLICY = 'Polis', MAIN_ENSURED = 'Utama', ADDITIONAL = 'Tambahan'
+  var vm = this;
+  var STEP1_TAB_1 = "Polis", STEP1_TAB_2 = "Utama", STEP1_TAB_3 = "Tambahan";
+  var STEP2_TAB_1 = "Utama",
+    STEP2_TAB_2 = "Tambahan_1",
+    STEP2_TAB_3 = "Tambahan_2";
 
   // data of policy page
   vm.pageList = [
     {
-      step: '1',
-      title: 'Policy Holder Information',
-      template: 'templates/spaj/policy/step1.html',
+      step: "1",
+      defaultTab: STEP1_TAB_1,
+      title: "Policy Holder Information",
+      template: "templates/spaj/policy/step1.html",
       valid: false
     },
     {
-      step: '2',
-      title: 'Health Questions',
-      template: 'templates/spaj/policy/step2.html',
+      step: "2",
+      defaultTab: STEP2_TAB_1,
+      title: "Health Questions",
+      template: "templates/spaj/policy/step2.html",
       valid: false
     },
     {
@@ -63,26 +68,23 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService, $i
     }
   ]
   vm.typeOfInsurance = [
-    { name: 'Option 1', value: 1 },
-    { name: 'Option 2', value: 2 },
-    { name: 'Option 3', value: 3 }
-  ]
-  // default view is POLICY
-  vm.view = POLICY
-  vm.step1 = 'info'
-  vm.step2 = 'Utama'
-  vm.policyStep = '1'
-  vm.showStepBar = true
+    { name: "Option 1", value: 1 },
+    { name: "Option 2", value: 2 },
+    { name: "Option 3", value: 3 }
+  ];
+
+  vm.step1 = "info";
+  vm.step2 = "Utama";
+  vm.policyStep = "1";
+  vm.showStepBar = true;
+
 
   vm.nextpagePh = function () {}
 
-  vm.changeView = function (view) {
-    vm.view = view || vm.view
-  }
+  vm.viewStep1 = function(view) {
+    vm.step1 = view || vm.step1;
+  };
 
-  vm.viewStep1 = function (view) {
-    vm.step1 = view || vm.step1
-  }
 
   vm.viewStep2 = function (view) {
     vm.step2 = view || vm.step2
@@ -101,6 +103,7 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService, $i
 
   // Zone for policy page
   vm.policy = {
+    currentTab: STEP1_TAB_1,
     // this function will validate policy step page,
     // then will update the "valid" status, which will enable or disable submit function
     validator: function (step) {
@@ -162,8 +165,17 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService, $i
     },
 
     // move to special step
-    changeStep: function (step) {
-      vm.policyStep = step || vm.policyStep
+    changeStep: function(step) {
+      vm.policyStep = step || vm.policyStep;
+      var defaultTab = null;
+      vm.pageList.forEach(function(page) {
+        if (page.step === step) defaultTab = page.defaultTab;
+      });
+      this.changeTab(defaultTab);
+    },
+
+    changeTab: function(tab) {
+      this.currentTab = tab;
     },
 
     beneficiary: {

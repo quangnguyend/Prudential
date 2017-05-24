@@ -1,8 +1,8 @@
 <div class='row tab-menu'>
-  <span class='col' ng-class="{'active': vm.view === 'Polis'}" ng-click="vm.changeView('Polis')">Pemegang Polis</span>
-  <span class='col' ng-class="{'active': vm.view === 'Utama'}" ng-click="vm.changeView('Utama')">Tertanggung Utama</span>
-  <span class='col' ng-class="{'active': vm.view === 'Tambahan'}" ng-click="vm.changeView('Tambahan')">+ Tertanggung Tambahan</span>
+  <span class='col' ng-class="{'active':vm.policy.currentTab === 'Polis'}" ng-click="vm.policy.changeTab('Polis')">Pemegang Polis</span>
+  <span class='col' ng-class="{'active':vm.policy.currentTab === 'Utama'}" ng-click="vm.policy.changeTab('Utama')">Tertanggung Utama</span>
+  <span class='col' ng-class="{'active':vm.policy.currentTab === 'Tambahan'}" ng-click="vm.policy.changeTab('Tambahan')">+ Tertanggung Tambahan</span>
 </div>
-<div ng-show="vm.view==='Polis'" ng-include="'templates/spaj/policy/step1/ph_info.html'"></div>
-<div ng-show="vm.view==='Utama'" ng-include="'templates/spaj/main_ensured/index.html'"></div>
-<div ng-show="vm.view==='Tambahan'" ng-include="'templates/spaj/addittional_ensured/index.html'"></div>
+<div ng-show="vm.policy.currentTab ==='Polis'" ng-include="'templates/spaj/policy/step1/ph_info.html'"></div>
+<div ng-show="vm.policy.currentTab =='Utama'" ng-include="'templates/spaj/main_ensured/index.html'"></div>
+<div ng-show="vm.policy.currentTab ==='Tambahan'" ng-include="'templates/spaj/addittional_ensured/index.html'"></div>
