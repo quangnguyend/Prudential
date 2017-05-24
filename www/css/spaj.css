@@ -156,22 +156,44 @@
 
 #policy_beneficiary table {
   overflow-x: auto;
+  padding-bottom: 100px;
 }
 
 #policy_beneficiary table, th {
-  font-size: 11px;
   text-align: left;
 }
 
 #policy_beneficiary table, th, td {
-  padding: 3px;
+  padding: 10px !important;
 }
 
-#policy_beneficiary table td input {
-  border: transparent;
-  border-bottom: 1px solid #c2c2c2;
-  width: 100%;
+#policy_beneficiary table td.birthdate-column input[type=date] {
+  width: auto;
+}
+
+#policy_beneficiary table td span.error-message {
+  float: right;
+  color: red;
+  font-weight: normal;
+}
+
+#policy_beneficiary table td input, #policy_beneficiary table td select {
   height: 35px;
+  font-size: 17px;
+}
+
+#policy_beneficiary table td .gender span {
+  font-weight: normal;
+  margin: 0px 30px 0px 0px;
+}
+
+#policy_beneficiary table td .gender div {
+  font-weight: bold;
+  margin: 0px 30px; 
+}
+
+#policy_beneficiary table td .gender div label{
+  font-weight: bold; 
 }
 
 #policy_beneficiary table td.birthdate-column i.icon {
