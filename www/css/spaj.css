@@ -1,4 +1,4 @@
-.header-bar-spaj button{
+.header-bar-spaj button {
   border: none;
   background: transparent;
   color: white;
@@ -7,23 +7,48 @@
   top: 15px;
 }
 
-.header-bar-spaj button.up-arrow::after{
+.header-bar-spaj button.up-arrow::after {
   content: ' ⏶';
 }
 
-.header-bar-spaj button.down-arrow::after{
+.header-bar-spaj button.down-arrow::after {
   content: ' ⏷';
 }
 
-#SPAJ .tab-menu{ height: 40px;}
-#SPAJ .tab-menu .col{ text-align: center; height: 40px; line-height: 40px;}
-#SPAJ .tab-menu .col.active{border-bottom:3px solid #F00}
-#SPAJ .bar.bar-header{padding-left: 0px; padding-right:0px;}
-.multiStep-wrapper{width: 100%}
+#SPAJ .tab-menu {
+  height: 50px;
+  padding: 0px;
+}
+
+#SPAJ .tab-menu .col {
+  text-align: center;
+  height: 50px;
+  line-height: 40px;
+  background: #F7F5F5;
+  border-right: 1px solid #f0eded
+}
+
+#SPAJ .tab-menu .col:last-child {
+  border-right: none
+}
+
+#SPAJ .tab-menu .col.active {
+  border-bottom: 3px solid #F00
+}
+
+#SPAJ .bar.bar-header {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.multiStep-wrapper {
+  width: 100%
+}
+
 .multi-step {
-  margin: 0px 0 20px 0;
+  margin: 0px;
   background: #DA291C;
-  padding:40px 0 !important
+  padding: 40px 0 !important
 }
 
 .multi-step .col span {
@@ -86,11 +111,14 @@
 }
 
 #health_question1 input[type=text] {
-  font-size: 20px; width:100%
+  font-size: 20px;
+  width: 100%
 }
-#health_question1 .button.button-dark{
-    background-color: #5B6770;
+
+#health_question1 .button.button-dark {
+  background-color: #5B6770;
 }
+
 #health_question1 #health1_step1 .col-50:nth-child(1) .item-note {
   padding-right: 10px
 }
@@ -101,14 +129,16 @@
   opacity: 0.4;
   pointer-events: none;
 }
-#health_question1 .item:nth-child(1),
-#health_question1 .item._active{
+
+#health_question1 .item:nth-child(1), #health_question1 .item._active {
   opacity: 1;
   pointer-events: auto
 }
-#health_question1 .item:last-child{
-  padding-bottom:40px
+
+#health_question1 .item:last-child {
+  padding-bottom: 40px
 }
+
 #health_question1 .smoker-btn {
   background: #F7F5F5;
   opacity: 1.00;
@@ -218,10 +248,12 @@
 
 
 /* Css PH Info */
+
 #policy_info_ph_info {
   padding-bottom: 50px;
 }
-#policy_info_ph_info, #policy_info_ph_info h2, #policy_info_ph_info .button, #policy_info_ph_info .input-label, #policy_info_ph_info input[type="text"], #policy_info_ph_info input[type="date"], #policy_info_ph_info .form_select{
+
+#policy_info_ph_info, #policy_info_ph_info h2, #policy_info_ph_info .button, #policy_info_ph_info .input-label, #policy_info_ph_info input[type="text"], #policy_info_ph_info input[type="date"], #policy_info_ph_info .form_select {
   font-family: "Roboto", "Frutiger-Regular", "Helvetica Neue", "Segoe UI", sans-serif !important;
 }
 
@@ -237,7 +269,7 @@
   color: #49545D;
 }
 
-#policy_info_ph_info input[type="date"]{
+#policy_info_ph_info input[type="date"] {
   width: 94%;
 }
 
@@ -296,7 +328,8 @@
   background-color: #fff;
   border: none;
 }
-#policy_info_ph_info .form_select.reset_threecol{
+
+#policy_info_ph_info .form_select.reset_threecol {
   margin-top: 2px;
 }
 
@@ -305,7 +338,7 @@
   padding-bottom: 4px;
 }
 
-#policy_info_ph_info .indent_label{
+#policy_info_ph_info .indent_label {
   margin-top: 25px;
 }
 
@@ -319,124 +352,168 @@
   border-radius: 0px;
   border-color: #da291c;
 }
-#policy_info_ph_info .checkbox, #policy_info_ph_info .no_padding .row{
+
+#policy_info_ph_info .checkbox, #policy_info_ph_info .no_padding .row {
   padding-left: 0;
 }
+
 #policy_info_ph_info .no_padding .row {
   padding-right: 0;
 }
+
 #policy_info_ph_info .item-checkbox .checkbox {
   left: 0;
 }
+
 #policy_info_ph_info .item-checkbox {
   padding-left: 52px;
 }
 
-#policy_info_ph_info .cust-checkbox .checkbox input:checked:before,
-#policy_info_ph_info .cust-checkbox .checkbox input:checked + .checkbox-icon:before{background: #da291c;border-color: #da291c;}
-#policy_info_ph_info .cust-checkbox .desc{display: block;font-size: 14px;margin-top: 15px;}
-#policy_info_ph_info .button-block.full_width_button .button, #policy_info_ph_info .left_input_date.input_full_width input[type="date"]{
+#policy_info_ph_info .cust-checkbox .checkbox input:checked:before, #policy_info_ph_info .cust-checkbox .checkbox input:checked + .checkbox-icon:before {
+  background: #da291c;
+  border-color: #da291c;
+}
+
+#policy_info_ph_info .cust-checkbox .desc {
+  display: block;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+#policy_info_ph_info .button-block.full_width_button .button, #policy_info_ph_info .left_input_date.input_full_width input[type="date"] {
   width: 100%;
 }
+
 #policy_info_ph_info .indent_row {
   padding-top: 16px;
   padding-bottom: 16px;
 }
+
 #policy_info_ph_info .add_icon {
   color: #da291c;
   cursor: pointer;
 }
+
 #policy_info_ph_info .add_icon, #policy_info_ph_info .add_icon label {
   cursor: pointer;
 }
-#policy_info_ph_info .add_icon i{
+
+#policy_info_ph_info .add_icon i {
   font-size: 32px;
   top: -1px;
   font-weight: bold;
   display: inline;
   position: relative;
 }
+
 #policy_info_ph_info .add_icon label {
   display: block;
   float: left;
   margin-top: 7px;
 }
 
-#policy_info_ph_info hr{
+#policy_info_ph_info hr {
   border: 1px solid #efecec;
 }
-#policy_info_ph_info .agree_text{
+
+#policy_info_ph_info .agree_text {
   display: block;
   white-space: normal;
   margin-left: 50px;
 }
+
 #policy_info_ph_info .custom_checkbox {
   display: block;
 }
-#policy_info_ph_info .custom_checkbox .item-checkbox{
+
+#policy_info_ph_info .custom_checkbox .item-checkbox {
   padding-left: 35px;
   float: left;
 }
+
 #policy_info_ph_info .input_red {
   color: #cb2033;
 }
+
 #policy_info_ph_info .item-stacked-label {
   margin-bottom: 15px;
 }
-#policy_info_ph_info .left_input_date input[type="date"]{
+
+#policy_info_ph_info .left_input_date input[type="date"] {
   float: left;
   width: 68%;
   margin-right: 15px;
 }
 
+
 /* Terms & Conditions */
-#terms_conditions p, #terms_conditions h2, #terms_conditions h3{
+
+#terms_conditions p, #terms_conditions h2, #terms_conditions h3 {
   font-family: "Roboto", "Frutiger-Regular", "Helvetica Neue", "Segoe UI", sans-serif !important;
 }
+
 #terms_conditions {
   padding-bottom: 100px;
 }
+
 #terms_conditions .terms_space {
   height: 1px;
   background-color: #f3f0f0;
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
 #terms_conditions .terms_block {
   background: #F7F5F5;
   padding: 25px;
 }
+
 #terms_conditions h3, #terms_conditions h2 {
   font-weight: 400;
   width: 100%;
 }
-#terms_conditions h3{
+
+#terms_conditions h3 {
   font-size: 14px;
   margin: 27px 0 29px;
   text-align: center;
 }
-#terms_conditions .terms_block h2{
+
+#terms_conditions .terms_block h2 {
   font-size: 17px;
   text-transform: uppercase;
   margin-bottom: 18px;
 }
+
 #terms_conditions .terms_padding_box {
   padding: 0 30px;
 }
+
 #terms_conditions .terms_check {
   float: right;
 }
+
 #terms_conditions .terms_check .item {
   border-width: 0;
   margin-top: 36px;
   margin-bottom: 35px;
 }
-#terms_conditions .cust-checkbox .checkbox input:checked:before,
-#terms_conditions .cust-checkbox .checkbox input:checked + .checkbox-icon:before{background: #da291c;border-color: #da291c;}
-#terms_conditions .cust-checkbox .desc{display: block;font-size: 14px;margin-top: 15px;}
-#terms_conditions .button-block.full_width_button .button:first-child{
+
+#terms_conditions .cust-checkbox .checkbox input:checked:before, #terms_conditions .cust-checkbox .checkbox input:checked + .checkbox-icon:before {
+  background: #da291c;
+  border-color: #da291c;
+}
+
+#terms_conditions .cust-checkbox .desc {
+  display: block;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+#terms_conditions .button-block.full_width_button .button:first-child {
   margin-right: 0
 }
+
 #terms_conditions .checkbox input:before, #terms_conditions .checkbox-icon:before {
   border-radius: 0px;
   background: #eee
@@ -447,15 +524,19 @@
   border-radius: 0px;
   border-color: #da291c;
 }
-#terms_conditions .checkbox, #terms_conditions .no_padding .row{
+
+#terms_conditions .checkbox, #terms_conditions .no_padding .row {
   padding-left: 0;
 }
+
 #terms_conditions .no_padding .row {
   padding-right: 0;
 }
+
 #terms_conditions .item-checkbox .checkbox {
   left: 0;
 }
+
 #terms_conditions .item-checkbox {
   padding-left: 52px;
 }
@@ -564,6 +645,7 @@
 .active-insurance-page.has-bottom-bar {
   padding-bottom: 100px;
 }
+
 
 /* Upload document page*/
 
