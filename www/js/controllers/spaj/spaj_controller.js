@@ -1,6 +1,6 @@
 'use strict'
 
-function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService) {
+function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService, Upload) {
   $rootScope.showBar = true
   $rootScope.showBack = true
   $rootScope.showMenu = true
@@ -14,7 +14,8 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService) {
     { step: '2', title: 'Active Insurance Policies', template: 'templates/spaj/policy/active_insurance.html', valid: false },
     { step: '3', title: 'Prospective Beneficiaries', template: 'templates/spaj/policy/beneficiaries.html', valid: false },
     { step: '4', title: 'Health Questions', template: 'templates/spaj/policy/health.html', valid: false },
-    { step: '5', title: 'Document Upload', template: 'templates/spaj/policy/document_upload.html', valid: false }
+    { step: '5', title: 'Document Upload', template: 'templates/spaj/policy/document_upload.html', valid: false },
+    { step: '6', title: 'Amendment', template: 'templates/spaj/policy/amendment.html', valid: false }
   ]
 
   vm.dataBeneficiary = [
@@ -177,50 +178,56 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService) {
     /* document upload page */
     documents: [
       {
-        'document_name': 'Proof of Identification',
+        'document_name': 'Bukti Kartu Identitas',
         'document_type': '',
         'document_image': ''
       }, {
-        'document_name': 'Document 2',
+        'document_name': '<Nama dokumen>',
         'document_type': '',
         'document_image': ''
       }, {
-        'document_name': 'Document 3',
+        'document_name': '<Nama dokumen>',
         'document_type': '',
         'document_image': ''
       }, {
-        'document_name': 'Document 4',
+        'document_name': '<Nama dokumen>',
         'document_type': '',
         'document_image': ''
       }
     ],
     documentType: [
-      { name: 'Identity Card', value: 1 }
+      { name: 'Kartu Identitas', value: 1 }
     ],
+    amendment: '',
     toogleStepBar: function () {
       vm.showStepBar = !vm.showStepBar
     }
   }
 
   // Upload file to server
-  $scope.uploadFiles = function(files, item) {
-    //console.log(item);
-    // console.log(files[0]);
-    // var fileFormData  = new FormData();
-    //Take the first selected file
-    //fileFormData .append("file", files[0]);
-    //$scope.testdata = file[0].name;
-    /*var uploadUrl = '';
-    $http.post(uploadUrl, fileFormData , {
-      withCredentials: true,
-      headers: {'Content-Type': undefined },
-      transformRequest: angular.identity
-    }).success(function (response) {
-      console.log(response);
-    }).error(function (response) {
-      console.log(response);
-    });*/
 
+  $scope.uploadFiles = function(file, errFiles, item) {
+    // console.log(file);
+    // item.document_image = file.$ngfBlobUrl;
+    $scope.errFile = errFiles && errFiles[0];
+    if (file) {
+      file.upload = Upload.upload({
+        url: '',
+        data: {file: file}
+      });
+      file.upload.then(function (response) {
+        // upload successful
+        item.document_image = response.data;
+      }, function (response) {
+        // upload error
+        /*if (response.status > 0)
+          $scope.errorMsg = response.status + ': ' + response.data;*/
+      }, function (evt) {
+        // upload processing
+        /*file.progress = Math.min(100, parseInt(100.0 *
+          evt.loaded / evt.total));*/
+      });
+    }
   };
 
   $scope.goTo = function (id) {
