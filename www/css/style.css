@@ -105,6 +105,11 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 .button-stable{color:#5d6972!important;}
 
+input{
+  width: 100%;
+  border: none;
+}
+
 input[type=range].custom-range {
   -webkit-appearance: none;
   width: 100%;
@@ -246,10 +251,35 @@ input[type="checkbox"], input[type="radio"] {
   -webkit-transform: scale(1.02);
   transform: scale(1.02);
 }
+input[type="date"] {
+  border-bottom: 10px solid #D8D8D8;
+  padding-bottom: 4px;
+  font-size: 16px;
+  color: #49545D;
+}
 .input-helper{
   padding: 5px 35px 10px;
 }
 
 .even-block {
   background: #F7F5F5;
+}
+
+
+select {
+  width: 100%;
+  display: block;
+  padding-top: 2px;
+  padding-left: 0;
+  height: 34px;
+  color: #111;
+  vertical-align: middle;
+  line-height: 16px;
+  border: none;
+  background-color: #fff;
+  font-size: 17px;
+}
+
+.blur-text {
+  color: #c2c2c2 !important;
 }
