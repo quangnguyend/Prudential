@@ -8,7 +8,7 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService, $i
   var vm = this
   var POLICY = 'Polis', MAIN_ENSURED = 'Utama', ADDITIONAL = 'Tambahan'
 
-// data of policy page
+  // data of policy page
   vm.pageList = [
     { step: '1', title: 'Policy Holder Information', template: 'templates/spaj/policy/step1.html', valid: false },
     { step: '2', title: 'Health Questions', template: 'templates/spaj/policy/step2.html', valid: false },
@@ -18,10 +18,10 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService, $i
   ]
 
   vm.dataBeneficiary = [
-    {name: '', birthday: null, relationship: '', relationship_placeholder: 'Mother', share: '', gender: ''},
-    {name: '', birthday: null, relationship: '', relationship_placeholder: 'Father', share: '', gender: ''},
-    {name: '', birthday: null, relationship: '', relationship_placeholder: 'Brother', share: '', gender: ''},
-    {name: '', birthday: null, relationship: '', relationship_placeholder: 'Sister', share: '', gender: ''}
+    { name: '', birthday: null, relationship: '', relationship_placeholder: 'Mother', share: '', gender: '' },
+    { name: '', birthday: null, relationship: '', relationship_placeholder: 'Father', share: '', gender: '' },
+    { name: '', birthday: null, relationship: '', relationship_placeholder: 'Brother', share: '', gender: '' },
+    { name: '', birthday: null, relationship: '', relationship_placeholder: 'Sister', share: '', gender: '' }
   ]
 
   vm.insurancePolicies = [
@@ -39,9 +39,9 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService, $i
     }
   ]
   vm.typeOfInsurance = [
-      {name: 'Option 1', value: 1},
-      {name: 'Option 2', value: 2},
-      {name: 'Option 3', value: 3}
+    { name: 'Option 1', value: 1 },
+    { name: 'Option 2', value: 2 },
+    { name: 'Option 3', value: 3 }
   ]
   // default view is POLICY
   vm.view = POLICY
@@ -144,7 +144,7 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService, $i
 
     beneficiary: {
       addRow: function () {
-        vm.dataBeneficiary.push({name: '', birthday: null, relationship: '', share: '', gender: ''})
+        vm.dataBeneficiary.push({ name: '', birthday: null, relationship: '', share: '', gender: '' })
       },
       setGender: function (rowIndex, gender) {
         vm.dataBeneficiary.forEach(function (row, index) {
@@ -168,9 +168,9 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService, $i
       { name: 'IDR', value: 'IDR' }
     ],
     typeOfInsurance: [
-      {name: 'Option 1', value: 1},
-      {name: 'Option 2', value: 2},
-      {name: 'Option 3', value: 3}
+      { name: 'Option 1', value: 1 },
+      { name: 'Option 2', value: 2 },
+      { name: 'Option 3', value: 3 }
     ],
     addPolicy: function () {
       var policy = {
@@ -244,7 +244,7 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService, $i
   /// Spaj Health 1
   $scope.health1Steps = ['health1_step1']
   $scope.health1NextStep = function (id) {
-    var STEP_HEIGHT = $('.multi-step').height() + 90
+    var STEP_HEIGHT = $('.multi-step').height() + 120
     var distance = $('#' + id) && $('#' + id).position().top + STEP_HEIGHT
     if ($scope.health1Steps.indexOf(id) < 0) $scope.health1Steps.push(id)
     $ionicScrollDelegate.scrollTo(0, distance, true)
