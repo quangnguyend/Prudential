@@ -25,7 +25,13 @@
   height: 50px;
   line-height: 40px;
   background: #F7F5F5;
-  border-right: 1px solid #f0eded
+  border-right: 1px solid #f0eded;
+  border-left: 1px solid #f0eded;
+  box-sizing: border-box
+}
+
+#SPAJ .tab-menu .col:first-child {
+  border-left: none
 }
 
 #SPAJ .tab-menu .col:last-child {
@@ -33,7 +39,17 @@
 }
 
 #SPAJ .tab-menu .col.active {
-  border-bottom: 3px solid #F00
+  border-bottom: 2px solid #da291c;
+  border-right: 1px solid #f1d6d7;
+  border-left: 1px solid #f1d6d7
+}
+
+#SPAJ .tab-menu .col.active:first-child {
+  border-left: none
+}
+
+#SPAJ .tab-menu .col.active:last-child {
+  border-right: none
 }
 
 #SPAJ .bar.bar-header {
