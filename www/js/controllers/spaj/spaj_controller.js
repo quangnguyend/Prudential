@@ -1,6 +1,6 @@
 'use strict'
 
-function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService) {
+function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService, $ionicScrollDelegate) {
   $rootScope.showBar = true
   $rootScope.showBack = true
   $rootScope.showMenu = true
@@ -226,5 +226,14 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService) {
   $scope.goTo = function (id) {
     $location.hash(id)
     $ionicScrollDelegate.anchorScroll()
+  }
+
+  /// Spaj Health 1
+  $scope.health1Steps = ['health1_step1']
+  $scope.health1NextStep=function(id){
+    var STEP_HEIGHT=$('.multi-step').height()+90;
+    var distance = $('#'+id) && $('#'+id) .position().top +STEP_HEIGHT;
+    if($scope.health1Steps.indexOf(id)<0) $scope.health1Steps.push(id)
+    $ionicScrollDelegate.scrollTo(0, distance, true)
   }
 }
