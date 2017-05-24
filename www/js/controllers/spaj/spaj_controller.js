@@ -20,31 +20,31 @@ function spajCtrl(
     {
       step: "1",
       title: "Policy Holder Information",
-      template: "templates/spaj/policy/ph_info.html",
+      template: "templates/spaj/policy/step1.html",
       valid: false
     },
     {
       step: "2",
-      title: "Active Insurance Policies",
-      template: "templates/spaj/policy/active_insurance.html",
+      title: "Health Questions",
+      template: "templates/spaj/policy/step2.html",
       valid: false
     },
     {
       step: "3",
       title: "Prospective Beneficiaries",
-      template: "templates/spaj/policy/beneficiaries.html",
+      template: "templates/spaj/policy/step1/beneficiaries.html",
       valid: false
     },
     {
       step: "4",
       title: "Health Questions",
-      template: "templates/spaj/policy/health.html",
+      template: "templates/spaj/policy/step1/health.html",
       valid: false
     },
     {
       step: "5",
       title: "Document Upload",
-      template: "templates/spaj/policy/document_upload.html",
+      template: "templates/spaj/policy/step1/document_upload.html",
       valid: false
     }
   ];
@@ -76,11 +76,23 @@ function spajCtrl(
   ];
   // default view is POLICY
   vm.view = POLICY;
+  vm.step1 = "info";
+  vm.step2 = "Utama";
   vm.policyStep = "1";
   vm.showStepBar = true;
 
+  vm.nextpagePh = function() {};
+
   vm.changeView = function(view) {
     vm.view = view || vm.view;
+  };
+
+  vm.viewStep1 = function(view) {
+    vm.step1 = view || vm.step1;
+  };
+
+  vm.viewStep2 = function(view) {
+    vm.step2 = view || vm.step2;
   };
 
   // handle when user click on bottom button
@@ -245,13 +257,13 @@ function spajCtrl(
 
   // Upload file to server
   $scope.uploadFiles = function(files, item) {
-    //console.log(item);
+    // console.log(item);
     // console.log(files[0]);
     // var fileFormData  = new FormData();
-    //Take the first selected file
-    //fileFormData .append("file", files[0]);
-    //$scope.testdata = file[0].name;
-    /*var uploadUrl = '';
+    // Take the first selected file
+    // fileFormData .append("file", files[0]);
+    // $scope.testdata = file[0].name;
+    /* var uploadUrl = '';
     $http.post(uploadUrl, fileFormData , {
       withCredentials: true,
       headers: {'Content-Type': undefined },
@@ -260,7 +272,7 @@ function spajCtrl(
       console.log(response);
     }).error(function (response) {
       console.log(response);
-    });*/
+    }); */
   };
 
   $scope.goTo = function(id) {
