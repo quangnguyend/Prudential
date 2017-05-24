@@ -460,6 +460,14 @@
   margin-top: 30px;
 }
 
+.active-insurance-page .m-gap-20 {
+  margin-top: 20px;
+}
+
+.active-insurance-page .input-inline {
+  display: inline-block;
+}
+
 .active-insurance-page .clearfix {
   clear: both;
 }
@@ -483,6 +491,10 @@
   float: left;
 }
 
+.active-insurance-page .float-right {
+  float: right;
+}
+
 .active-insurance-page .col-5 {
   width: 5%;
 }
@@ -492,38 +504,35 @@
 }
 
 .active-insurance-page .row .col-padding, .active-insurance-page .col-padding {
-  padding: 5px;
+  padding: 5px!important;
 }
 
 .active-insurance-page input[type="text"].form-input {
-  border-bottom: 1px solid #5b6770;
-  max-width: 100%;
+  width: 100%;
+  font-size: 17px;
 }
 
 .active-insurance-page select.form-input {
-  max-width: 100%;
+  width: 100%;
   display: block;
   padding-top: 2px;
   padding-left: 0;
   height: 34px;
   color: #111;
   vertical-align: middle;
-  font-size: 14px;
   line-height: 16px;
   border: none;
-  border-bottom: 1px solid #5b6770;
   background-color: #fff;
+  font-size: 17px;
 }
 
-.active-insurance-page .row-number {
-  height: 34px;
-  line-height: 34px;
-  display: inline-block;
+.active-insurance-page .button.button-active {
+  background-color: #5b6770;
+  color: #fff!important;
 }
 
-.active-insurance-page .red-link {
-  color: #DA291C;
-  text-decoration: none;
+.active-insurance-page .m-gap-left-30 {
+  margin-left: 30px;
 }
 
 .active-insurance-page .txt-add-policy {
@@ -533,7 +542,6 @@
 .active-insurance-page.has-bottom-bar {
   padding-bottom: 100px;
 }
-
 
 /* Upload document page*/
 

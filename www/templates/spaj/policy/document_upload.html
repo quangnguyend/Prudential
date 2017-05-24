@@ -26,7 +26,7 @@
               </div>
               <div class="col col-33 col-padding">
                 <div class="document-upload-file">
-                  <input type="file" ng-model="item.document_image">
+                  <input type="file" ng-model="item.document_image" ng-model-instant onchange="angular.element(this).scope().uploadFiles(this.files, this.item)">
                   <button class="button button-stable btn-upload-img">Upload image</button>
                 </div>
               </div>

@@ -147,13 +147,12 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService) {
         'type_of_insurance': '',
         'insurance_company': '',
         'sum_assured': '',
-        'substandard_policy': false
-      }, {
-        'type_of_insurance': '',
-        'insurance_company': '',
-        'sum_assured': '',
+        'currency': '',
         'substandard_policy': false
       }
+    ],
+    currencyUnits: [
+      { name: 'IDR', value: 'IDR' }
     ],
     typeOfInsurance: [
       {name: 'Option 1', value: 1},
@@ -168,6 +167,12 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService) {
         'substandard_policy': false
       }
       vm.policy.insurancePolicies.push(policy)
+    },
+    changeActiveStatus: function (val, id) {
+      document.getElementById("active-insurance-yes").classList.remove("button-active");
+      document.getElementById("active-insurance-no").classList.remove("button-active");
+      var $idActive = document.getElementById(id);
+      $idActive.className += " button-active";
     },
     /* document upload page */
     documents: [
@@ -187,7 +192,8 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService) {
         'document_name': 'Document 4',
         'document_type': '',
         'document_image': ''
-      }],
+      }
+    ],
     documentType: [
       { name: 'Identity Card', value: 1 }
     ],
@@ -195,6 +201,27 @@ function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService) {
       vm.showStepBar = !vm.showStepBar
     }
   }
+
+  // Upload file to server
+  $scope.uploadFiles = function(files, item) {
+    //console.log(item);
+    // console.log(files[0]);
+    // var fileFormData  = new FormData();
+    //Take the first selected file
+    //fileFormData .append("file", files[0]);
+    //$scope.testdata = file[0].name;
+    /*var uploadUrl = '';
+    $http.post(uploadUrl, fileFormData , {
+      withCredentials: true,
+      headers: {'Content-Type': undefined },
+      transformRequest: angular.identity
+    }).success(function (response) {
+      console.log(response);
+    }).error(function (response) {
+      console.log(response);
+    });*/
+
+  };
 
   $scope.goTo = function (id) {
     $location.hash(id)
