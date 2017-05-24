@@ -1,13 +1,6 @@
 'use strict'
 
-function spajCtrl (
-  $scope,
-  $rootScope,
-  $ionicPopup,
-  UserService,
-  DataService,
-  $ionicScrollDelegate
-) {
+function spajCtrl ($scope, $rootScope, $ionicPopup, UserService, DataService, $ionicScrollDelegate) {
   $rootScope.showBar = true
   $rootScope.showBack = true
   $rootScope.showMenu = true
