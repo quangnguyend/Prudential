@@ -1,9 +1,9 @@
-<ion-view cache-view="false"  id="SPAJ">
+<ion-view cache-view="false" id="SPAJ">
   <ion-nav-title class="header-bar-spaj">
     <span>Data informasi</span>
     <button ng-class='vm.showStepBar ? "up-arrow" : "down-arrow"' ng-click='vm.policy.toogleStepBar()'>Step {{vm.policyStep}} of {{vm.pageList.length}}</button>
   </ion-nav-title>
-  
+
   <ion-content class="has-footer has-header">
     <div class="multiStep-wrapper" ng-show="vm.showStepBar"></div>
 
@@ -17,5 +17,5 @@
   </ion-content>
 </ion-view>
 <div ng-show="true" class="bar bar-footer bar-assertive">
-  <a ng-click="vm.submitHandle()" title="Continue" class="btn">Next<button class="button button-clear"><i class="icon ion-ios-arrow-forward"></i></button></a>
+  <a ng-click="vm.submitHandle()" title="Continue" class="btn">Lanjutkan<button class="button button-clear"><i class="icon ion-ios-arrow-forward"></i></button></a>
 </div>

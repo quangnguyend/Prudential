@@ -1,8 +1,8 @@
 <div class='row tab-menu'>
-  <span class='col' ng-class="{'active':view === 'Utama'}" ng-click="vm.changeView('Utama')">Tertanggung Utama</span>
-  <span class='col' ng-class="{'active':view === 'Tambahan1'}" ng-click="vm.changeView('Tambahan1')">Tertanggung Tambahan 1</span>
-  <span class='col' ng-class="{'active':view === 'Tambahan2'}" ng-click="vm.changeView('Tambahan2')">Tertanggung Tambahan 1</span>
+  <span class='col' ng-class="{'active':vm.policy.currentTab === 'Utama'}" ng-click="vm.policy.changeTab('Utama')">Tertanggung Utama</span>
+  <span class='col' ng-class="{'active':vm.policy.currentTab === 'Tambahan_1'}" ng-click="vm.policy.changeTab('Tambahan_1')">Tertanggung Tambahan 1</span>
+  <span class='col' ng-class="{'active':vm.policy.currentTab === 'Tambahan_2'}" ng-click="vm.policy.changeTab('Tambahan_2')">Tertanggung Tambahan 1</span>
 </div>
-<div ng-show="vm.view==='Utama'" ng-include="'templates/spaj/policy/step2/health.html'"></div>
-<div ng-show="vm.view==='Tambahan1'" ng-include=""></div>
-<div ng-show="vm.view==='Tambahan2'" ng-include=""></div>
+<div ng-show="vm.policy.currentTab ==='Utama'" ng-include="'templates/spaj/policy/step2/health.html'"></div>
+<div ng-show="vm.policy.currentTab ==='Tambahan1'" ng-include=""></div>
+<div ng-show="vm.policy.currentTab ==='Tambahan2'" ng-include=""></div>
