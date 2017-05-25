@@ -1,0 +1,7 @@
+<ul class="row text-center multi-step">
+  <li ng-repeat="page in vm.pageList" ng-if="page.step != 6"  class='col col-20' ng-class="vm.policyStep == page.step?'active':''" ng-click="vm.policy.changeStep(page.step)">
+    <span>{{page.step}}</span>
+  </li>
+</ul>
+
+<div ng-repeat="page in vm.pageList" ng-show="vm.policyStep===page.step" ng-include="page.template"></div>

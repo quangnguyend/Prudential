@@ -6,6 +6,7 @@ function spajCtrl(
   $ionicPopup,
   UserService,
   DataService,
+  Upload,
   $ionicScrollDelegate
 ) {
   $rootScope.showBar = true;
@@ -50,6 +51,12 @@ function spajCtrl(
       step: "5",
       title: "Document Upload",
       template: "templates/spaj/policy/step5/beneficiaries.html",
+      valid: false
+    },
+    {
+      step: "6",
+      title: "Amendment",
+      template: "templates/spaj/policy/amendment.html",
       valid: false
     }
   ];
@@ -239,57 +246,62 @@ function spajCtrl(
     /* document upload page */
     documents: [
       {
-        document_name: "Proof of Identification",
-        document_type: "",
-        document_image: ""
-      },
-      {
-        document_name: "Document 2",
-        document_type: "",
-        document_image: ""
-      },
-      {
-        document_name: "Document 3",
-        document_type: "",
-        document_image: ""
-      },
-      {
-        document_name: "Document 4",
-        document_type: "",
-        document_image: ""
+        'document_name': 'Bukti Kartu Identitas',
+        'document_type': '',
+        'document_image': ''
+      }, {
+        'document_name': '<Nama dokumen>',
+        'document_type': '',
+        'document_image': ''
+      }, {
+        'document_name': '<Nama dokumen>',
+        'document_type': '',
+        'document_image': ''
+      }, {
+        'document_name': '<Nama dokumen>',
+        'document_type': '',
+        'document_image': ''
       }
     ],
-    documentType: [{ name: "Identity Card", value: 1 }],
-    toogleStepBar: function() {
-      vm.showStepBar = !vm.showStepBar;
+    documentType: [
+      { name: 'Kartu Identitas', value: 1 }
+    ],
+    amendment: '',
+    toogleStepBar: function () {
+      vm.showStepBar = !vm.showStepBar
     }
   };
 
   // Upload file to server
-  $scope.uploadFiles = function(files, item) {
-    // console.log(item);
-    // console.log(files[0]);
-    // var fileFormData  = new FormData();
-    // Take the first selected file
-    // fileFormData .append("file", files[0]);
-    // $scope.testdata = file[0].name;
-    /* var uploadUrl = '';
-    $http.post(uploadUrl, fileFormData , {
-      withCredentials: true,
-      headers: {'Content-Type': undefined },
-      transformRequest: angular.identity
-    }).success(function (response) {
-      console.log(response);
-    }).error(function (response) {
-      console.log(response);
-    }); */
+
+  $scope.uploadFiles = function(file, errFiles, item) {
+    // console.log(file);
+    // item.document_image = file.$ngfBlobUrl;
+    $scope.errFile = errFiles && errFiles[0];
+    if (file) {
+      file.upload = Upload.upload({
+        url: '',
+        data: {file: file}
+      });
+      file.upload.then(function (response) {
+        // upload successful
+        item.document_image = response.data;
+      }, function (response) {
+        // upload error
+        /*if (response.status > 0)
+          $scope.errorMsg = response.status + ': ' + response.data;*/
+      }, function (evt) {
+        // upload processing
+        /*file.progress = Math.min(100, parseInt(100.0 *
+          evt.loaded / evt.total));*/
+      });
+    }
   };
 
-  $scope.goTo = function(id) {
-    $location.hash(id);
-    $ionicScrollDelegate.anchorScroll();
-  };
-
+  $scope.goTo = function (id) {
+    $location.hash(id)
+    $ionicScrollDelegate.anchorScroll()
+  }
   /// Spaj Health 1
   $scope.health1Steps = ["health1_step1"];
   $scope.health1NextStep = function(id) {
