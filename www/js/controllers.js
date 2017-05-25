@@ -48,5 +48,7 @@ angular.module('prudential.controllers', [])
   .controller('SpajStartCtrl', spajStartCtrl)
   .controller('RiskProfileCtrl', riskProfileCtrl)
   .controller('SpajCtrl', spajCtrl)
+  .controller('ESignatureConfirmCtrl', eSignatureConfirmCtrl)
+
   .directive('dataService', dataService)
   .directive('groupedRadio', groupedRadio)

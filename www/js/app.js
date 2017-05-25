@@ -63,13 +63,13 @@ angular.module('prudential', ['ionic', 'prudential.controllers', 'prudential.ser
           }
         }
       })
-      .state('app.spaj2_11', {
+      .state('app.spaj_esignature_confirmation', {
         cache: false,
-        url: '/spaj_page2_11',
+        url: '/spaj_esignature_confirmation',
         views: {
           'menuContent': {
-            templateUrl: 'templates/spaj/policy/step1/page2_11.html',
-            controller: 'SpajCtrl',
+            templateUrl: 'templates/spaj/e-signature-confirmation.html',
+            controller: 'ESignatureConfirmCtrl',
             controllerAs: 'vm'
           }
         }
